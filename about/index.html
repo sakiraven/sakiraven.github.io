@@ -1,10 +1,43 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>声控周不鸽的开发者日志</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="声控周不鸽的开发者日志"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="声控周不鸽的开发者日志"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="个人简介 技能 java 主要用于编写server端，接触契机是上中专时一个很厉害的同学带我入门的。当时喜欢玩一些独立游戏，没有专用服务器，只能自己搭建。最初从静态网页开始，到个人网站，再到靠java吃饭； python 工作后一个同事带我入坑的，从这以后认识到只会一门语言远远不够，python还有更多的功能，但自己能力有限（api战士），使用范围仅限于脚本了；  爱好 钓鱼 这种快乐可能类似于钓"><meta property="og:type" content="blog"><meta property="og:title" content="声控周不鸽"><meta property="og:url" content="https://sakiraven.github.io/"><meta property="og:site_name" content="声控周不鸽"><meta property="og:description" content="个人简介 技能 java 主要用于编写server端，接触契机是上中专时一个很厉害的同学带我入门的。当时喜欢玩一些独立游戏，没有专用服务器，只能自己搭建。最初从静态网页开始，到个人网站，再到靠java吃饭； python 工作后一个同事带我入坑的，从这以后认识到只会一门语言远远不够，python还有更多的功能，但自己能力有限（api战士），使用范围仅限于脚本了；  爱好 钓鱼 这种快乐可能类似于钓"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta property="article:published_time" content="2021-05-29T11:10:21.000Z"><meta property="article:modified_time" content="2021-05-31T00:56:33.247Z"><meta property="article:author" content="声控周不鸽"><meta property="article:tag" content="日志"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/about/index.html"},"headline":"声控周不鸽的开发者日志","image":[],"datePublished":"2021-05-29T11:10:21.000Z","dateModified":"2021-05-31T00:56:33.247Z","author":{"@type":"Person","name":"saki-raven"},"description":"个人简介 技能 java 主要用于编写server端，接触契机是上中专时一个很厉害的同学带我入门的。当时喜欢玩一些独立游戏，没有专用服务器，只能自己搭建。最初从静态网页开始，到个人网站，再到靠java吃饭； python 工作后一个同事带我入坑的，从这以后认识到只会一门语言远远不够，python还有更多的功能，但自己能力有限（api战士），使用范围仅限于脚本了；  爱好 钓鱼 这种快乐可能类似于钓"}</script><link rel="canonical" href="http://example.com/about/index.html"><link rel="icon" href="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/声控周不鸽logoblue.png" alt="声控周不鸽的开发者日志" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/album">相册</a><a class="navbar-item" href="/friend">友链</a><a class="navbar-item" href="/self-talking">碎碎念</a><a class="navbar-item" href="/message">留言</a><a class="navbar-item is-active" href="/about">自述</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/hexo-theme-amazing/community"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main"><!--!--><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/head_aboout.jpeg" alt="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/head_aboout.jpeg"></span></div><article class="card-content article" role="article"><h1 class="title is-3 is-size-4-mobile"> </h1><div class="content"><h3 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h3><hr>
-<h3 id="技能"><a href="#技能" class="headerlink" title="技能"></a><strong>技能</strong></h3><ul>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>声控周不鸽的开发者日志</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="声控周不鸽的开发者日志"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="声控周不鸽的开发者日志"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="最初搭建博客目的  灵感来源  &amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;最初是自第二份工作后4个月开始，从项目经理身上学到的工作日志记录习惯（后续还有一个日常日志app的想法）期间虽然记录的很简单，有得一笔带过，有的记录可能细节丢失，回过头来看看还挺享受的这个过程的；  便于管理  &amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;上述过程中分"><meta property="og:type" content="blog"><meta property="og:title" content="声控周不鸽"><meta property="og:url" content="https://sakiraven.github.io/"><meta property="og:site_name" content="声控周不鸽"><meta property="og:description" content="最初搭建博客目的  灵感来源  &amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;最初是自第二份工作后4个月开始，从项目经理身上学到的工作日志记录习惯（后续还有一个日常日志app的想法）期间虽然记录的很简单，有得一笔带过，有的记录可能细节丢失，回过头来看看还挺享受的这个过程的；  便于管理  &amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;上述过程中分"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta property="article:published_time" content="2021-05-29T11:10:21.000Z"><meta property="article:modified_time" content="2021-05-31T06:58:24.621Z"><meta property="article:author" content="声控周不鸽"><meta property="article:tag" content="日志"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/about/index.html"},"headline":"声控周不鸽的开发者日志","image":[],"datePublished":"2021-05-29T11:10:21.000Z","dateModified":"2021-05-31T06:58:24.621Z","author":{"@type":"Person","name":"saki-raven"},"description":"最初搭建博客目的  灵感来源  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;最初是自第二份工作后4个月开始，从项目经理身上学到的工作日志记录习惯（后续还有一个日常日志app的想法）期间虽然记录的很简单，有得一笔带过，有的记录可能细节丢失，回过头来看看还挺享受的这个过程的；  便于管理  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;上述过程中分"}</script><link rel="canonical" href="http://example.com/about/index.html"><link rel="icon" href="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/声控周不鸽logoblue.png" alt="声控周不鸽的开发者日志" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/album">相册</a><a class="navbar-item" href="/friend">友链</a><a class="navbar-item" href="/self-talking">碎碎念</a><a class="navbar-item" href="/message">留言</a><a class="navbar-item is-active" href="/about">自述</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/hexo-theme-amazing/community"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main"><!--!--><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/head_aboout.jpeg" alt="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/head_aboout.jpeg"></span></div><article class="card-content article" role="article"><h1 class="title is-3 is-size-4-mobile"> </h1><div class="content"><h1 id="最初搭建博客目的"><a href="#最初搭建博客目的" class="headerlink" title="最初搭建博客目的"></a><strong>最初搭建博客目的</strong></h1><hr>
+<ul>
+<li><strong>灵感来源</strong></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最初是自第二份工作后4个月开始，从项目经理身上学到的工作日志记录习惯（后续还有一个日常日志app的想法）期间虽然记录的很简单，有得一笔带过，有的记录可能细节丢失，回过头来看看还挺享受的这个过程的；</p>
+<ul>
+<li><strong>便于管理</strong></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上述过程中分化成三部分笔记，工作日志（记录每天工作内容）个人项目开发日志（对于个人项目学习过程）辞职后的生活日志（相对综合什么都有写）承载平台为有道云笔记，整体相对比较杂乱，不方便管理。个性化的博客主题模板，分类、归档、标签，这些功能正好切中要害，满足自身需求；</p>
+<ul>
+<li><strong>监督作用</strong></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作为个人开发者工作与学习需要极强的意志力，我认为自己只存在一定的自控力。将生活发布于互联网，会有种督促自身的感觉。相当于每天都在立flag，如果实现不了可太丢人了；</p>
+<ul>
+<li><strong>作为简历</strong></li>
+</ul>
+<p>因为暂时不工作，为了证明自己还处于码圈，并且持续在以个人开发者身份工作；</p>
+<br/>
+
+<h1 id="为什么放弃工作"><a href="#为什么放弃工作" class="headerlink" title="为什么放弃工作"></a><strong>为什么放弃工作</strong></h1><hr>
+<ul>
+<li>趁着年轻，追逐下梦想，有一个搭建核心向社区的idea；</li>
+<li>职业规划有三个阶段，第1年能力达到组长能力，2-4年达到项目经理级别，4-???年要摸到更高的层次，但还没具体想到。也是想开始尝试下第二阶段；</li>
+<li>学习计划，过去两年的学习方式是扩大广度，各方面的技术点都有接触使用，现在依旧在拓宽接触范围比如移动原生开发，同时想挖掘下server端的深度；</li>
+<li>想尝试一下面对网络用户的移动平台，站在产品角度思考功能，作为项目经理来规划业务，挑战架构师的工作设计符合业务与局限性能下的技术选型；</li>
+<li>计划做数款ios平台app来提高产品能力；</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因为《中专学历》，面试通知率极低，因为《年纪小，但成熟》《价格便宜，但能力还算不错》两项主要优势入职通过率极高。但随着时间的推移，等我到24岁时同龄本科生可能已经工作一两年，又或者研究生快毕业，再与他们竞争将毫无优势可言。所以我想通过被迫”独自”的形式维护一个”用户级”的社区平台来提高自身的各项能力。再与他人竞争时，别人可能在讨论代码技术点，而我想在产品、技术选型、业务、运维等角度与面试官讨论；</p>
+<br/>
+
+<h1 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a><strong>个人简介</strong></h1><hr>
+<h2 id="技能"><a href="#技能" class="headerlink" title="技能"></a><strong>技能</strong></h2><ul>
 <li><strong>java</strong> 主要用于编写server端，接触契机是上中专时一个很厉害的同学带我入门的。当时喜欢玩一些独立游戏，没有专用服务器，只能自己搭建。最初从静态网页开始，到个人网站，再到靠java吃饭；</li>
 <li><strong>python</strong> 工作后一个同事带我入坑的，从这以后认识到只会一门语言远远不够，python还有更多的功能，但自己能力有限（api战士），使用范围仅限于脚本了；</li>
+<li><strong>javascript</strong> 主要用于web前端的逻辑，用过的框架只有jquery和vue。老实说在接触MVVM之前很讨厌写web前端代码，有大量的填充节点代码，拼接起来很痛苦;</li>
+<li><strong>swift</strong> 我是苹果老脑残粉了，可能是因为信仰加持，配合swiftUI感觉代码写起来的感觉很舒适…就很玄学，现在社区2.0.1的原型是现在苹果端编写的；</li>
+<li><strong>dart</strong> 还有没开始使用，当初决定踏足移动端时看向android与ios，比较之下选择了更陌生的ios先入坑，如果ios都不无法拿下那就不打算浪费时间了，使用dart主要是为了flutterUI；</li>
 </ul>
-<h3 id="爱好"><a href="#爱好" class="headerlink" title="爱好"></a><strong>爱好</strong></h3><ul>
+<h2 id="爱好"><a href="#爱好" class="headerlink" title="爱好"></a><strong>爱好</strong></h2><ul>
 <li><strong>钓鱼</strong> 这种快乐可能类似于钓鱼执法吧，🐟上钩那一刻特别兴奋，很享受这个过程与结果；</li>
 <li><strong>摄影</strong> 喜欢拍摄动植物、人像，相对于万年不变的绿水青山，更喜欢记录转瞬即逝的画面；</li>
 <li><strong>电影</strong> 偏向于历史、纪录片、演技派、内涵向、纯喜剧 例如切尔诺贝利、姜文系列、周星驰系列、辛德勒的名单、绿皮书、了不起的盖茨比；</li>
@@ -12,32 +45,39 @@
 <li><strong>动画</strong> 追番观看200+ 喜欢有充实内容或画面表现力有独特理解的 例如：物语系列、来自新世界、进击的巨人、怪化猫、动物狂想曲、昨日之歌、eva、天气之子、夏目友人帐等；</li>
 <li><strong>骑行</strong> 机械式的传动结构令我满足，还比较喜欢摩托车，但是不会…曾经陪朋友出去放松，决定从哈尔滨开始长白山为目的地，结果到吉林的时候遇到了50年不遇的暴风雨走到舒兰便打道回府了，完成度1/3。后来还有一次从北京带猫回家，单日行程170km；</li>
 </ul>
-<h3 id="优势"><a href="#优势" class="headerlink" title="优势"></a><strong>优势</strong></h3><ul>
-<li><strong>为人方面</strong> 和善、坦诚，直爽、靠谱，不好意思我就是那超越99%的完美人（工具人），我的朋友（用过我的人）没有不说好；</li>
-<li><strong>三人行必有我师</strong> 我会分析他人优点，将一点我所欠缺的素养，加以特色化适应学习；</li>
-<li><strong>相对来说还算有悟性</strong> </li>
+<h2 id="优势"><a href="#优势" class="headerlink" title="优势"></a><strong>优势</strong></h2><ul>
+<li><strong>学习方面</strong> 三人行必有我师，我会分析他人优点，将一点我所欠缺的素养，加以特色化适应学习，这么多年来我非常感谢身边的每个朋友，我认为你们是我最好的老师。还算有悟性，当受人点拨时，可以相对较快的领悟，同时有一定的举一反三能力。除此之外学习知识大多来源于互联网，有较强的辨识能力。</li>
+<li><strong>为人方面</strong> 和善，任何时候都不会主动交恶。坦诚，我以双赢为目的。直爽，当有人询问我意见或者问答时，有什么说什么，不会拖泥带水。体贴，公开场合我非常注意不让他人受到冷落或者处于尴尬境地，如果要尴尬我希望那个人是说。不好意思我就是那超越99%的完美人（工具人），我的朋友（用过我的人）没有不说好；</li>
 </ul>
-<h3 id="劣势"><a href="#劣势" class="headerlink" title="劣势"></a><strong>劣势</strong></h3><br>
+<h2 id="劣势"><a href="#劣势" class="headerlink" title="劣势"></a><strong>劣势</strong></h2><ul>
+<li><strong>学习方面</strong> 很怠惰，没办法向那些热爱学习的人一样，以学代休，下班时我想的还是娱乐至上；</li>
+<li><strong>为人方面</strong> 非常慢热，会给那些不熟悉我的人一种阴冷的感觉，不是那么近人，主要原因是从前是个社恐。再有就是和没有共同话题的人，非工作原因几乎无法聊起来，不是我不愿意和这些人接触，而是我不知道切入点。</li>
+</ul>
+<br/>
 
-<h3 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h3><hr>
-<br>
-
-
+<h1 id="年度短期计划"><a href="#年度短期计划" class="headerlink" title="年度短期计划"></a><strong>年度短期计划</strong></h1><hr>
 <blockquote>
-<p><strong>2021-GOALS</strong>              </p>
+<p><strong>2021-UNCOMPLETED</strong></p>
 <ul>
-<li><input disabled="" type="checkbox"> 开发早季2.0.1（server,android,ios,web）；</li>
-<li><input disabled="" type="checkbox"> 8月份开始健身，一周最少2次，形成习惯。</li>
-<li><input disabled="" type="checkbox"> 作息要尽可能有规律10点30后必须熄灯上床睡觉，形成习惯；</li>
-<li><input disabled="" type="checkbox"> 生活健康一些，戒可乐；</li>
-<li><input disabled="" type="checkbox"> 整理搭建桌面，让开发环境尽可能舒适一些；</li>
-<li><input disabled="" type="checkbox"> 尽可能参与社交活动，不能宅起来，比如找一下类似于服务生的兼职； </li>
+<li><input disabled="" type="checkbox"> 8月份开始尝试健身；</li>
 <li><input disabled="" type="checkbox"> 尽可能减少非开发屏幕使用占比；</li>
+<li><input disabled="" type="checkbox"> 开发社区2.0.1以ios作为原型端；</li>
+<li><input disabled="" type="checkbox"> 整理搭建桌面，让开发环境尽可能舒适一些； </li>
+<li><input disabled="" type="checkbox"> 生活健康一些，戒可乐，作息要尽可能有规律10点30后必须熄灯上床睡觉；</li>
 </ul>
 </blockquote>
-<br>
+<blockquote>
+<p><strong>2022-UNCOMPLETED</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> 将健身养成习惯；</li>
+<li><input disabled="" type="checkbox"> 尽可能参与社交活动，不能宅起来，比如找一下类似于服务生的兼职；</li>
+<li><input disabled="" type="checkbox"> 开发ios、android、win、web任意平台10款app；</li>
+<li><input disabled="" type="checkbox"> 开发社区2.1.1（andriod，iso，web，server）6月份之前完成决定发行版，并在年底累计万名用户注册；</li>
+</ul>
+</blockquote>
+<br/>
 
-<h3 id="心路历程转折点"><a href="#心路历程转折点" class="headerlink" title="心路历程转折点"></a>心路历程转折点</h3><hr>
+<h1 id="心路历程转折点"><a href="#心路历程转折点" class="headerlink" title="心路历程转折点"></a><strong>心路历程转折点</strong></h1><hr>
 <div class="time-axis-main">
     <ul class="time-axis"></ul>
 </div>
