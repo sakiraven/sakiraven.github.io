@@ -126,7 +126,6 @@ function loadMainJs($, moment, ClipboardJS, config) {
         $mask.attr('id', 'toc-mask');
 
         $('body').append($mask);
-
         function toggleToc() { // eslint-disable-line no-inner-declarations
             $toc.toggleClass('is-active');
             $mask.toggleClass('is-active');
