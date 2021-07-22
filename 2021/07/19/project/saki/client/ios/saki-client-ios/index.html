@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>早季ios客户端兼产品原型 - 声控周不鸽的开发者日志</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="声控周不鸽的开发者日志"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="声控周不鸽的开发者日志"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="摘要早季社区的ios客户端规划"><meta property="og:type" content="blog"><meta property="og:title" content="声控周不鸽"><meta property="og:url" content="https://sakiraven.github.io/"><meta property="og:site_name" content="声控周不鸽"><meta property="og:description" content="摘要早季社区的ios客户端规划"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta property="article:published_time" content="2021-07-19T10:15:55.000Z"><meta property="article:modified_time" content="2021-07-22T02:50:32.927Z"><meta property="article:author" content="声控周不鸽"><meta property="article:tag" content="ios项目规划"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/07/19/project/saki/client/ios/saki-client-ios/"},"headline":"声控周不鸽的开发者日志","image":["http://example.com/img/og_image.png"],"datePublished":"2021-07-19T10:15:55.000Z","dateModified":"2021-07-22T02:50:32.927Z","author":{"@type":"Person","name":"声控周不鸽"},"description":"摘要早季社区的ios客户端规划"}</script><link rel="canonical" href="http://example.com/2021/07/19/project/saki/client/ios/saki-client-ios/"><link rel="icon" href="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/声控周不鸽logoblue.png" alt="声控周不鸽的开发者日志" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/about/index.html">自述</a><a class="navbar-item" href="/album/index.html">相册</a><a class="navbar-item" href="/self-talking/index.html">碎碎念</a><a class="navbar-item" href="/friend/index.html">友链</a><a class="navbar-item" href="/message/index.html">留言</a><a class="navbar-item" href="/thanks/index.html">鸣谢</a><a class="navbar-item" href="/categories/index.html">分类</a><a class="navbar-item" href="/tags/index.html">标签</a><a class="navbar-item" href="/archives/index.html">归档</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/hexo-theme-amazing/community"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-07-19  <a class="commentCountImg" href="/2021/07/19/project/saki/client/ios/saki-client-ios/#comment-container"><span class="display-none-class">72120452f2207bc409cb745d6d3b4f55</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="72120452f2207bc409cb745d6d3b4f55">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>7 分钟  <i class="fas fa-pencil-alt"> </i>1.1 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">早季ios客户端兼产品原型</h1><div class="content"><blockquote>
+<p>摘要<br>早季社区的ios客户端规划</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="初始开发阶段"><a href="#初始开发阶段" class="headerlink" title="初始开发阶段"></a>初始开发阶段</h3><p>swift接触是在20年10月,那时候经常加班学习时间不是很多,一开始是午休挤时间.后来发现这样不行,效率太低.开始减少加班,傍晚回去7点搞到10点.<br>    又因为忙碌了一天,回去的时候基本都在听些直播、相声之类的,状态不是很集中,听着听着就去看了.过年期间1周的学习进取要比过去3、4个月的效率还恐怖<br>    ,挺痛苦的,内心很纠结.经过胜楠建议我早起,结合我实际情况,进一步取消加班.到点就走,每天8-9点就睡觉,早起4-5点起床,这三个小时精力非常集中,效果还不错.<br>    坚持了一个月,公司给员工涨薪,和每个人都要聊一边.过程中询问领导对我的工作评价,总体评价是不如去年的,他应该挺失望的(我猜测).回归原来的节奏,每天最少留公司1小时.<br>    节奏崩盘,此时根据swiftui开发的app原型已经差不多了,还差临门一脚了.此时我决定辞职,我不能做到兼顾.</p>
+<h3 id="学习与开发周期"><a href="#学习与开发周期" class="headerlink" title="学习与开发周期"></a>学习与开发周期</h3><ul>
+<li>学习是20年10月到21年2月,断断续续的</li>
+<li>2-3开始编写早季客户端原型</li>
+<li>3-5月之间在纠结与实践辞职</li>
+<li>7月玩了两周游戏1周java框架重构,</li>
+<li>7月19号正式继续开发ios原型</li>
+</ul>
+<h3 id="一阶段目标-21年3月-5月"><a href="#一阶段目标-21年3月-5月" class="headerlink" title="一阶段目标(21年3月-5月)"></a>一阶段目标(21年3月-5月)</h3><ul>
+<li>已经在21年2月-3月实现,80%的页面</li>
+</ul>
+<h3 id="二阶段目标-21年7月完成"><a href="#二阶段目标-21年7月完成" class="headerlink" title="二阶段目标(21年7月完成)"></a>二阶段目标(21年7月完成)</h3><ul>
+<li>完成度提高到100%,分析当前功能是否已经满足市场需求,补充细节,或缺失功能</li>
+</ul>
+<h3 id="三阶段目标-21年9月完成"><a href="#三阶段目标-21年9月完成" class="headerlink" title="三阶段目标(21年9月完成)"></a>三阶段目标(21年9月完成)</h3><ul>
+<li>8月份将java后端4.0版本开发完毕后,实现api</li>
+</ul>
+<h2 id="开发日志"><a href="#开发日志" class="headerlink" title="开发日志"></a>开发日志</h2><h3 id="2021-07-20"><a href="#2021-07-20" class="headerlink" title="2021/07/20"></a>2021/07/20</h3><ul>
+<li>放弃轮播图填充,因为实现比较麻烦不想搞,决定用社区守则来替代轮播图</li>
+<li>开始userInfoCenter页面</li>
+</ul>
+<h3 id="2021-07-19"><a href="#2021-07-19" class="headerlink" title="2021/07/19"></a>2021/07/19</h3><ul>
+<li>用循环方式与lazyGrid生成functionGroup</li>
+<li>用switch方式导航navigationLink</li>
+<li>开始修改功能页,设想添加轮播图填充位置</li>
+</ul>
+<h3 id="2021-03-15"><a href="#2021-03-15" class="headerlink" title="2021/03/15"></a>2021/03/15</h3><ul>
+<li>确定我的页面 表页面 展现形式</li>
+<li>增加动态tab页</li>
+<li>更改tabview 内 topbar展现形式 全部修改为视图内部导航(已修改动态,其他无)</li>
+</ul>
+<h3 id="2021-03-09"><a href="#2021-03-09" class="headerlink" title="2021/03/09"></a>2021/03/09</h3><ul>
+<li>登陆页面按钮<h3 id="2021-03-08"><a href="#2021-03-08" class="headerlink" title="2021/03/08"></a>2021/03/08</h3></li>
+<li>登陆页面</li>
+<li>导入FileText包</li>
+<li>todo 微信 qq登陆</li>
+</ul>
+<h3 id="2021-03-05"><a href="#2021-03-05" class="headerlink" title="2021/03/05"></a>2021/03/05</h3><ul>
+<li>适应深色模式</li>
+<li>修复hscrollview与滑动返回冲突问题</li>
+</ul>
+<h3 id="2021-03-04"><a href="#2021-03-04" class="headerlink" title="2021/03/04"></a>2021/03/04</h3><ul>
+<li>我的界基本完毕</li>
+<li>解决滑动返回冲突问题,暂时想到的解决办法在左侧侧边栏添加隐藏的 rootview用于返回<h3 id="2021-03-03"><a href="#2021-03-03" class="headerlink" title="2021/03/03"></a>2021/03/03</h3></li>
+<li>我的界面</li>
+<li>通知</li>
+<li>回复</li>
+<li>点赞</li>
+<li>钱包</li>
+<li>需要添加关注功能 在个人面板展示关注按钮</li>
+<li>需要添加动态页面 记录个人历史</li>
+<li>需要添加个人相册页面,未想好添加在哪里如何构建与展示维度</li>
+</ul>
+<h3 id="2021-02-29"><a href="#2021-02-29" class="headerlink" title="2021/02/29"></a>2021/02/29</h3><ul>
+<li>定时器禁止重复执行 cancle</li>
+<li>我的界面</li>
+<li>efresh包暂时删除</li>
+</ul>
+<h3 id="2021-02-28"><a href="#2021-02-28" class="headerlink" title="2021/02/28"></a>2021/02/28</h3><ul>
+<li>定时器禁止重复执行 cancle</li>
+<li>oser pho发布 stamp发布</li>
+<li>新番列表</li>
+<li>新番详情</li>
+</ul>
+<h3 id="2021-02-26"><a href="#2021-02-26" class="headerlink" title="2021/02/26"></a>2021/02/26</h3><ul>
+<li>全局通知编写</li>
+<li>自定义字体引入</li>
+<li>阿里iconfont引入</li>
+</ul>
+<h3 id="2021-02-23"><a href="#2021-02-23" class="headerlink" title="2021/02/23"></a>2021/02/23</h3><ul>
+<li>组合集邮页面</li>
+<li>调整topbar 添加右侧按钮</li>
+<li>相集页发布照片</li>
+<li>集邮页发布集邮</li>
+</ul>
+<h3 id="2021-02-22"><a href="#2021-02-22" class="headerlink" title="2021/02/22"></a>2021/02/22</h3><ul>
+<li>制作与coser集邮页面</li>
+<li>思考我的集邮添加在合适位置</li>
+<li>相集评论模块的加入位置</li>
+<li>LeanCloud即时通讯api 看起来挺便宜</li>
+</ul>
+<h3 id="2021-02-21"><a href="#2021-02-21" class="headerlink" title="2021/02/21"></a>2021/02/21</h3><ul>
+<li>确定好相集主页展现形式 [coser,pho] coser页存在海报其他tab不展示海报</li>
+<li>暂时保留back</li>
+<li>延缓无法解决冲突 HScrollview</li>
+</ul>
+<h3 id="2021-02-20"><a href="#2021-02-20" class="headerlink" title="2021/02/20"></a>2021/02/20</h3><ul>
+<li>coser列表</li>
+<li>coser详情</li>
+<li>最后在调试顶部吸附topbar</li>
+<li>经过b站up洗稿事件以后 决定日推模块保留,但是何种呈现方式还未确定</li>
+</ul>
+<h3 id="2021-02-17-19"><a href="#2021-02-17-19" class="headerlink" title="2021/02/17-19"></a>2021/02/17-19</h3><ul>
+<li>调整思路,将app体量缩减为只有相集,当作我个人相册使用开发,推广时以收集各位coser照片为入口</li>
+</ul>
+<h3 id="2021-02-15"><a href="#2021-02-15" class="headerlink" title="2021/02/15"></a>2021/02/15</h3><ul>
+<li>评论TextField组件封装完毕</li>
+<li>将评论模块组装到新闻</li>
+</ul>
+<h3 id="2021-02-16"><a href="#2021-02-16" class="headerlink" title="2021/02/16"></a>2021/02/16</h3><ul>
+<li>调整评论模块 TextFiels</li>
+</ul>
+<h3 id="2021-02-14"><a href="#2021-02-14" class="headerlink" title="2021/02/14"></a>2021/02/14</h3><ul>
+<li>反杭</li>
+<li>路上了解了一些 TextFeild</li>
+</ul>
+<h3 id="2021-02-13"><a href="#2021-02-13" class="headerlink" title="2021/02/13"></a>2021/02/13</h3><ul>
+<li>一级评论和二级评论单页面</li>
+<li>看视频</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>早季ios客户端兼产品原型</p><p><a href="http://example.com/2021/07/19/project/saki/client/ios/saki-client-ios/">http://example.com/2021/07/19/project/saki/client/ios/saki-client-ios/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><a href="http://example.com"><p>声控周不鸽</p></a></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-07-19</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-07-22</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="recommend-area"><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 相关文章</span><br><span>  1.<a class="is-size-6" href="/2021/06/03/project/ios/project-planning-lifetrip/" target="_blank">项目规划生命之旅其一</a><br></span></div><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 推荐文章</span><br><span>  1.<a class="is-size-6" href="/2021/06/03/project/ios/project-planning-lifetrip/" target="_blank">项目规划生命之旅其一</a><br></span><span>  2.<a class="is-size-6" href="/2021/06/03/project/java/saki-server-base/" target="_blank">saki-server-2.0-base框架</a><br></span><span>  3.<a class="is-size-6" href="/2021/06/08/life/summary/perception/selfdelivery/" target="_blank">《自我救赎》</a><br></span><span>  4.<a class="is-size-6" href="/2021/07/19/project/saki/client/ios/saki-client-ios/" target="_blank">早季ios客户端兼产品原型</a><br></span><span>  5.<a class="is-size-6" href="/2021/06/20/plan/preparation/" target="_blank">《计划学习或了解的软件/技术》</a><br></span><span>  6.<a class="is-size-6" href="/2021/06/15/life/goal/diary/" target="_blank">《每日目标》</a><br></span></div></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/20210527101118.png" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/20210527101100.png" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/07/20/life/log/diary/hello-world50/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">来自新世界的第五十期</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/07/19/learn/book/elements_of_influence/"><span class="level-item">《影响力》阅读</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">评论</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            language:'zh-CN',
+            id: '72120452f2207bc409cb745d6d3b4f55',
+            repo: 'blog-comment',
+            owner: 'sakiraven',
+            clientID: 'c98812d0bb3bbe80e27d',
+            clientSecret: '18dd21afa9cbf7a9790197ae6a90c8d83bb72f41',
+            admin: ["sakiraven"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg" alt="声控周不鸽"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">声控周不鸽</p><p class="is-size-6 is-block">敲喜欢细雨的夜景，街道积水打出的镜面宛如异世界</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>杭州</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">80</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">37</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">11</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/sakiraven" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/sakiraven"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="https://weibo.com/声控周不鸽"><i class="fab fa-weibo"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:sakiraven@icloud.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Next" href="https://sakiraven.github.io"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"来源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新评论</h3><span class="body_hot_comment">加载中，最新评论有1分钟缓存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><figure class="media-left"><a class="image" href="/2021/07/20/life/log/diary/hello-world50/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/helloworld-poster.jpeg" alt="来自新世界的第五十期"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-07-19T22:48:10.000Z">2021-07-20</time></p><p class="title"><a href="/2021/07/20/life/log/diary/hello-world50/">来自新世界的第五十期</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/">日志</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/%E6%97%A5%E8%AE%B0/">日记</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-07-19T10:15:55.000Z">2021-07-19</time></p><p class="title"><a href="/2021/07/19/project/saki/client/ios/saki-client-ios/">早季ios客户端兼产品原型</a></p><p class="categories"><a href="/categories/%E9%A1%B9%E7%9B%AE%E8%A7%84%E5%88%92/">项目规划</a> / <a href="/categories/%E9%A1%B9%E7%9B%AE%E8%A7%84%E5%88%92/ios/">ios</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-07-19T07:22:44.000Z">2021-07-19</time></p><p class="title"><a href="/2021/07/19/learn/book/elements_of_influence/">《影响力》阅读</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B9%A6/">书</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/07/19/life/log/diary/hello-world49/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/helloworld-poster.jpeg" alt="来自新世界的第四十九期"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-07-18T22:48:10.000Z">2021-07-19</time></p><p class="title"><a href="/2021/07/19/life/log/diary/hello-world49/">来自新世界的第四十九期</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/">日志</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/%E6%97%A5%E8%AE%B0/">日记</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/07/19/life/log/diary/hello-world51/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/helloworld-poster.jpeg" alt="来自新世界的第四十九期"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-07-18T22:48:10.000Z">2021-07-19</time></p><p class="title"><a href="/2021/07/19/life/log/diary/hello-world51/">来自新世界的第四十九期</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/">日志</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/%E6%97%A5%E8%AE%B0/">日记</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/"><span class="level-start"><span class="level-item">学习</span></span><span class="level-end"><span class="level-item tag">12</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B9%A6/"><span class="level-start"><span class="level-item">书</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/"><span class="level-start"><span class="level-item">系统与服务</span></span><span class="level-end"><span class="level-item tag">5</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/"><span class="level-start"><span class="level-item">linux</span></span><span class="level-end"><span class="level-item tag">5</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/docker/"><span class="level-start"><span class="level-item">docker</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/docker/mysql/"><span class="level-start"><span class="level-item">mysql</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/jenkins/"><span class="level-start"><span class="level-item">jenkins</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/nginx/"><span class="level-start"><span class="level-item">nginx</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/ubuntu/"><span class="level-start"><span class="level-item">ubuntu</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/ubuntu/docker/"><span class="level-start"><span class="level-item">docker</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li></ul></li></ul></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2021/07/"><span class="level-start"><span class="level-item">七月 2021</span></span><span class="level-end"><span class="level-item tag">31</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/06/"><span class="level-start"><span class="level-item">六月 2021</span></span><span class="level-end"><span class="level-item tag">48</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/05/"><span class="level-start"><span class="level-item">五月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E6%97%A5%E6%80%BB%E7%BB%93/"><span class="tag">每日总结</span><span class="tag is-grey-lightest">55</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E5%91%A8%E6%80%BB%E7%BB%93/"><span class="tag">每周总结</span><span class="tag is-grey-lightest">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mysql%E4%B8%93%E6%A0%8F/"><span class="tag">mysql专栏</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ios%E9%A1%B9%E7%9B%AE%E8%A7%84%E5%88%92/"><span class="tag">ios项目规划</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/swift%E4%B8%93%E6%A0%8F/"><span class="tag">swift专栏</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/swift%E6%9D%82%E8%AE%B0/"><span class="tag">swift杂记</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/node/"><span class="tag">node</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E6%9C%88%E6%80%BB%E7%BB%93/"><span class="tag">每月总结</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%9F%E6%B4%BB%E6%80%BB%E7%BB%93/"><span class="tag">生活总结</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%A7%81%E6%B4%BB/"><span class="tag">私活</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%BB%E4%B9%A6/"><span class="tag">读书</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><!--!--><div class="column-right-shadow is-hidden-widescreen"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/声控周不鸽logoblue.png" alt="声控周不鸽的开发者日志" height="28"></a><p class="size-small"><span>&copy; 2021 声控周不鸽</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© <a href="http://www.beian.miit.gov.cn/" target="_blank">冀ICP备20012150号-1</a><br></span><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br/>&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br/></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️本站自 <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> 已运行 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小时 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒！❤️";
+        }var now = new Date();setInterval("createTime('2021/05/28 00:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️感谢 <strong><span id="busuanzi_value_site_uv">99+</span></strong> 小伙伴的 <strong><span id="busuanzi_value_site_pv">99+</span></strong> 次光临！❤️</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><meting-js style="width: auto;height: 2000px;" server="netease" type="playlist" id="6778372041" theme="#2980b9" loop="all" autoplay="false" order="list" storageName="aplayer-setting" lrctype="0" list-max-height="400px" fixed="true"></meting-js></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('c98812d0bb3bbe80e27d','18dd21afa9cbf7a9790197ae6a90c8d83bb72f41','sakiraven','blog-comment',false);})</script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('c98812d0bb3bbe80e27d','18dd21afa9cbf7a9790197ae6a90c8d83bb72f41','sakiraven','blog-comment',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script></body></html>
