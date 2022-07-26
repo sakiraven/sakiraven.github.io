@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>7折steam - 声控周不鸽的开发者日志</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="声控周不鸽的开发者日志"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="声控周不鸽的开发者日志"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="摘要之前有尝试做buff倒爷,尝试无果后,将思路转移为差价网站分享"><meta property="og:type" content="blog"><meta property="og:title" content="声控周不鸽"><meta property="og:url" content="https://sakiraven.github.io/"><meta property="og:site_name" content="声控周不鸽"><meta property="og:description" content="摘要之前有尝试做buff倒爷,尝试无果后,将思路转移为差价网站分享"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta property="article:published_time" content="2021-08-25T10:15:55.000Z"><meta property="article:modified_time" content="2021-09-17T04:25:23.956Z"><meta property="article:author" content="声控周不鸽"><meta property="article:tag" content="小程序规划"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/08/25/project/uniapp/steam70off/"},"headline":"声控周不鸽的开发者日志","image":["http://example.com/img/og_image.png"],"datePublished":"2021-08-25T10:15:55.000Z","dateModified":"2021-09-17T04:25:23.956Z","author":{"@type":"Person","name":"声控周不鸽"},"description":"摘要之前有尝试做buff倒爷,尝试无果后,将思路转移为差价网站分享"}</script><link rel="canonical" href="http://example.com/2021/08/25/project/uniapp/steam70off/"><link rel="icon" href="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/声控周不鸽logoblue.png" alt="声控周不鸽的开发者日志" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/about/index.html">自述</a><a class="navbar-item" href="/album/index.html">相册</a><a class="navbar-item" href="/self-talking/index.html">碎碎念</a><a class="navbar-item" href="/friend/index.html">友链</a><a class="navbar-item" href="/message/index.html">留言</a><a class="navbar-item" href="/thanks/index.html">鸣谢</a><a class="navbar-item" href="/categories/index.html">分类</a><a class="navbar-item" href="/tags/index.html">标签</a><a class="navbar-item" href="/archives/index.html">归档</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/hexo-theme-amazing/community"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-08-25  <a class="commentCountImg" href="/2021/08/25/project/uniapp/steam70off/#comment-container"><span class="display-none-class">f0c0e5821fc46ed284e4636e33faa313</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="f0c0e5821fc46ed284e4636e33faa313">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>6 分钟  <i class="fas fa-pencil-alt"> </i>0.9 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">7折steam</h1><div class="content"><blockquote>
+<p>摘要<br>之前有尝试做buff倒爷,尝试无果后,将思路转移为差价网站分享</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="想法出处"><a href="#想法出处" class="headerlink" title="想法出处"></a>想法出处</h2><p>做buuf倒爷的过程中遇到一个问题,无法将steam金币完全转出,有隐藏额度限制.但是这并不妨碍优惠购买游戏.</p>
+<h2 id="爬虫参考文章"><a href="#爬虫参考文章" class="headerlink" title="爬虫参考文章"></a>爬虫参考文章</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43739951/article/details/108894670#comments_13370315">https://blog.csdn.net/qq_43739951/article/details/108894670#comments_13370315</a></p>
+<ul>
+<li>速度太慢,尝试添加线程数,尝试无果,因为steam商品详情接口查询频率不能超过1.5秒1次.决定放弃查询24小时交易记录,改为用户手动查询,然后提交到服务器</li>
+<li>重新解析信息</li>
+<li>有点杂乱决定搬运到java上</li>
+<li>buff:10 - 13秒一次接口,大致连续900页就会被封号</li>
+<li>steam查询商品详情接口1.5秒一次,建议2秒一次</li>
+<li>每日连续拉取700页后停止拉取,每日一次更新</li>
+<li>steam24小时销售额两种方式更新<ul>
+<li>用户查询到数据后友client查询并更新(优点:假设在用户量大的时候更新速度快.缺点:第一批用户体验差)</li>
+<li>后端更新(1000条数据大致需要1小时,可接受范围内,但还不确定steam429策略)</li>
+</ul>
+</li>
+<li>每1分钟连续请求20条steam info.持续30分钟后持续429.</li>
+</ul>
+<h2 id="建议鸣谢"><a href="#建议鸣谢" class="headerlink" title="建议鸣谢"></a>建议鸣谢</h2><ul>
+<li>金志炜: 销售额 -&gt; 销售量</li>
+<li>邱双: 视频内二维码长留</li>
+<li>fox: 提供规避反爬思路</li>
+<li>no game no life: 提供功能思路,选择游戏,推荐饰品</li>
+<li>@bilibili-22考研山科的多莫: 折扣率应该是 价格/1.15 而非 价格*0.85.我错的理解的steam15%手续费的含义</li>
+<li>烨董建议文字过短不要滚动</li>
+</ul>
+<h2 id="待实现"><a href="#待实现" class="headerlink" title="待实现"></a>待实现</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> ～～销量排序(老板需求)～～</li>
+<li><input disabled="" type="checkbox"> dota饰品爬取(老板需求)</li>
+<li><input disabled="" type="checkbox"> 通过ip池形式,规避steam反爬,以提升爬取速度与稳定性</li>
+</ul>
+<h2 id="2021-09-16"><a href="#2021-09-16" class="headerlink" title="2021-09-16"></a>2021-09-16</h2><ul>
+<li>思考了一下ip池的可行性,因为我需要梯子代理来实现爬取steam市场数据</li>
+<li>将爬取dota数据提上日程</li>
+</ul>
+<h2 id="20201-09-15"><a href="#20201-09-15" class="headerlink" title="20201-09-15"></a>20201-09-15</h2><ul>
+<li>小程序人数因b站视频的曝光,用户增多,虽然存留几乎没什么,但有人打赏提出加入销量筛选,老板的需求当然是尽力满足<ul>
+<li>添加销量筛选</li>
+<li>添加折扣率筛选</li>
+<li>添加全量数据筛选</li>
+<li>添加近两日数据筛选</li>
+<li>修改文案 销售额-&gt;销售量</li>
+</ul>
+</li>
+<li>将于16日早6点发布</li>
+</ul>
+<h2 id="20201-09-02"><a href="#20201-09-02" class="headerlink" title="20201-09-02"></a>20201-09-02</h2><ul>
+<li>视频制作完毕,找了一些朋友帮忙审核</li>
+<li>邱双发现了视频二维码最后缺一块</li>
+<li>no game no lie让我找到了未来做视频的方向</li>
+<li>胜楠、🔒给了我标题的灵感</li>
+</ul>
+<h2 id="20201-09-01"><a href="#20201-09-01" class="headerlink" title="20201-09-01"></a>20201-09-01</h2><ul>
+<li>视频文稿</li>
+<li>视频录音</li>
+<li>视频制作进度50%,一直到凌晨4点就很痛苦</li>
+</ul>
+<h2 id="2021-09-31"><a href="#2021-09-31" class="headerlink" title="2021-09-31"></a>2021-09-31</h2><ul>
+<li>测试bug与调整页面</li>
+<li>思考饰品标题与封面</li>
+<li>测试请求策略<ul>
+<li>目前最优解每分钟请求1页buff.连续请求20条steam info.可以坚持30分钟</li>
+<li>将代理改为自动切换节点,尝试解决</li>
+</ul>
+</li>
+<li>添加计算折扣率模块</li>
+<li>添加分享功能</li>
+</ul>
+<h2 id="2021-09-30"><a href="#2021-09-30" class="headerlink" title="2021-09-30"></a>2021-09-30</h2><ul>
+<li>完善小程序赞赏</li>
+<li>提交审核</li>
+<li>联系测试</li>
+<li>上线后发现web-view不能使用非业务域名,只能给用户复制url</li>
+</ul>
+<h2 id="2021-08-29"><a href="#2021-08-29" class="headerlink" title="2021-08-29"></a>2021-08-29</h2><ul>
+<li>确定打赏页面样式</li>
+</ul>
+<h2 id="2021-08-28"><a href="#2021-08-28" class="headerlink" title="2021-08-28"></a>2021-08-28</h2><ul>
+<li>心血来潮搞了个通宵</li>
+<li>buff数据对接、steam数据对接、饰品渲染、steam数据渲染、历史信息渲染</li>
+</ul>
+<h2 id="2021-08-27"><a href="#2021-08-27" class="headerlink" title="2021-08-27"></a>2021-08-27</h2><ul>
+<li>cad css样式</li>
+<li>渲染</li>
+</ul>
+<h2 id="2021-08-26"><a href="#2021-08-26" class="headerlink" title="2021-08-26"></a>2021-08-26</h2><ul>
+<li>将python接口转移到java</li>
+</ul>
+<h2 id="2021-08-25"><a href="#2021-08-25" class="headerlink" title="2021-08-25"></a>2021-08-25</h2><ul>
+<li>测试爬虫</li>
+</ul>
+<h2 id="2021-08-24"><a href="#2021-08-24" class="headerlink" title="2021-08-24"></a>2021-08-24</h2><ul>
+<li>找合适的爬虫</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>7折steam</p><p><a href="http://example.com/2021/08/25/project/uniapp/steam70off/">http://example.com/2021/08/25/project/uniapp/steam70off/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><a href="http://example.com"><p>声控周不鸽</p></a></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-08-25</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-09-17</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="recommend-area"><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 推荐文章</span><br><span>  1.<a class="is-size-6" href="/2021/09/05/life/log/weekly/weekly-review-end/" target="_blank">《每周回顾终》</a><br></span><span>  2.<a class="is-size-6" href="/2021/06/03/project/ios/project-planning-lifetrip/" target="_blank">项目规划生命之旅其一</a><br></span><span>  3.<a class="is-size-6" href="/2021/06/03/project/java/saki-server-base/" target="_blank">saki-server-2.0-base框架</a><br></span><span>  4.<a class="is-size-6" href="/2021/08/25/project/uniapp/steam70off/" target="_blank">7折steam</a><br></span><span>  5.<a class="is-size-6" href="/2021/06/08/life/summary/perception/selfdelivery/" target="_blank">《自我救赎》</a><br></span><span>  6.<a class="is-size-6" href="/2021/07/19/project/saki/base/saki-base-think/" target="_blank">早季base思考</a><br></span></div></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/20210527101118.png" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/20210527101100.png" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/08/26/life/log/diary/hello-world88/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">来自新世界的第八十八期</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/08/25/life/log/diary/hello-world87/"><span class="level-item">来自新世界的第八十七期</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">评论</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            language:'zh-CN',
+            id: 'f0c0e5821fc46ed284e4636e33faa313',
+            repo: 'blog-comment',
+            owner: 'sakiraven',
+            clientID: 'c98812d0bb3bbe80e27d',
+            clientSecret: '18dd21afa9cbf7a9790197ae6a90c8d83bb72f41',
+            admin: ["sakiraven"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg" alt="声控周不鸽"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">声控周不鸽</p><p class="is-size-6 is-block">敲喜欢细雨的夜景，街道积水打出的镜面宛如异世界</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>杭州</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">154</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">59</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">25</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/sakiraven" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/sakiraven"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="https://weibo.com/声控周不鸽"><i class="fab fa-weibo"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:sakiraven@icloud.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Next" href="https://sakiraven.github.io"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"来源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新评论</h3><span class="body_hot_comment">加载中，最新评论有1分钟缓存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-12T08:59:48.000Z">2022-07-12</time></p><p class="title"><a href="/2022/07/12/work/project/shici/">中华诗词库</a></p><p class="categories"><a href="/categories/%E5%B7%A5%E4%BD%9C/">工作</a> / <a href="/categories/%E5%B7%A5%E4%BD%9C/%E9%A1%B9%E7%9B%AE/">项目</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-06T07:22:44.000Z">2022-07-06</time></p><p class="title"><a href="/2022/07/06/docker/dnf/">dnf容器</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/docker/">docker</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/docker/dnf/">dnf</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-04T07:22:44.000Z">2022-07-04</time></p><p class="title"><a href="/2022/07/04/learn/language/js/vue/html-use-vue-template/">html使用vue模版</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AF%AD%E8%A8%80/">语言</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AF%AD%E8%A8%80/js/">js</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AF%AD%E8%A8%80/js/vue/">vue</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-21T06:51:56.000Z">2022-06-21</time></p><p class="title"><a href="/2022/06/21/learn/systemserver/linux/ubuntu/docker/portdynasetting/">mac动态添加端口号</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/">系统与服务</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/">linux</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/ubuntu/">ubuntu</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/ubuntu/docker/">docker</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-20T07:22:44.000Z">2022-06-20</time></p><p class="title"><a href="/2022/06/20/learn/language/java/jdk-add-ssl/">jdk添加ssl证书</a></p><p class="categories"><a href="/categories/java/">java</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/java/"><span class="level-start"><span class="level-item">java</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/"><span class="level-start"><span class="level-item">学习</span></span><span class="level-end"><span class="level-item tag">23</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/docker/"><span class="level-start"><span class="level-item">docker</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/docker/dnf/"><span class="level-start"><span class="level-item">dnf</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/"><span class="level-start"><span class="level-item">中间件</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/mysql/"><span class="level-start"><span class="level-item">mysql</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/mysql/%E6%9D%82%E8%AE%B0/"><span class="level-start"><span class="level-item">杂记</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B9%A6/"><span class="level-start"><span class="level-item">书</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/"><span class="level-start"><span class="level-item">系统与服务</span></span><span class="level-end"><span class="level-item tag">10</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/"><span class="level-start"><span class="level-item">linux</span></span><span class="level-end"><span class="level-item tag">10</span></span></a><ul class="mr-0"></ul></li></ul></li></ul></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2022/07/"><span class="level-start"><span class="level-item">七月 2022</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/06/"><span class="level-start"><span class="level-item">六月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/05/"><span class="level-start"><span class="level-item">五月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/10/"><span class="level-start"><span class="level-item">十月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/09/"><span class="level-start"><span class="level-item">九月 2021</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E6%97%A5%E6%80%BB%E7%BB%93/"><span class="tag">每日总结</span><span class="tag is-grey-lightest">99</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E5%91%A8%E6%80%BB%E7%BB%93/"><span class="tag">每周总结</span><span class="tag is-grey-lightest">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mysql%E4%B8%93%E6%A0%8F/"><span class="tag">mysql专栏</span><span class="tag is-grey-lightest">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/swift%E4%B8%93%E6%A0%8F/"><span class="tag">swift专栏</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E6%9C%88%E6%80%BB%E7%BB%93/"><span class="tag">每月总结</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ios%E9%A1%B9%E7%9B%AE%E8%A7%84%E5%88%92/"><span class="tag">ios项目规划</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/docker%E4%B8%93%E6%A0%8F/"><span class="tag">docker专栏</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/swift%E6%9D%82%E8%AE%B0/"><span class="tag">swift杂记</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%A5%E4%BD%9C/"><span class="tag">工作</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%A7%84%E5%88%92/"><span class="tag">规划</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mysql%E6%9D%82%E8%AE%B0/"><span class="tag">Mysql杂记</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dnf/"><span class="tag">dnf</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/docker/"><span class="tag">docker</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/java/"><span class="tag">java</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/java%E6%9D%82%E8%AE%B0/"><span class="tag">java杂记</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/node/"><span class="tag">node</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/redis%E4%B8%93%E6%A0%8F/"><span class="tag">redis专栏</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/vue/"><span class="tag">vue</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%9F%8E/"><span class="tag">天空之城</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%84%E5%88%92/"><span class="tag">小程序规划</span><span class="tag is-grey-lightest">1</span></a></div></div><div class="field is-grouped is-grouped-multiline"><a class="tags has-addons" href="/tags/"><span class="tag">查看全部&gt;&gt;</span></a></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><!--!--><div class="column-right-shadow is-hidden-widescreen"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/声控周不鸽logoblue.png" alt="声控周不鸽的开发者日志" height="28"></a><p class="size-small"><span>&copy; 2022 声控周不鸽</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© <a href="http://www.beian.miit.gov.cn/" target="_blank">冀ICP备20012150号-1</a><br></span><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br/>&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br/></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️本站自 <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> 已运行 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小时 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒！❤️";
+        }var now = new Date();setInterval("createTime('2021/05/28 00:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️感谢 <strong><span id="busuanzi_value_site_uv">99+</span></strong> 小伙伴的 <strong><span id="busuanzi_value_site_pv">99+</span></strong> 次光临！❤️</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><meting-js style="width: auto;height: 2000px;" server="netease" type="playlist" id="6778372041" theme="#2980b9" loop="all" autoplay="false" order="list" storageName="aplayer-setting" lrctype="0" list-max-height="400px" fixed="true"></meting-js></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('c98812d0bb3bbe80e27d','18dd21afa9cbf7a9790197ae6a90c8d83bb72f41','sakiraven','blog-comment',false);})</script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('c98812d0bb3bbe80e27d','18dd21afa9cbf7a9790197ae6a90c8d83bb72f41','sakiraven','blog-comment',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script></body></html>

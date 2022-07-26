@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>来自新世界终 - 声控周不鸽的开发者日志</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="声控周不鸽的开发者日志"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="声控周不鸽的开发者日志"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="每日记录自95期后整合"><meta property="og:type" content="blog"><meta property="og:title" content="声控周不鸽"><meta property="og:url" content="https://sakiraven.github.io/"><meta property="og:site_name" content="声控周不鸽"><meta property="og:description" content="每日记录自95期后整合"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta property="article:published_time" content="2021-09-05T22:48:10.000Z"><meta property="article:modified_time" content="2022-05-10T02:14:05.584Z"><meta property="article:author" content="声控周不鸽"><meta property="article:tag" content="每日总结"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/09/06/life/log/diary/hello-world-end/"},"headline":"声控周不鸽的开发者日志","image":[],"datePublished":"2021-09-05T22:48:10.000Z","dateModified":"2022-05-10T02:14:05.584Z","author":{"@type":"Person","name":"声控周不鸽"},"description":"每日记录自95期后整合"}</script><link rel="canonical" href="http://example.com/2021/09/06/life/log/diary/hello-world-end/"><link rel="icon" href="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/声控周不鸽logoblue.png" alt="声控周不鸽的开发者日志" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/about/index.html">自述</a><a class="navbar-item" href="/album/index.html">相册</a><a class="navbar-item" href="/self-talking/index.html">碎碎念</a><a class="navbar-item" href="/friend/index.html">友链</a><a class="navbar-item" href="/message/index.html">留言</a><a class="navbar-item" href="/thanks/index.html">鸣谢</a><a class="navbar-item" href="/categories/index.html">分类</a><a class="navbar-item" href="/tags/index.html">标签</a><a class="navbar-item" href="/archives/index.html">归档</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/hexo-theme-amazing/community"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/helloworld-poster.jpeg" alt="来自新世界终"></span></div><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-09-06  <a class="commentCountImg" href="/2021/09/06/life/log/diary/hello-world-end/#comment-container"><span class="display-none-class">5e49a34e1cb17836d4451d25b3218011</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="5e49a34e1cb17836d4451d25b3218011">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>1 小时  <i class="fas fa-pencil-alt"> </i>7.6 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">来自新世界终</h1><div class="content"><blockquote>
+<p>每日记录<br>自95期后整合</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="提议"><a href="#提议" class="headerlink" title="提议"></a>提议</h1><ul>
+<li>五笔:放弃(不合适)</li>
+<li>每周一个小技能</li>
+<li>英语文档阅读,没事多看看swiftui英文文档,毕竟英语才是第一生产力</li>
+</ul>
+<p>#2022-05-10<br>编号:35967 时间:5.9 价值:3.5k 昵称:仕草君<br>编号:58443 时间:5.26 价值:0k 昵称:高桥凉介</p>
+<h1 id="2021-11-07"><a href="#2021-11-07" class="headerlink" title="2021-11-07"></a>2021-11-07</h1><h2 id="题外话"><a href="#题外话" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>凌晨一点</li>
+</ul>
+<h1 id="2021-11-03"><a href="#2021-11-03" class="headerlink" title="2021-11-03"></a>2021-11-03</h1><h2 id="今日总结"><a href="#今日总结" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-1"><a href="#题外话-1" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>例会,心中的不满全说了</li>
+</ul>
+<h2 id="标准"><a href="#标准" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-11-02"><a href="#2021-11-02" class="headerlink" title="2021-11-02"></a>2021-11-02</h1><h2 id="今日总结-1"><a href="#今日总结-1" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-2"><a href="#题外话-2" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>晚上胜楠做的薯条,罪恶感拉满</li>
+<li>大黑问胜楠是否找到工作,我感觉这种问题挺尖锐的,情商不在线,也怪胜楠之前去问大黑同样的问题,不管出发点是如何的,两人五五开</li>
+<li>大黑再次没有及时刷碗</li>
+</ul>
+<h2 id="标准-1"><a href="#标准-1" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-11-01"><a href="#2021-11-01" class="headerlink" title="2021-11-01"></a>2021-11-01</h1><h2 id="今日总结-2"><a href="#今日总结-2" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-3"><a href="#题外话-3" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>胜楠帝国时代太菜了 over</li>
+</ul>
+<h2 id="标准-2"><a href="#标准-2" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-31"><a href="#2021-10-31" class="headerlink" title="2021-10-31"></a>2021-10-31</h1><h2 id="今日总结-3"><a href="#今日总结-3" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-4"><a href="#题外话-4" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>胜楠做的水煮肉</li>
+<li>帝国时代42v2,很刺激,明天试试野兵营战术</li>
+</ul>
+<h2 id="标准-3"><a href="#标准-3" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-30"><a href="#2021-10-30" class="headerlink" title="2021-10-30"></a>2021-10-30</h1><h2 id="今日总结-4"><a href="#今日总结-4" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }<br><br/><br>{ % post_link project/saki/client/java/saki-client-java % }</p>
+<h2 id="题外话-5"><a href="#题外话-5" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>醒来就和胜楠一起帝国时代4,这游戏基本快到头了,可玩性较低</li>
+<li>玩够了回归工作</li>
+<li>写的过程中在思考就算写出第一版我该如何维护剩下的代码,<br>  一个人肯定是没办法做到的,即使有人投资,假设有20w,开公司肯定不够,<br>  本身属于福利项目,初期几乎不能赚到钱,能想到的只有被大厂收购.</li>
+<li>明天试着和胜楠谈谈,我出5000-10000快之间,两年给齐用这个条件和胜楠商量下,<br>  帮我开发安卓前端?但是要用到flutter不知道能否胜任</li>
+<li>大黑加班一段时间了,加班真的是福报</li>
+</ul>
+<h2 id="标准-4"><a href="#标准-4" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-29"><a href="#2021-10-29" class="headerlink" title="2021-10-29"></a>2021-10-29</h1><h2 id="今日总结-5"><a href="#今日总结-5" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-6"><a href="#题外话-6" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>和胜楠玩一下午,2v2电脑,困难都没打过…晚上去吃了许府牛,回来自己开了一盘极难电脑,就随便打</li>
+<li>勇者斗恶龙45小时存档通关完结撒花</li>
+</ul>
+<h2 id="标准-5"><a href="#标准-5" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-28"><a href="#2021-10-28" class="headerlink" title="2021-10-28"></a>2021-10-28</h1><h2 id="今日总结-6"><a href="#今日总结-6" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-7"><a href="#题外话-7" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>帝国时代4和我想的差不多,做的挺一般的…未来还会不会有超越星际争霸2的rts游戏</li>
+<li>勇者斗恶龙</li>
+<li>帝国时代4和我想的差不多,做的挺一般的…未来还会不会有超越星际争霸2的rts游戏</li>
+<li>胜楠夜宵伺候茄子</li>
+<li>网球战了几个回合,开始和我有来有回,任天堂大礼包玩了一圈</li>
+<li>体验了5小时后去玩勇者斗恶龙</li>
+<li>和董烨借了台ipad做随航显示器,挺好玩的<h2 id="标准-6"><a href="#标准-6" class="headerlink" title="标准"></a>标准</h2></li>
+</ul>
+<ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-27"><a href="#2021-10-27" class="headerlink" title="2021-10-27"></a>2021-10-27</h1><h2 id="今日总结-7"><a href="#今日总结-7" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-8"><a href="#题外话-8" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>和胜楠约了帝国时代4</li>
+<li>勇者斗恶龙</li>
+</ul>
+<h2 id="标准-7"><a href="#标准-7" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-26"><a href="#2021-10-26" class="headerlink" title="2021-10-26"></a>2021-10-26</h1><h2 id="今日总结-8"><a href="#今日总结-8" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-9"><a href="#题外话-9" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>风平浪静</li>
+</ul>
+<h2 id="标准-8"><a href="#标准-8" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-25"><a href="#2021-10-25" class="headerlink" title="2021-10-25"></a>2021-10-25</h1><h2 id="今日总结-9"><a href="#今日总结-9" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-10"><a href="#题外话-10" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>和胜楠取超市购物共花费92.5</li>
+<li>改良一下牛肉豆腐,添加一些蔬菜丁</li>
+<li>昨晚熬夜,今早赖床补番,今天一定要在3点30睡</li>
+</ul>
+<h2 id="标准-9"><a href="#标准-9" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-24"><a href="#2021-10-24" class="headerlink" title="2021-10-24"></a>2021-10-24</h1><h2 id="今日总结-10"><a href="#今日总结-10" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-11"><a href="#题外话-11" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>收拾了一下屋子</li>
+<li>打了会代码后胜楠给我送了炸肉</li>
+<li>吃完后胜楠约我任天堂全家桶玩到10点30,那个提子特别好吃</li>
+<li>回来后看看陈一发的录播,听听王菲的歌,打打码直到4点上床</li>
+</ul>
+<h2 id="标准-10"><a href="#标准-10" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-23"><a href="#2021-10-23" class="headerlink" title="2021-10-23"></a>2021-10-23</h1><h2 id="今日总结-11"><a href="#今日总结-11" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-12"><a href="#题外话-12" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>大黑加班,我说今天为何如此清净</li>
+<li>叫着胜楠去扔垃圾,然后他带着我去了超市shopping</li>
+<li>回来后打打码</li>
+<li>勇者斗恶龙吧</li>
+</ul>
+<h2 id="标准-11"><a href="#标准-11" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-22"><a href="#2021-10-22" class="headerlink" title="2021-10-22"></a>2021-10-22</h1><h2 id="今日总结-12"><a href="#今日总结-12" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-13"><a href="#题外话-13" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>胜楠下厨我收拾</li>
+<li>大黑要提前给我房租,我对他的回复如下<ul>
+<li>刚才在收拾厨房 没看到信息.</li>
+<li>你不用这么敏感提前给我,我也从来没有要求过</li>
+<li>你只需要按照我们制定的规则执行即可,26号开始5天内把房租给我就行.我也不会去催.我也不喜欢去催,我更不喜欢把心思放在这方面.</li>
+<li>你要是对规则有质疑你就应该在例会上提出来,我在最开始在商量房租分摊时就怕你有意见,特意给你一个星期的考虑时间,第二个星期再确定的,你也说可以,<br>  而且考虑到你找到的工作可能会很远,也没有要求你像胜楠一样在这里住满一年,没有束缚的自由身,你再失信是不是就有点过分了.</li>
+<li>当天没有回复</li>
+</ul>
+</li>
+<li>和胜楠快乐任天堂全家桶,输了我两碗水,最后玩了会俄罗斯方块</li>
+</ul>
+<h2 id="标准-12"><a href="#标准-12" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-21"><a href="#2021-10-21" class="headerlink" title="2021-10-21"></a>2021-10-21</h1><h2 id="今日总结-13"><a href="#今日总结-13" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-14"><a href="#题外话-14" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>购物一波,回来加餐了一份虾</li>
+<li>和fox吹吹水,聊聊未来方向</li>
+<li>吃完就很晚了,看了会直播去玩游戏了</li>
+</ul>
+<h2 id="标准-13"><a href="#标准-13" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-20"><a href="#2021-10-20" class="headerlink" title="2021-10-20"></a>2021-10-20</h1><h2 id="今日总结-14"><a href="#今日总结-14" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-15"><a href="#题外话-15" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>胜楠亲自下厨做的鸡胗,鸡翅,洋葱炒鸡蛋,很好吃</li>
+<li>晚上的时候我蛊惑胜楠一起吃了包方便面,要胖大家一起胖</li>
+<li>dq11</li>
+</ul>
+<h2 id="标准-14"><a href="#标准-14" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input checked="" disabled="" type="checkbox"> 3组哑铃</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-19"><a href="#2021-10-19" class="headerlink" title="2021-10-19"></a>2021-10-19</h1><h2 id="今日总结-15"><a href="#今日总结-15" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }<br><br/><br>{ % post_link project/saki/client/java/saki-client-java % }</p>
+<h2 id="题外话-16"><a href="#题外话-16" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>胜楠告诉我明天他亲自下厨,请我吃大餐</li>
+<li>吃了包方便面,但是零食摄入减少,还算是能连摄入正常吧</li>
+<li>赖床了2小时哈哈哈</li>
+<li>代码磨到12点30,也算是8小时,但是中途看了近两个小时视频,其实进度还算凑合,如果没有浪费之前两个月的时间话</li>
+<li>12点45去勇者斗恶龙啦,玩到2点30,3点睡觉gogo</li>
+</ul>
+<h2 id="标准-15"><a href="#标准-15" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,1公里边跑边走</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-18"><a href="#2021-10-18" class="headerlink" title="2021-10-18"></a>2021-10-18</h1><h2 id="今日总结-16"><a href="#今日总结-16" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }<br><br/><br>{ % post_link project/saki/client/java/saki-client-java % }</p>
+<h2 id="题外话-17"><a href="#题外话-17" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>胜楠在家第一天,晚上吃饭时说要去买菜,我不想动,直接拒绝.胜楠二次邀请我直接答应,他好像想起了什么,说明天去.我同样答应,我说得下午1点,因为我12点起床,<br>  他想了想算了,毕竟生物钟不在同一段上</li>
+<li>胜楠维护的厨房卫生很干净</li>
+<li>看了下公厕卫生还算ok</li>
+<li>给菊花看了一下我吃的中午饭</li>
+<li>富婆让我给他转1.2w买机票,很快就还我了</li>
+</ul>
+<h2 id="标准-16"><a href="#标准-16" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input checked="" disabled="" type="checkbox"> 3组哑铃,1公里边跑边走</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-17"><a href="#2021-10-17" class="headerlink" title="2021-10-17"></a>2021-10-17</h1><h2 id="今日总结-17"><a href="#今日总结-17" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-18"><a href="#题外话-18" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>胜楠将厨房卫生打扫的非常干净,希望可以保持住</li>
+<li>显示器售后回来了,快递服务态度很差,验货没问题</li>
+<li>烨董请客吃烧烤,日常乌苏,聊了下我朋友要走了,其他基本各种调侃,见识了一下他的社交牛逼症</li>
+<li>勇者斗恶龙</li>
+</ul>
+<h2 id="标准-17"><a href="#标准-17" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,1公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-16"><a href="#2021-10-16" class="headerlink" title="2021-10-16"></a>2021-10-16</h1><h2 id="今日总结-18"><a href="#今日总结-18" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-19"><a href="#题外话-19" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>醒来后就在和胜楠大黑大乱斗,最后和胜楠pk马车8,输家喝一碗水,我是胜者哈哈哈</li>
+<li>勇者斗恶龙</li>
+</ul>
+<h2 id="标准-18"><a href="#标准-18" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,1公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-15"><a href="#2021-10-15" class="headerlink" title="2021-10-15"></a>2021-10-15</h1><h2 id="今日总结-19"><a href="#今日总结-19" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-20"><a href="#题外话-20" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>电信超级管理页面在192.168.1.1:8080</li>
+<li>胜楠被公司坑了,我觉得吧,公司的项目不是自己的,没必要太动心思,领导说什么就是什么完事了</li>
+</ul>
+<h2 id="标准-19"><a href="#标准-19" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,1公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-14"><a href="#2021-10-14" class="headerlink" title="2021-10-14"></a>2021-10-14</h1><h2 id="今日总结-20"><a href="#今日总结-20" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-21"><a href="#题外话-21" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>清理主厕卫生,我心态真的是要爆炸,用了2个小时才搞完</li>
+</ul>
+<h2 id="标准-20"><a href="#标准-20" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,1公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 每日代码量 在思考图片保存方式,对比七牛与腾讯,最后看腾讯文档</li>
+</ol>
+<h1 id="2021-10-13"><a href="#2021-10-13" class="headerlink" title="2021-10-13"></a>2021-10-13</h1><h2 id="今日总结-21"><a href="#今日总结-21" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-22"><a href="#题外话-22" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>显示器售后人员联系我明天来帮我查看维修</li>
+<li>晚上和胜楠大乱斗,快玩到头了,这游戏还蛮难的,当时买来是想打网战的,没勇气了</li>
+<li>胜楠搞了个青芒吃,挺酸的[捂脸]这玩意儿不适合我</li>
+</ul>
+<h2 id="标准-21"><a href="#标准-21" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input checked="" disabled="" type="checkbox"> 3组哑铃,1公里边跑边走</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-12"><a href="#2021-10-12" class="headerlink" title="2021-10-12"></a>2021-10-12</h1><h2 id="今日总结-22"><a href="#今日总结-22" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-23"><a href="#题外话-23" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>能量守恒,中午不吃跳到晚上等酱骨</li>
+<li>今日净重首次到达125</li>
+</ul>
+<h2 id="标准-22"><a href="#标准-22" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input checked="" disabled="" type="checkbox"> 3组哑铃,1公里边跑边走</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-11"><a href="#2021-10-11" class="headerlink" title="2021-10-11"></a>2021-10-11</h1><h2 id="今日总结-23"><a href="#今日总结-23" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-24"><a href="#题外话-24" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>胜楠说他的号找回来,为了庆祝,明天去恰酱骨</li>
+</ul>
+<h2 id="标准-23"><a href="#标准-23" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-10"><a href="#2021-10-10" class="headerlink" title="2021-10-10"></a>2021-10-10</h1><h2 id="今日总结-24"><a href="#今日总结-24" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-25"><a href="#题外话-25" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>再次精炼了蒸牛肉食谱,感觉今后都可以吃</li>
+<li>下午马车,胜楠拉了,后面换成大乱斗</li>
+<li>格斗游戏我是又菜又爱玩,还想玩的好,就很痛苦</li>
+<li>胳膊太痛,明晚哑铃</li>
+</ul>
+<h2 id="标准-24"><a href="#标准-24" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-09"><a href="#2021-10-09" class="headerlink" title="2021-10-09"></a>2021-10-09</h1><h2 id="今日总结-25"><a href="#今日总结-25" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-26"><a href="#题外话-26" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>搞了一顿蒸牛肉豆腐+紫薯,蛮好吃的,以后吃这个套餐就好了,好做、好吃、省钱、能量适中、饱腹感强</li>
+<li>胜楠公司转型,准备辞职,挺难受的,最差的结果是我一个人租住</li>
+<li>大乱斗到了练了一下,太难了,晚上和大黑胜楠一起玩了一下,一直到1点30</li>
+<li>开始恢复运动</li>
+</ul>
+<h2 id="标准-25"><a href="#标准-25" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input checked="" disabled="" type="checkbox"> 3组哑铃,2公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-08"><a href="#2021-10-08" class="headerlink" title="2021-10-08"></a>2021-10-08</h1><h2 id="今日总结-26"><a href="#今日总结-26" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }<br><br/><br>{ % post_link project/saki/client/java/saki-client-java % }</p>
+<h2 id="题外话-27"><a href="#题外话-27" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>显示器不亮了,淘宝客服回复效率很差,已经在退款了</li>
+</ul>
+<h2 id="标准-26"><a href="#标准-26" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-07"><a href="#2021-10-07" class="headerlink" title="2021-10-07"></a>2021-10-07</h1><h2 id="今日总结-27"><a href="#今日总结-27" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-28"><a href="#题外话-28" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>被秋双拒绝,挺心痛的,自己也是蠢非要去贴冷屁股</li>
+<li>玩守望的时候就很气,总能遇到那种傻逼,奶呢奶呢,我还想问输出输出呢</li>
+<li>jrpg很慢热,投入进去后就真香,这才是玩游戏的感觉</li>
+</ul>
+<h2 id="标准-27"><a href="#标准-27" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-06"><a href="#2021-10-06" class="headerlink" title="2021-10-06"></a>2021-10-06</h1><h2 id="今日总结-28"><a href="#今日总结-28" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }<br><br/><br>{ % post_link project/saki/client/java/saki-client-java % }</p>
+<h2 id="题外话-29"><a href="#题外话-29" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li><p>代码写一半胜楠叫我去玩马车,玩完去购物了,回来互相在生闷气,挺离谱的</p>
+</li>
+<li><p>后来边看直播边写代码的时候,感觉炉石酒馆的赛事小程序可以搞,明天和秋双聊聊,如果他愿意帮助我来开发,感觉可以搞,自己实在是太累了</p>
+</li>
+<li><p>很烦躁,想将swiftui重构为uikit,swiftui开发复杂项目还是有待商榷.但swiftui的mvvm架构属实不想让自己更换到uikit.<br>  而且未来开发安卓要用flutter,两者相似度挺高的,为毛还要去摸uikit,我忍了…</p>
+</li>
+<li><p>我想做一个星际/魔兽/炉石 酒馆赛事发布小程序</p>
+<ul>
+<li>角色<ul>
+<li>选手&lt;=&gt;主办方 管理</li>
+</ul>
+</li>
+<li>吸引点<ul>
+<li>主办方积分、热情</li>
+<li>选手积分、奖金</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="标准-28"><a href="#标准-28" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-05"><a href="#2021-10-05" class="headerlink" title="2021-10-05"></a>2021-10-05</h1><h2 id="今日总结-29"><a href="#今日总结-29" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }<br><br/><br>{ % post_link project/saki/client/java/saki-client-java % }</p>
+<h2 id="题外话-30"><a href="#题外话-30" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>风平浪静的一天开发</li>
+</ul>
+<h2 id="标准-29"><a href="#标准-29" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-04"><a href="#2021-10-04" class="headerlink" title="2021-10-04"></a>2021-10-04</h1><h2 id="今日总结-30"><a href="#今日总结-30" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-31"><a href="#题外话-31" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>中午胜楠给我带了块蛋挞</li>
+<li>下午马里奥赛车</li>
+<li>开了例会</li>
+<li>去陕西风味点了份酱骨,量非常大…</li>
+<li>晚上去楼顶吹风吹吹水</li>
+<li>回来后和烨董玩了一会永劫无间,还排到一个妹子</li>
+</ul>
+<h2 id="标准-30"><a href="#标准-30" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-03"><a href="#2021-10-03" class="headerlink" title="2021-10-03"></a>2021-10-03</h1><h2 id="今日总结-31"><a href="#今日总结-31" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-32"><a href="#题外话-32" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>风平浪静的一天开发</li>
+</ul>
+<h2 id="标准-31"><a href="#标准-31" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-02"><a href="#2021-10-02" class="headerlink" title="2021-10-02"></a>2021-10-02</h1><h2 id="今日总结-32"><a href="#今日总结-32" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-33"><a href="#题外话-33" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>上午视频</li>
+<li>下午守望</li>
+<li>晚上地锅鱼</li>
+<li>和胜楠马车8</li>
+<li>胜楠表示大黑很不爽,但我觉得自己已经仁至义尽了</li>
+</ul>
+<h2 id="标准-32"><a href="#标准-32" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-10-01"><a href="#2021-10-01" class="headerlink" title="2021-10-01"></a>2021-10-01</h1><h2 id="今日总结-33"><a href="#今日总结-33" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-34"><a href="#题外话-34" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>马车8、守望</li>
+<li>尝试一下更新steam30off,代理部分没有找到太好的解决办法</li>
+</ul>
+<h2 id="标准-33"><a href="#标准-33" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-30"><a href="#2021-09-30" class="headerlink" title="2021-09-30"></a>2021-09-30</h1><h2 id="今日总结-34"><a href="#今日总结-34" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-35"><a href="#题外话-35" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>8点出发10点到了游乐园,搞了一下碰碰车,看了个演出,就去排队过山车了,很刺激,只有这个时候我才感觉自己有心跳</li>
+<li>回来后非常累,休息一会,楼下商超开业了,和胜楠去下面吃了顿好的.陕西风味的面馆,那个酸梅汤无敌的好喝,临走还打包了一份</li>
+</ul>
+<h2 id="标准-34"><a href="#标准-34" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-29"><a href="#2021-09-29" class="headerlink" title="2021-09-29"></a>2021-09-29</h1><h2 id="今日总结-35"><a href="#今日总结-35" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-36"><a href="#题外话-36" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>醒来后刷了会视频,去了一趟猫咖,拍了很多照片哇</li>
+<li>晚上回来和胜楠体验了一下马里奥赛车8,很好玩,有点上头</li>
+</ul>
+<h2 id="标准-35"><a href="#标准-35" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-28"><a href="#2021-09-28" class="headerlink" title="2021-09-28"></a>2021-09-28</h1><h2 id="今日总结-36"><a href="#今日总结-36" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-37"><a href="#题外话-37" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>晚上时烨董喝点白酒,宿醉一下,对我来说太解压了,去的一家东北菜馆</li>
+</ul>
+<h2 id="标准-36"><a href="#标准-36" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-27"><a href="#2021-09-27" class="headerlink" title="2021-09-27"></a>2021-09-27</h1><h2 id="今日总结-37"><a href="#今日总结-37" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-38"><a href="#题外话-38" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>上午螃蟹到了,光速送他们上天</li>
+<li>中午胜楠电视到了,和卖家测了一下效果</li>
+<li>下午模拟演习去游乐园做过山车,看了很多蹦极的视频,更恐怖的项目,脑中模拟演习了几次,对过山车无感了</li>
+<li>桌面布局改了一下,更加舒适</li>
+<li>然后去配了眼镜,明天发货估计后天到,之前两次去看动漫电影没戴眼镜感觉血亏</li>
+<li>回来时候路过肯德基没有忍住,点了炸鸡可乐冰激凌,太快乐了</li>
+<li>和烨董辩论了一下价值观方面的事情,我为什么选择了学校旁的眼镜店,还有就是,我是社恐不是社障</li>
+<li>12点多要睡觉的时候,一个b站观众拆机后电脑无法进入系统,最后发觉是显卡驱动问题,他上一次异常关机或者没有关机/睡眠状态进行拆机</li>
+<li>今天是工作日,我有点放纵了,还是那个问题,前端开发对于我来说挺痛苦的,总是在逃避</li>
+</ul>
+<h2 id="标准-37"><a href="#标准-37" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-26"><a href="#2021-09-26" class="headerlink" title="2021-09-26"></a>2021-09-26</h1><h2 id="今日总结-38"><a href="#今日总结-38" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-39"><a href="#题外话-39" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>胜楠光速下单switch,我陪跑,搞了个手柄 马奥8 死喷乱涂2</li>
+<li>买了一份螃蟹,这个月请他们换换口味</li>
+</ul>
+<h2 id="标准-38"><a href="#标准-38" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-25"><a href="#2021-09-25" class="headerlink" title="2021-09-25"></a>2021-09-25</h1><h2 id="今日总结-39"><a href="#今日总结-39" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-40"><a href="#题外话-40" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>胜楠说他想买switch,终于要有第一个switch朋友了…</li>
+<li>放假不写代码</li>
+<li>通关了异度之刃2,惆怅许久,这就是jrpg的魅力吧</li>
+</ul>
+<h2 id="标准-39"><a href="#标准-39" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-24"><a href="#2021-09-24" class="headerlink" title="2021-09-24"></a>2021-09-24</h1><h2 id="今日总结-40"><a href="#今日总结-40" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/java/saki-client-java % }</p>
+<h2 id="题外话-41"><a href="#题外话-41" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>李宇找我说他明年可能想去成都走一走,我对川渝还是很有感觉的,想30以后在那定居,如果app做的足够优秀,成都漫展也蛮多的,在那边工作也许是一件好事</li>
+</ul>
+<h2 id="标准-40"><a href="#标准-40" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input checked="" disabled="" type="checkbox"> 公共卫生</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-23"><a href="#2021-09-23" class="headerlink" title="2021-09-23"></a>2021-09-23</h1><h2 id="今日总结-41"><a href="#今日总结-41" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }<br><br/><br>{ % post_link project/saki/client/java/saki-client-java % }</p>
+<h2 id="题外话-42"><a href="#题外话-42" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>还是在使用docker方式搭建fastdfs</li>
+<li>胜楠回来后去吃了麻辣烫,买了很多的零食回来,我把超市新进的巧克力冰激凌包圆了哈哈哈,很快乐</li>
+<li>和胜楠提起了马里奥赛车,他还蛮感兴趣的,有机会搞一下</li>
+<li>买了个蒸锅,准备这个月请大家吃螃蟹</li>
+<li>买了苹果,作为零食性价比极高,还不用担心热量摄入超标</li>
+</ul>
+<h2 id="标准-41"><a href="#标准-41" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-22"><a href="#2021-09-22" class="headerlink" title="2021-09-22"></a>2021-09-22</h1><h2 id="今日总结-42"><a href="#今日总结-42" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }<br><br/><br>{ % post_link project/saki/client/java/saki-client-java % }</p>
+<h2 id="题外话-43"><a href="#题外话-43" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>晚上胜楠回来聊了一会,出去吃了一顿烤鱼,回来天台望月吹逼.最后谈到了很多杨海峰,胜楠要我多包容他,但我觉得自己做的已经很好了,我本身就是受害者,<br>没必要对施害者有更多的包容<ul>
+<li>我对他只想做到1.不亏欠他 2.不给他添麻烦即可.更何况我觉得自己并没有对他有什么不包容的地方.<ul>
+<li>第一个月他呜嗷嚎叫整整一个月,我一句话没有提过,就有一晚声音实在太大,我才过去说一次.因为我认为一个人做的事情可能是偶发的,给他时间自己就可能改正.<br>但事实是怎样的,在我还没有正式开会提出问题时,楼上的邻居先爆发了.导致我被迫受辱,我是最怕给人添麻烦的,但他却拼了命的给邻居添麻烦,给房东添麻烦.<br>我该如何包容,我也没大吵大闹,我还是心平气和的与他沟通,只是将10点30熄灯后禁止吵闹,改成了全天候不许吵闹.因为我觉他没有同理心,没办法为室友做出改变,<br>那我认为只有强制了.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>算了不想吐槽其他的了,这点足以概括他的全部,如果要吐槽还有特别多,我只想与他做一个萍水相逢的房客关系,在他走的时候说不出我任何的不好,我没有亏欠他任何事情.<ol>
+<li>以自己为中心,没有同理心</li>
+<li>没办法主动为室友做出让步与改变</li>
+</ol>
+</li>
+</ul>
+<h2 id="标准-42"><a href="#标准-42" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-12-2021-09-21"><a href="#2021-09-12-2021-09-21" class="headerlink" title="2021-09-12 - 2021-09-21"></a>2021-09-12 - 2021-09-21</h1><h1 id="2021-09-21"><a href="#2021-09-21" class="headerlink" title="2021-09-21"></a>2021-09-21</h1><h2 id="今日总结-43"><a href="#今日总结-43" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-44"><a href="#题外话-44" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>1点醒来看了会视频,玩了一会异度之刃2,点了个早餐煎饼,挺难吃的,9点睡到12点</li>
+<li>下午零食拉满,薯片 面包 可乐 呀土豆,神仙生活</li>
+<li>15的月亮就拍了两张照片,手机没电了,自拍是真的难,哎</li>
+<li>研究了一下,决定不去舟山了,路线,住宿不是太靠谱</li>
+</ul>
+<h2 id="标准-43"><a href="#标准-43" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-20"><a href="#2021-09-20" class="headerlink" title="2021-09-20"></a>2021-09-20</h1><h2 id="今日总结-44"><a href="#今日总结-44" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-45"><a href="#题外话-45" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>守望先锋奶终于到了1500分,低分局莫伊拉效果大于安娜,可以补伤害,有位移保命,奶量大</li>
+</ul>
+<h2 id="标准-44"><a href="#标准-44" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-20-1"><a href="#2021-09-20-1" class="headerlink" title="2021-09-20"></a>2021-09-20</h1><h2 id="今日总结-45"><a href="#今日总结-45" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-46"><a href="#题外话-46" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>守望先锋奶终于到了1500分,低分局莫伊拉效果大于安娜,可以补伤害,有位移保命,奶量大</li>
+</ul>
+<h2 id="标准-45"><a href="#标准-45" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-16"><a href="#2021-09-16" class="headerlink" title="2021-09-16"></a>2021-09-16</h1><h2 id="今日总结-46"><a href="#今日总结-46" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/uniapp/steam70off % }<br><br/><br>{ % post_link project/saki/client/java/saki-client-java % }</p>
+<h2 id="题外话-47"><a href="#题外话-47" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>昨天起得早2点,睡得晚22点,导致一睁眼8点30了,发布延迟了,尬住了,好在之前测试的比较到位,升级一共消耗了1分钟</li>
+<li>胜楠在家办公,中午的时候我们出发去验光,期间还往唐山的医保卡冲了55,这辈子没机会花了.左眼75度,右眼50度.医生说眼镜可配可不配,但我还是需要的<br>(看电影和去漫展的时候戴,还记得当年看天之子的时候忘记戴眼镜,一生的遗憾)</li>
+<li>顺道在医院测了一下体脂,基本标准,主要是太缺乏肌肉了,算是我明年的目标了.像素元同事还问了一下我之前的体重.我和他说瘦了20斤,他发了个牛的表情,我回他<br>了一句:这个世界上没有什么是比减肥更容易的事情了,真心有感而发</li>
+<li>今日又有人打赏了,要求添加dota饰品的爬取,老板的需求提上日程</li>
+<li>买了秋季衣服,确定好了10月1的备选游玩地点为舟山(气候,疫情,社交等都是我们考虑的因素)买了眼镜框,就怕买来自己戴着不好看,和卖家询问后支持退货的我就放心了</li>
+<li>为了庆祝,去吃了烤肉,花费371,体验了一下服务员帮助烤肉,比自己动手省事了很多,吃的很舒适</li>
+<li>回来后胜楠的玩具到了,陪他吹了一会</li>
+<li>碰了两行早季代码,设计样式头疼,实现前端痛苦,和刘博坤聊完后再次确定自己如果错过这个年纪,以后就没机会了,提上日程提上日程</li>
+<li>再然后8点来肿了,写写日志</li>
+</ul>
+<h2 id="标准-46"><a href="#标准-46" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-15"><a href="#2021-09-15" class="headerlink" title="2021-09-15"></a>2021-09-15</h1><h2 id="今日总结-47"><a href="#今日总结-47" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/uniapp/steam70off % }<br><br/><br>{ % post_link project/saki/client/java/saki-client-java % }</p>
+<h2 id="题外话-48"><a href="#题外话-48" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>因昨日烨董请客吃饭,喝了那个大乌苏,没有我想象中的那么夸张,但却是比普通啤酒要上头一些.回来8点睡着,凌晨2点就醒了,时差调回来了,但是没有完全调回来</li>
+<li>小程序被打赏两次<ul>
+<li>第一个人要求添加筛选 心情:兴奋</li>
+<li>第二个人是金志炜 心情:感动</li>
+</ul>
+</li>
+<li>需求当天下午就修改好了,准备明天早6点发布</li>
+<li>本来计划8点睡觉,胜楠回来提起杨海峰将搬离,意料之内,所以我最一开始就没有对这块要求太多.后来又聊了很久,直到10点才结束,虽然很困,但很珍惜和朋友聊天的<br>每一分每一秒.怎么睡着的忘记了,这段消息也是第二天记录的</li>
+</ul>
+<h2 id="标准-47"><a href="#标准-47" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-14"><a href="#2021-09-14" class="headerlink" title="2021-09-14"></a>2021-09-14</h1><h2 id="今日总结-48"><a href="#今日总结-48" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-49"><a href="#题外话-49" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>13点30起来以后,想了一下晚上烨董还要请客出去一趟,索性玩会守望先锋</li>
+<li>吃完回来倒头就睡,2点来钟醒了,时差调过来了但没完全调过来</li>
+<li>买了75块的零食,吃了一颗饼干,很难吃,冻在了冰箱,偶尔解馋下吧.把薯片和面包给胜楠了,要胖大家一起胖,甚至我想把枣泥糕和榴莲酥也给胜楠</li>
+<li>b站播放量单日增长1000,开心</li>
+</ul>
+<h2 id="标准-48"><a href="#标准-48" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-13"><a href="#2021-09-13" class="headerlink" title="2021-09-13"></a>2021-09-13</h1><h2 id="今日总结-49"><a href="#今日总结-49" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % post_link project/saki/client/ios/saki-client-ios % }<br><br/><br>{ % post_link project/saki/client/java/saki-client-java % }</p>
+<h2 id="题外话-50"><a href="#题外话-50" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>生物钟基本稳定在4-5点睡12-13点醒了,其实之前一直保持正常时间起床,但还是感觉午夜战斗才是我的主战场</li>
+<li>最近两天b站视频播放量突然变高了,达到了800+,每天都有点赞的虽然不多,打开看了一下小程序用户数据,居然还有人来用,<br>哈哈哈开心.于是又上传一份到推特,希望能有更多的人来使用<blockquote>
+<p><strong>小程序数据</strong></p>
+</blockquote>
+<div class="justified-gallery"> </li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/1241631521227_.pic_hd.jpg" alt="小程序数据"></p>
+</div>
+
+<ul>
+<li>额不行,推特视频长度限制在140s<h2 id="标准-49"><a href="#标准-49" class="headerlink" title="标准"></a>标准</h2></li>
+</ul>
+<ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input checked="" disabled="" type="checkbox"> 公共卫生</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-11-2021-09-12-沉迷异度之刃2"><a href="#2021-09-11-2021-09-12-沉迷异度之刃2" class="headerlink" title="2021-09-11 - 2021-09-12 沉迷异度之刃2"></a>2021-09-11 - 2021-09-12 沉迷异度之刃2</h1><h2 id="今日总结-50"><a href="#今日总结-50" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-51"><a href="#题外话-51" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>胜楠快乐烤肉</li>
+<li>烨董约我下周二去吃饭,还要做电灯泡,难搞,去感觉是罚站,不去的话我现在就这么几个朋友,每个都格外珍惜</li>
+</ul>
+<h2 id="标准-50"><a href="#标准-50" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-10"><a href="#2021-09-10" class="headerlink" title="2021-09-10"></a>2021-09-10</h1><h2 id="今日总结-51"><a href="#今日总结-51" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-52"><a href="#题外话-52" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>12点起床,午饭还是速冻水饺</li>
+<li>感觉和鸽子的对赌输了,自己买了异度之刃2,上次其实已经快玩完了,还需要重新适应一下</li>
+</ul>
+<h2 id="标准-51"><a href="#标准-51" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-09"><a href="#2021-09-09" class="headerlink" title="2021-09-09"></a>2021-09-09</h1><h2 id="今日总结-52"><a href="#今日总结-52" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-53"><a href="#题外话-53" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>12点起床,看了会视频,吃了10个速冻水饺,给胜楠算了下房租和上周末的超市花销</li>
+<li>开始帮刘博坤写作业</li>
+<li>解决tabview navigationlink 两次问题,很耗时</li>
+</ul>
+<h2 id="标准-52"><a href="#标准-52" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走 只完成了哑铃部分</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input disabled="" type="checkbox"> 每日代码量 完成度低</li>
+</ol>
+<h1 id="2021-09-08"><a href="#2021-09-08" class="headerlink" title="2021-09-08"></a>2021-09-08</h1><h2 id="今日总结-53"><a href="#今日总结-53" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-54"><a href="#题外话-54" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>手表没电了,一觉到13点10分才起床,原计划是9点30-10点起床的,尬住了</li>
+<li>一个图像查看器墨迹很长时间,挺难受的,受限于swiftui的功能不全,由限制于没有能力再继续uikit</li>
+<li>今天能量摄入有些超标,吃了一包饼干,大半包薯片</li>
+<li>刘博坤要我帮他做两个简单的ios页面,举手之劳,明天帮他搞一下</li>
+<li>傍晚时刷了一部番<relife>,一直看到3点30太甜了,极度舒适</li>
+<li>今天算是休息日了,以后想要2天工作1天休息,工作日期间运动</li>
+</ul>
+<h2 id="标准-53"><a href="#标准-53" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-07"><a href="#2021-09-07" class="headerlink" title="2021-09-07"></a>2021-09-07</h1><h2 id="今日总结-54"><a href="#今日总结-54" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % project/saki/client/ios/saki-client-ios % }<br>{ % post_link learn/language/swift/swiftui/technical-point/image-zoom % }</p>
+<h2 id="题外话-55"><a href="#题外话-55" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>做前端太煎熬了,做一个新兴语言的前端并且缺少大量社区资源,更加的煎熬,swiftui还是欠缺太多,uikit还是永远的神</li>
+</ul>
+<h2 id="标准-54"><a href="#标准-54" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input checked="" disabled="" type="checkbox"> 手机时常控制</li>
+<li><input checked="" disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-06"><a href="#2021-09-06" class="headerlink" title="2021-09-06"></a>2021-09-06</h1><h2 id="今日总结-55"><a href="#今日总结-55" class="headerlink" title="今日总结"></a>今日总结</h2><p>{ % project/saki/client/ios/saki-client-ios % }</p>
+<h2 id="题外话-56"><a href="#题外话-56" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>今日代码量虽然不太多,但是还算认真投入</li>
+<li>如果想在10.1到120,要保持一周2斤的速度往下瘦,目前看下来速度还挺快的,上次看体重还是130,现在净重126,虽然存在水分,但是目前看下来进展神速</li>
+<li>尝试将视频投放在youtube,结果更加惨淡,猜测,youtube平台用户关注点并不在此,都已经翻墙了,更多的是想看他们期待的内容.</li>
+<li>时差以后可能要调整,因为早上8点30起床,稍微写两段代码就中午做饭了,时间不够集中,而且,说实话,夜晚才是我的主战场,真就更加集中注意力</li>
+<li>提议:五笔开始gogogo.整理下网络数据,再经过自己的分析,五笔可能并没有我想象的那么好用,尤其是在打字思维上的提现,后置</li>
+<li>提议:每周一个小技能,积少成多,想通过数量产生质变,但如果全是垃圾,再怎么质变也只能生蛆,所以还是要考虑好方向</li>
+<li>提议:英语文档阅读,没事多看看swiftui英文文档,毕竟英语才是第一生产力</li>
+</ul>
+<h2 id="标准-55"><a href="#标准-55" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input checked="" disabled="" type="checkbox"> 手机时常控制</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input checked="" disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-05"><a href="#2021-09-05" class="headerlink" title="2021-09-05"></a>2021-09-05</h1><h2 id="今日总结-56"><a href="#今日总结-56" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-57"><a href="#题外话-57" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>哈迪斯持续上头,又买了个pc版本,解锁了矛与剑第四形态,都挺垃圾的.</li>
+<li>和胜楠去超市买了下周菜,板鸭和属实,晚饭热量炸弹</li>
+</ul>
+<h2 id="标准-56"><a href="#标准-56" class="headerlink" title="标准"></a>标准</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input checked="" disabled="" type="checkbox"> 晚间拒绝垃圾食品</li>
+<li><input checked="" disabled="" type="checkbox"> 手机时常控制</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-04"><a href="#2021-09-04" class="headerlink" title="2021-09-04"></a>2021-09-04</h1><h2 id="今日总结-57"><a href="#今日总结-57" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-58"><a href="#题外话-58" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>重新拾起哈迪斯,开始上头,守望掉分到1400,想叫着强哥玩吃鸡,强哥表示拒绝</li>
+<li>让我爸祝测了一下个buff,然后我用他的账号拉取数据,我的三个账号已封禁</li>
+</ul>
+<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 单日能量摄入</li>
+<li><input checked="" disabled="" type="checkbox"> 晚间拒绝垃圾食品</li>
+<li><input checked="" disabled="" type="checkbox"> 手机时常控制</li>
+<li><input disabled="" type="checkbox"> 3组哑铃,5公里边跑边走</li>
+<li><input disabled="" type="checkbox"> 公共卫生</li>
+<li><input disabled="" type="checkbox"> 每日代码量</li>
+</ol>
+<h1 id="2021-09-03"><a href="#2021-09-03" class="headerlink" title="2021-09-03"></a>2021-09-03</h1><h2 id="今日总结-58"><a href="#今日总结-58" class="headerlink" title="今日总结"></a>今日总结</h2><h2 id="题外话-59"><a href="#题外话-59" class="headerlink" title="题外话"></a>题外话</h2><ul>
+<li>8点发布的视频,然后石沉大海,一瞬间感觉萎了,决定休息三天</li>
+<li>想玩游戏,纠结不知道玩哪个,放松一下</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>来自新世界终</p><p><a href="http://example.com/2021/09/06/life/log/diary/hello-world-end/">http://example.com/2021/09/06/life/log/diary/hello-world-end/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><a href="http://example.com"><p>声控周不鸽</p></a></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-09-06</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-05-10</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="recommend-area"><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 相关文章</span><br><span>  1.<a class="is-size-6" href="/2021/09/02/life/log/diary/hello-world95/" target="_blank">来自新世界的第九十五期</a><br></span><span>  2.<a class="is-size-6" href="/2021/09/01/life/log/diary/hello-world94/" target="_blank">来自新世界的第九十四期</a><br></span><span>  3.<a class="is-size-6" href="/2021/08/31/life/log/diary/hello-world93/" target="_blank">来自新世界的第九十三期</a><br></span><span>  4.<a class="is-size-6" href="/2021/08/30/life/log/diary/hello-world92/" target="_blank">来自新世界的第九十二期</a><br></span><span>  5.<a class="is-size-6" href="/2021/08/29/life/log/diary/hello-world91/" target="_blank">来自新世界的第九十一期</a><br></span><span>  6.<a class="is-size-6" href="/2021/08/28/life/log/diary/hello-world90/" target="_blank">来自新世界的第九十期</a><br></span><span>  7.<a class="is-size-6" href="/2021/08/27/life/log/diary/hello-world89/" target="_blank">来自新世界的第八十九期</a><br></span><span>  8.<a class="is-size-6" href="/2021/08/26/life/log/diary/hello-world88/" target="_blank">来自新世界的第八十八期</a><br></span></div><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 推荐文章</span><br><span>  1.<a class="is-size-6" href="/2021/09/05/life/log/weekly/weekly-review-end/" target="_blank">《每周回顾终》</a><br></span><span>  2.<a class="is-size-6" href="/2021/06/03/project/ios/project-planning-lifetrip/" target="_blank">项目规划生命之旅其一</a><br></span><span>  3.<a class="is-size-6" href="/2021/06/03/project/java/saki-server-base/" target="_blank">saki-server-2.0-base框架</a><br></span><span>  4.<a class="is-size-6" href="/2021/08/25/project/uniapp/steam70off/" target="_blank">7折steam</a><br></span><span>  5.<a class="is-size-6" href="/2021/06/08/life/summary/perception/selfdelivery/" target="_blank">《自我救赎》</a><br></span><span>  6.<a class="is-size-6" href="/2021/07/19/project/saki/base/saki-base-think/" target="_blank">早季base思考</a><br></span></div></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/20210527101118.png" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/20210527101100.png" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/09/22/learn/systemserver/linux/fastdfs/installjenkins/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">docker安装jenkins</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/09/05/life/log/weekly/weekly-review-end/"><span class="level-item">《每周回顾终》</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">评论</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            language:'zh-CN',
+            id: '5e49a34e1cb17836d4451d25b3218011',
+            repo: 'blog-comment',
+            owner: 'sakiraven',
+            clientID: 'c98812d0bb3bbe80e27d',
+            clientSecret: '18dd21afa9cbf7a9790197ae6a90c8d83bb72f41',
+            admin: ["sakiraven"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg" alt="声控周不鸽"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">声控周不鸽</p><p class="is-size-6 is-block">敲喜欢细雨的夜景，街道积水打出的镜面宛如异世界</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>杭州</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">154</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">59</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">25</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/sakiraven" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/sakiraven"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="https://weibo.com/声控周不鸽"><i class="fab fa-weibo"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:sakiraven@icloud.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Next" href="https://sakiraven.github.io"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"来源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新评论</h3><span class="body_hot_comment">加载中，最新评论有1分钟缓存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-12T08:59:48.000Z">2022-07-12</time></p><p class="title"><a href="/2022/07/12/work/project/shici/">中华诗词库</a></p><p class="categories"><a href="/categories/%E5%B7%A5%E4%BD%9C/">工作</a> / <a href="/categories/%E5%B7%A5%E4%BD%9C/%E9%A1%B9%E7%9B%AE/">项目</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-06T07:22:44.000Z">2022-07-06</time></p><p class="title"><a href="/2022/07/06/docker/dnf/">dnf容器</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/docker/">docker</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/docker/dnf/">dnf</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-04T07:22:44.000Z">2022-07-04</time></p><p class="title"><a href="/2022/07/04/learn/language/js/vue/html-use-vue-template/">html使用vue模版</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AF%AD%E8%A8%80/">语言</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AF%AD%E8%A8%80/js/">js</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AF%AD%E8%A8%80/js/vue/">vue</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-21T06:51:56.000Z">2022-06-21</time></p><p class="title"><a href="/2022/06/21/learn/systemserver/linux/ubuntu/docker/portdynasetting/">mac动态添加端口号</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/">系统与服务</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/">linux</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/ubuntu/">ubuntu</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/ubuntu/docker/">docker</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-20T07:22:44.000Z">2022-06-20</time></p><p class="title"><a href="/2022/06/20/learn/language/java/jdk-add-ssl/">jdk添加ssl证书</a></p><p class="categories"><a href="/categories/java/">java</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/java/"><span class="level-start"><span class="level-item">java</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/"><span class="level-start"><span class="level-item">学习</span></span><span class="level-end"><span class="level-item tag">23</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/docker/"><span class="level-start"><span class="level-item">docker</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/docker/dnf/"><span class="level-start"><span class="level-item">dnf</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/"><span class="level-start"><span class="level-item">中间件</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/mysql/"><span class="level-start"><span class="level-item">mysql</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/mysql/%E6%9D%82%E8%AE%B0/"><span class="level-start"><span class="level-item">杂记</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B9%A6/"><span class="level-start"><span class="level-item">书</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/"><span class="level-start"><span class="level-item">系统与服务</span></span><span class="level-end"><span class="level-item tag">10</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/"><span class="level-start"><span class="level-item">linux</span></span><span class="level-end"><span class="level-item tag">10</span></span></a><ul class="mr-0"></ul></li></ul></li></ul></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2022/07/"><span class="level-start"><span class="level-item">七月 2022</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/06/"><span class="level-start"><span class="level-item">六月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/05/"><span class="level-start"><span class="level-item">五月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/10/"><span class="level-start"><span class="level-item">十月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/09/"><span class="level-start"><span class="level-item">九月 2021</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E6%97%A5%E6%80%BB%E7%BB%93/"><span class="tag">每日总结</span><span class="tag is-grey-lightest">99</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E5%91%A8%E6%80%BB%E7%BB%93/"><span class="tag">每周总结</span><span class="tag is-grey-lightest">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mysql%E4%B8%93%E6%A0%8F/"><span class="tag">mysql专栏</span><span class="tag is-grey-lightest">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/swift%E4%B8%93%E6%A0%8F/"><span class="tag">swift专栏</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E6%9C%88%E6%80%BB%E7%BB%93/"><span class="tag">每月总结</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ios%E9%A1%B9%E7%9B%AE%E8%A7%84%E5%88%92/"><span class="tag">ios项目规划</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/docker%E4%B8%93%E6%A0%8F/"><span class="tag">docker专栏</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/swift%E6%9D%82%E8%AE%B0/"><span class="tag">swift杂记</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%A5%E4%BD%9C/"><span class="tag">工作</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%A7%84%E5%88%92/"><span class="tag">规划</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mysql%E6%9D%82%E8%AE%B0/"><span class="tag">Mysql杂记</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dnf/"><span class="tag">dnf</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/docker/"><span class="tag">docker</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/java/"><span class="tag">java</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/java%E6%9D%82%E8%AE%B0/"><span class="tag">java杂记</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/node/"><span class="tag">node</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/redis%E4%B8%93%E6%A0%8F/"><span class="tag">redis专栏</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/vue/"><span class="tag">vue</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%9F%8E/"><span class="tag">天空之城</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%84%E5%88%92/"><span class="tag">小程序规划</span><span class="tag is-grey-lightest">1</span></a></div></div><div class="field is-grouped is-grouped-multiline"><a class="tags has-addons" href="/tags/"><span class="tag">查看全部&gt;&gt;</span></a></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><!--!--><div class="column-right-shadow is-hidden-widescreen"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/声控周不鸽logoblue.png" alt="声控周不鸽的开发者日志" height="28"></a><p class="size-small"><span>&copy; 2022 声控周不鸽</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© <a href="http://www.beian.miit.gov.cn/" target="_blank">冀ICP备20012150号-1</a><br></span><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br/>&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br/></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️本站自 <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> 已运行 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小时 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒！❤️";
+        }var now = new Date();setInterval("createTime('2021/05/28 00:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️感谢 <strong><span id="busuanzi_value_site_uv">99+</span></strong> 小伙伴的 <strong><span id="busuanzi_value_site_pv">99+</span></strong> 次光临！❤️</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><meting-js style="width: auto;height: 2000px;" server="netease" type="playlist" id="6778372041" theme="#2980b9" loop="all" autoplay="false" order="list" storageName="aplayer-setting" lrctype="0" list-max-height="400px" fixed="true"></meting-js></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('c98812d0bb3bbe80e27d','18dd21afa9cbf7a9790197ae6a90c8d83bb72f41','sakiraven','blog-comment',false);})</script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('c98812d0bb3bbe80e27d','18dd21afa9cbf7a9790197ae6a90c8d83bb72f41','sakiraven','blog-comment',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script></body></html>

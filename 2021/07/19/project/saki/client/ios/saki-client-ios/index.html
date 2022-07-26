@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>早季ios客户端兼产品原型 - 声控周不鸽的开发者日志</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="声控周不鸽的开发者日志"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="声控周不鸽的开发者日志"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="摘要早季社区的ios客户端规划"><meta property="og:type" content="blog"><meta property="og:title" content="声控周不鸽"><meta property="og:url" content="https://sakiraven.github.io/"><meta property="og:site_name" content="声控周不鸽"><meta property="og:description" content="摘要早季社区的ios客户端规划"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta property="article:published_time" content="2021-07-19T10:15:55.000Z"><meta property="article:modified_time" content="2021-08-02T09:21:50.403Z"><meta property="article:author" content="声控周不鸽"><meta property="article:tag" content="ios项目规划"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/07/19/project/saki/client/ios/saki-client-ios/"},"headline":"声控周不鸽的开发者日志","image":["http://example.com/img/og_image.png"],"datePublished":"2021-07-19T10:15:55.000Z","dateModified":"2021-08-02T09:21:50.403Z","author":{"@type":"Person","name":"声控周不鸽"},"description":"摘要早季社区的ios客户端规划"}</script><link rel="canonical" href="http://example.com/2021/07/19/project/saki/client/ios/saki-client-ios/"><link rel="icon" href="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/声控周不鸽logoblue.png" alt="声控周不鸽的开发者日志" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/about/index.html">自述</a><a class="navbar-item" href="/album/index.html">相册</a><a class="navbar-item" href="/self-talking/index.html">碎碎念</a><a class="navbar-item" href="/friend/index.html">友链</a><a class="navbar-item" href="/message/index.html">留言</a><a class="navbar-item" href="/thanks/index.html">鸣谢</a><a class="navbar-item" href="/categories/index.html">分类</a><a class="navbar-item" href="/tags/index.html">标签</a><a class="navbar-item" href="/archives/index.html">归档</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/hexo-theme-amazing/community"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-07-19  <a class="commentCountImg" href="/2021/07/19/project/saki/client/ios/saki-client-ios/#comment-container"><span class="display-none-class">72120452f2207bc409cb745d6d3b4f55</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="72120452f2207bc409cb745d6d3b4f55">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>10 分钟  <i class="fas fa-pencil-alt"> </i>1.5 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">早季ios客户端兼产品原型</h1><div class="content"><blockquote>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>早季ios客户端兼产品原型 - 声控周不鸽的开发者日志</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="声控周不鸽的开发者日志"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="声控周不鸽的开发者日志"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="摘要早季社区的ios客户端规划"><meta property="og:type" content="blog"><meta property="og:title" content="声控周不鸽"><meta property="og:url" content="https://sakiraven.github.io/"><meta property="og:site_name" content="声控周不鸽"><meta property="og:description" content="摘要早季社区的ios客户端规划"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta property="article:published_time" content="2021-07-19T10:15:55.000Z"><meta property="article:modified_time" content="2022-01-15T07:58:01.247Z"><meta property="article:author" content="声控周不鸽"><meta property="article:tag" content="ios项目规划"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/07/19/project/saki/client/ios/saki-client-ios/"},"headline":"声控周不鸽的开发者日志","image":["https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/QQ20210908-165215.gif","https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/QQ20210908-175839.gif"],"datePublished":"2021-07-19T10:15:55.000Z","dateModified":"2022-01-15T07:58:01.247Z","author":{"@type":"Person","name":"声控周不鸽"},"description":"摘要早季社区的ios客户端规划"}</script><link rel="canonical" href="http://example.com/2021/07/19/project/saki/client/ios/saki-client-ios/"><link rel="icon" href="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/声控周不鸽logoblue.png" alt="声控周不鸽的开发者日志" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/about/index.html">自述</a><a class="navbar-item" href="/album/index.html">相册</a><a class="navbar-item" href="/self-talking/index.html">碎碎念</a><a class="navbar-item" href="/friend/index.html">友链</a><a class="navbar-item" href="/message/index.html">留言</a><a class="navbar-item" href="/thanks/index.html">鸣谢</a><a class="navbar-item" href="/categories/index.html">分类</a><a class="navbar-item" href="/tags/index.html">标签</a><a class="navbar-item" href="/archives/index.html">归档</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/hexo-theme-amazing/community"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-07-19  <a class="commentCountImg" href="/2021/07/19/project/saki/client/ios/saki-client-ios/#comment-container"><span class="display-none-class">72120452f2207bc409cb745d6d3b4f55</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="72120452f2207bc409cb745d6d3b4f55">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>1 小时  <i class="fas fa-pencil-alt"> </i>7.8 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">早季ios客户端兼产品原型</h1><div class="content"><blockquote>
 <p>摘要<br>早季社区的ios客户端规划</p>
 </blockquote>
 <span id="more"></span>
@@ -21,7 +21,639 @@
 <h3 id="三阶段目标-21年9月完成"><a href="#三阶段目标-21年9月完成" class="headerlink" title="三阶段目标(21年9月完成)"></a>三阶段目标(21年9月完成)</h3><ul>
 <li>8月份将java后端4.0版本开发完毕后,实现api</li>
 </ul>
-<h2 id="开发日志"><a href="#开发日志" class="headerlink" title="开发日志"></a>开发日志</h2><h3 id="2021-08-02"><a href="#2021-08-02" class="headerlink" title="2021/08/02"></a>2021/08/02</h3><ul>
+<h3 id="模仿"><a href="#模仿" class="headerlink" title="模仿"></a>模仿</h3><ul>
+<li>初次加载参考youtube将栅格展示出来</li>
+<li>没有网络提示参考youtube利用底部安全区域展示</li>
+</ul>
+<h2 id="未完成部分"><a href="#未完成部分" class="headerlink" title="未完成部分"></a>未完成部分</h2><ul>
+<li>现在剩余模块为<ul>
+<li>相集(上传照片模块)</li>
+<li>评论模块</li>
+<li>我的模块</li>
+<li>用户中心模块</li>
+</ul>
+</li>
+<li>原型修改与添加(遗漏或后续想到)<ul>
+<li>支付与提现模块</li>
+<li>通知(点赞、评论、回复)的跳转逻辑</li>
+</ul>
+</li>
+</ul>
+<h2 id="常驻bug"><a href="#常驻bug" class="headerlink" title="常驻bug"></a>常驻bug</h2><ol>
+<li><input checked="" disabled="" type="checkbox"> 下拉刷新偶尔无法下拉,必须关闭程序重启 换了种方式实现刷新与加载    </li>
+<li><input disabled="" type="checkbox"> 首页onapper放在lazystack内为了解决swiftui小键盘隐藏时触发onapper bug . 但是破坏了原有的视图结构(重试界面)</li>
+</ol>
+<h2 id="需补充"><a href="#需补充" class="headerlink" title="需补充"></a>需补充</h2><ul>
+<li>照片发布被点赞次数,被集邮次数的展示</li>
+<li>信息预览接口</li>
+<li>相集界面展示时添加筛选条件,全部 我参与集邮</li>
+</ul>
+<h2 id="开发日志"><a href="#开发日志" class="headerlink" title="开发日志"></a>开发日志</h2><h3 id="2021-01-15"><a href="#2021-01-15" class="headerlink" title="2021/01/15"></a>2021/01/15</h3><ul>
+<li>集邮页面添加删除</li>
+<li>集邮页面添加举报<h3 id="2021-01-07"><a href="#2021-01-07" class="headerlink" title="2021/01/07"></a>2021/01/07</h3></li>
+<li>添加-管理员审核日推页</li>
+<li>调整-日推详情页如果是管理员将展示设置状态按钮和删除按钮</li>
+<li>修复-编辑拒绝状态版本应该不变<h3 id="2021-01-06"><a href="#2021-01-06" class="headerlink" title="2021/01/06"></a>2021/01/06</h3></li>
+<li>调整-同一场漫展发布coser与pho算作1次参展</li>
+<li>修复-发布相集校验是否已经在同板块下存在数据</li>
+<li>优化-上传相集页面的发布按钮 删除按钮 上传图片 添加隐藏小键盘事件</li>
+<li>修复-上传所有页面 pickerphoto的view使用同一loading</li>
+<li>调整-底部删除框由offset改为transition</li>
+<li>修复-相集发布 集邮发布图片覆盖在texteditor</li>
+<li>添加-用户中心 日推模块</li>
+<li>修复-头像上传没有loading加载</li>
+<li>修复-所有图像上传添加disable控制</li>
+<li>修复-更新用户心成功时没有更新mine页面<h3 id="2021-01-05"><a href="#2021-01-05" class="headerlink" title="2021/01/05"></a>2021/01/05</h3></li>
+<li>修复登录后未重新加载mineview</li>
+<li>修复发布日推页面 因图片覆盖texteditor无法获取焦点的问题</li>
+<li>修复通知列表未加载coredata的问题</li>
+<li>对点赞通知与回复通知添加link news</li>
+<li>日推删除后返回上一页</li>
+<li>修复通知内跳转到日推 编辑后没有变化的bug</li>
+<li>评论与回复时校验顶级id是否被删除 针对news校验status是否合法</li>
+<li>修复部分列表不触发onappear的问题 但并没有将所有列表进行测试<h3 id="2022-01-04"><a href="#2022-01-04" class="headerlink" title="2022/01/04"></a>2022/01/04</h3></li>
+<li>更新时需要添加修改说明</li>
+<li>正文页面添加拒绝说明</li>
+<li>删除时返回历史</li>
+<li>删除时历史清除对应item</li>
+</ul>
+<h3 id="2022-01-03"><a href="#2022-01-03" class="headerlink" title="2022/01/03"></a>2022/01/03</h3><ul>
+<li>对接编辑接口</li>
+<li>编辑成功时返回newsContentInfo 状态与内容变化</li>
+<li>编辑成功时newsHistory item提到首位 item状态与内容变化</li>
+</ul>
+<h3 id="2022-01-02"><a href="#2022-01-02" class="headerlink" title="2022/01/02"></a>2022/01/02</h3><ul>
+<li>新闻发布页面设计与对接接口</li>
+<li>现嗯历史页面</li>
+<li>将历史与主页跳转整合</li>
+<li>重新设计newsSendPage模式将 upload与update整合</li>
+</ul>
+<h3 id="2021-12-29"><a href="#2021-12-29" class="headerlink" title="2021/12/29"></a>2021/12/29</h3><ul>
+<li>新闻静态页面重新设计</li>
+</ul>
+<h3 id="2021-12-28"><a href="#2021-12-28" class="headerlink" title="2021/12/28"></a>2021/12/28</h3><ul>
+<li>漫展添加城市筛选</li>
+</ul>
+<h3 id="2021-12-23"><a href="#2021-12-23" class="headerlink" title="2021/12/23"></a>2021/12/23</h3><ul>
+<li>测试与修复bug<ul>
+<li>集邮文字未展示</li>
+<li>集邮用户id与文字间距</li>
+<li>集邮页面card用户文字位置调整</li>
+<li>漫展详情添加跳转源作者链接</li>
+<li>一级评论后未弹到顶部</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<h3 id="2021-12-22"><a href="#2021-12-22" class="headerlink" title="2021/12/22"></a>2021/12/22</h3><ul>
+<li>调试完毕第三方授权登录与首次登录绑定手机号</li>
+<li>core data 添加userinfoid字段 以区别不同用户</li>
+<li>发现bug 留言后自己可以回复</li>
+<li>留言详情页面删除留言后添加提示 并且展示页面丢失</li>
+</ul>
+<h3 id="2021-12-21"><a href="#2021-12-21" class="headerlink" title="2021/12/21"></a>2021/12/21</h3><ul>
+<li>完善登录页面,初次第三方授权登录时需要绑定手机号</li>
+<li>对接接口-登录</li>
+<li>对接接口-绑定手机号</li>
+<li>对接接口-发送手机验证码</li>
+</ul>
+<h3 id="2021-12-19"><a href="#2021-12-19" class="headerlink" title="2021/12/19"></a>2021/12/19</h3><ul>
+<li>自定义imgTextFieldAlert 用于输入图形验证码</li>
+</ul>
+<h3 id="2021-12-18"><a href="#2021-12-18" class="headerlink" title="2021/12/18"></a>2021/12/18</h3><ul>
+<li>qq登录折磨中</li>
+<li>主要参考文档</li>
+<li>引用sdk会报错 - <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/c8db82d27b11">解决方案</a></li>
+<li>授权之前会1005 - 关闭vpn</li>
+<li>授权之前443 - <a target="_blank" rel="noopener" href="https://developer.apple.com/forums/thread/681040">解决方案</a></li>
+<li>调用handleOpen没有任何反馈<h3 id="2021-12-17"><a href="#2021-12-17" class="headerlink" title="2021/12/17"></a>2021/12/17</h3></li>
+<li>注册调试验证码登录</li>
+<li><h3 id="2021-12-16"><a href="#2021-12-16" class="headerlink" title="2021/12/16"></a>2021/12/16</h3></li>
+<li>折磨了好几天微信登录 终于找到一篇保姆级的代码片段 但是不走回调还是测试中 <a target="_blank" rel="noopener" href="https://blog.csdn.net/boildoctor/article/details/114383651">参考代码</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.fivestars.blog/articles/app-delegate-scene-delegate-swiftui/">swiftu 加载 SceneDelegate</a></li>
+<li><h3 id="2021-12-13"><a href="#2021-12-13" class="headerlink" title="2021/12/13"></a>2021/12/13</h3></li>
+<li>所有讨论与评论tab添加数量</li>
+<li>评论通知 分化为 漫展讨论 相集评论 新番讨论三部分的跳转路由</li>
+<li><h3 id="2021-12-12"><a href="#2021-12-12" class="headerlink" title="2021/12/12"></a>2021/12/12</h3></li>
+<li>下拉刷新偶尔失灵bug找到 在imageTabView出现以后bounces初始化为false 所以 应该在隐藏式 设置true</li>
+<li><h3 id="2021-12-11"><a href="#2021-12-11" class="headerlink" title="2021/12/11"></a>2021/12/11</h3></li>
+<li>漫展按照标题检索</li>
+<li>新番按照标题检索</li>
+<li><h3 id="2021-12-10"><a href="#2021-12-10" class="headerlink" title="2021/12/10"></a>2021/12/10</h3></li>
+<li>关注动态主页展示</li>
+<li>我的动态主页展示</li>
+<li>优化界面查漏补缺阶段 不再详细记录</li>
+<li>漫展页面添加讨论（评论）模块</li>
+<li><h3 id="2021-12-09"><a href="#2021-12-09" class="headerlink" title="2021/12/09"></a>2021/12/09</h3></li>
+<li>发现bug 下拉刷新时 会触发上滑刷新</li>
+<li>删除留言</li>
+<li>留言通知查询</li>
+<li>留言通知详情</li>
+<li>留言通知回复</li>
+</ul>
+<h3 id="2021-12-08"><a href="#2021-12-08" class="headerlink" title="2021/12/08"></a>2021/12/08</h3><ul>
+<li>关注/取消关注</li>
+<li>关注列表</li>
+<li>粉丝列表</li>
+<li>留言</li>
+<li>回复留言</li>
+</ul>
+<h3 id="2021-12-07"><a href="#2021-12-07" class="headerlink" title="2021/12/07"></a>2021/12/07</h3><ul>
+<li>链接到更多其他平台</li>
+<li>用户中心信息修改</li>
+</ul>
+<h3 id="2021-12-06"><a href="#2021-12-06" class="headerlink" title="2021/12/06"></a>2021/12/06</h3><ul>
+<li>用户中心主页数据读取</li>
+<li>链接到更多参展</li>
+<li>链接到更多集邮</li>
+</ul>
+<h3 id="2021-12-05"><a href="#2021-12-05" class="headerlink" title="2021/12/05"></a>2021/12/05</h3><ul>
+<li>最后尝试了一下swiftui无法将布局设置为【沾粘、头部、分段、分页】（uikit可以实现，但需要大改，与我封装的model冲突很大）重新设计用户中心页面<ul>
+<li>装备、动态、我的点赞、精选动态 删除</li>
+<li>参加漫展、参与集邮整合到首页</li>
+</ul>
+</li>
+<li>完善参展与集邮<ul>
+<li>补充缺失id字段导致的序列化失败</li>
+<li>添加跳转到photo</li>
+</ul>
+</li>
+<li>修补布局<ul>
+<li>漫展主页因标题过短导致右居中</li>
+</ul>
+</li>
+</ul>
+<h3 id="2021-12-04"><a href="#2021-12-04" class="headerlink" title="2021/12/04"></a>2021/12/04</h3><ul>
+<li>计划完成 <ul>
+<li>点赞详情页面</li>
+<li>本机缓存编写与网络接口链调</li>
+</ul>
+</li>
+<li>最后思考了一下用户中页面</li>
+</ul>
+<h3 id="2021-12-03"><a href="#2021-12-03" class="headerlink" title="2021/12/03"></a>2021/12/03</h3><ul>
+<li>CommentTwoListView 解耦 为了可以让通知详情页通用</li>
+<li>一级评论通知详情 接口对接</li>
+<li>二级评论通知详情 接口对接</li>
+<li>修复二级评论bug  只删除index=0</li>
+<li>优化显示 删除清空应该显示listEmpty</li>
+</ul>
+<h3 id="2021-12-02"><a href="#2021-12-02" class="headerlink" title="2021/12/02"></a>2021/12/02</h3><ul>
+<li>点赞通知页面设计</li>
+<li>集邮通知页面设计</li>
+<li>评论引用图片改为photoCoverImg</li>
+<li>删除集邮时多余的上传字段 漫展封面 漫展标题 用户相集封面</li>
+<li>修复bug 集邮上传没有添加loading</li>
+<li>修复bug 曾与他集邮一直为1</li>
+<li>通知相集集邮详情页面设计<h3 id="2021-11-30"><a href="#2021-11-30" class="headerlink" title="2021/11/30"></a>2021/11/30</h3></li>
+<li>我的页面添加未读集邮</li>
+<li>回复我的通知页面</li>
+<li>修改我的页面接口,将个人信息缓存到userDefault</li>
+<li><h3 id="2021-11-25"><a href="#2021-11-25" class="headerlink" title="2021/11/25"></a>2021/11/25</h3></li>
+<li>一级评论删除举报界面(菜单按钮)</li>
+<li>对接一级评论删除接口</li>
+<li>获取不到主对象将作出相对应的提示 为此修改模块-弹窗 更换组件,与request解耦</li>
+<li>删除动画</li>
+</ul>
+<h3 id="2021-11-24"><a href="#2021-11-24" class="headerlink" title="2021/11/24"></a>2021/11/24</h3><ul>
+<li>微调一二级评论页面, 页面样式 发布按钮 等等</li>
+</ul>
+<h3 id="2021-11-23"><a href="#2021-11-23" class="headerlink" title="2021/11/23"></a>2021/11/23</h3><ul>
+<li>对接几口-一级评论附加部分二级评论预览</li>
+</ul>
+<h3 id="2021-11-22"><a href="#2021-11-22" class="headerlink" title="2021/11/22"></a>2021/11/22</h3><ul>
+<li>优化模块-展示三级评论</li>
+<li>优化空数据与断网重试的页面模块,更好的兼容scrollview与Vstack不同场合</li>
+<li>优化小键盘弹出遮罩,统一HscrollView与other模式</li>
+<li>二级评论<ol>
+<li>点击用户为回复此用户</li>
+<li>隐藏小键盘恢复默认回复楼主<ul>
+<li>条件: 输入框内文字长度为0时</li>
+<li>说明: 如果存在文字,可能表示用户正在输入误触导致隐藏,会下意识再继续编辑</li>
+</ul>
+</li>
+<li>提示也随之变化,小键盘弹出为回复 @{用户} 隐藏小键盘为恢复默认值 请发一条友善的评论哦</li>
+</ol>
+</li>
+<li>底部输入框添加文字长度限制</li>
+<li>评论成功添加提示框</li>
+<li>二级评论点赞界面修改,实现接口</li>
+</ul>
+<h3 id="2021-11-21"><a href="#2021-11-21" class="headerlink" title="2021/11/21"></a>2021/11/21</h3><ul>
+<li>优化显示-添加评论后显示在顶部</li>
+<li>优化显示-添加评论添加loading</li>
+<li>优化显示-添加评论后跳转到top1</li>
+<li>集邮与相集合并-因为这样相对来说逻辑简洁,用户只需要一个入口,同时可以共享评论,减少开发复杂度</li>
+<li>对接接口-发布二级评论</li>
+<li>对接接口-分页二级评论</li>
+<li>优化显示-keyboard弹出时界面抖动问题</li>
+<li>优化显示-初次加载为empty时默认展示还没有数据,此时评论后的临时数据不会展示<br>  ,原策略评论时会向addModel.array内插入一条数据,这列数据用于展示我的发送,经过之前的优化,<br>  现在可以将这两个array合并</li>
+</ul>
+<h3 id="2021-11-20"><a href="#2021-11-20" class="headerlink" title="2021/11/20"></a>2021/11/20</h3><ul>
+<li>对接接口-添加评论</li>
+<li>对接接口-展示评论</li>
+<li>删除预览二级评论,暂时考虑不到如何更好的实现此功能,非重点先搁置</li>
+</ul>
+<h3 id="2021-11-19"><a href="#2021-11-19" class="headerlink" title="2021/11/19"></a>2021/11/19</h3><ul>
+<li>websocket 客户端搭建并对接服务端</li>
+</ul>
+<h3 id="2021-11-18"><a href="#2021-11-18" class="headerlink" title="2021/11/18"></a>2021/11/18</h3><ul>
+<li>我的参展接口对接</li>
+<li>发现bug-隐藏小键盘时会调用tabView内的onapper,解决方法为将tabview内的onapper放置于lazyStack,此问题本质为swiftui bug</li>
+<li>发现bug-未解决添加到常驻bug 2.</li>
+<li>我的参展-集邮页面设计,几乎无改动,使用原有的photoHomeViewItem 添加字段在此漫展内的集邮次数</li>
+<li>我的参展-集邮页面对接</li>
+</ul>
+<h3 id="2021-11-17"><a href="#2021-11-17" class="headerlink" title="2021/11/17"></a>2021/11/17</h3><ul>
+<li>对接我的页面</li>
+<li>思考参展的方案,并实现界面</li>
+</ul>
+<h3 id="2021-11-15"><a href="#2021-11-15" class="headerlink" title="2021/11/15"></a>2021/11/15</h3><ul>
+<li>对接我的页面接口</li>
+<li>思考系统通知、回复评论等通知的策略</li>
+</ul>
+<h3 id="2021-11-14"><a href="#2021-11-14" class="headerlink" title="2021/11/14"></a>2021/11/14</h3><ul>
+<li>计划重新排版一下我的页面<ul>
+<li>取消等级</li>
+<li>访客改获赞</li>
+<li>历史浏览改留言通知</li>
+</ul>
+</li>
+</ul>
+<h3 id="2021-11-13"><a href="#2021-11-13" class="headerlink" title="2021/11/13"></a>2021/11/13</h3><ul>
+<li>新番表的封面重新排版</li>
+<li>新番表主页接口</li>
+<li>新番详情接口</li>
+<li>粗略完成失败跳转到登陆页面,并且实现登陆过程</li>
+</ul>
+<h3 id="2021-11-12"><a href="#2021-11-12" class="headerlink" title="2021/11/12"></a>2021/11/12</h3><ul>
+<li>集邮数相关接口改造</li>
+</ul>
+<h3 id="2021-11-11"><a href="#2021-11-11" class="headerlink" title="2021/11/11"></a>2021/11/11</h3><ul>
+<li>找了很久的下拉组件,效果最好的还是uiscroll内的组件效果最好,但是我不清楚如何兼容到swifuti,网络上找到的轮子也只是普通的,唯一一个<br>  youtube的视频,他要计算card高度,并不能通用.还有就是ios15的刷新,但是只适用于list,list也有尝试,但是很复杂,要去除各种样式,太麻烦了,放弃了</li>
+<li>coser上传接口添加字段photoTitle photoCoverImg字段   </li>
+<li>coser发布添加文字限制</li>
+<li>小键盘隐藏区域</li>
+</ul>
+<h3 id="2021-11-10"><a href="#2021-11-10" class="headerlink" title="2021/11/10"></a>2021/11/10</h3><ul>
+<li>升级ios15后多个问题<ul>
+<li>所有的navigationBarHidden失效,将top改到navigationBarItem</li>
+<li>tabbar变成透明色,问题待处理</li>
+<li>navigationLink有时失效,很懵</li>
+</ul>
+</li>
+<li>返回按钮没有携带title是因为item太宽</li>
+<li>页面加载卡顿<ul>
+<li>尝试增强for循环方式能否解决卡顿</li>
+<li>后测试发现是刷新组件导致的lazyview失效,每次append数据会导致所有数据重新加载</li>
+<li>放弃第三方组件,想到一种方式,可以利用lazyStack的机制来触发上滑加载,用ios15新特性下拉刷新<h3 id="2021-11-09"><a href="#2021-11-09" class="headerlink" title="2021/11/09"></a>2021/11/09</h3></li>
+</ul>
+</li>
+<li>删除接口</li>
+<li>上传接口</li>
+<li>遇到bug数组清空如果用binding下标会越界,解决方式换为增强for循环形式</li>
+<li>添加限制,文字&lt;=10</li>
+<li>升级ios15</li>
+</ul>
+<h3 id="2021-11-08"><a href="#2021-11-08" class="headerlink" title="2021/11/08"></a>2021/11/08</h3><ul>
+<li>coser上传接口需要补充相集title和相集content</li>
+</ul>
+<h3 id="2021-11-07"><a href="#2021-11-07" class="headerlink" title="2021/11/07"></a>2021/11/07</h3><ul>
+<li>发布集邮页面设计</li>
+<li>发现bug,coser上传,图片上传失败可以点保存 已解决 判断失败list是否存在</li>
+</ul>
+<h3 id="2021-11-06"><a href="#2021-11-06" class="headerlink" title="2021/11/06"></a>2021/11/06</h3><ul>
+<li>点赞、取消点赞改写2.0继承规则</li>
+<li>集邮页面点赞功能实现,模块写好直接调用是有点爽</li>
+</ul>
+<h3 id="2021-11-05"><a href="#2021-11-05" class="headerlink" title="2021/11/05"></a>2021/11/05</h3><ul>
+<li>调整集邮样式<ul>
+<li>将点赞按钮布置在底部,改为黑色,背景为模糊透明</li>
+<li>用户内容放在用户名下方</li>
+<li>添加与ta集邮次数标记</li>
+<li>还是将功能区放在了照片下方,模糊背景方式展示影响观感</li>
+<li>request请求添加isPreview字段,用于判断是否为预览,预览将不加载,return方法</li>
+</ul>
+</li>
+</ul>
+<h3 id="2021-11-04"><a href="#2021-11-04" class="headerlink" title="2021/11/04"></a>2021/11/04</h3><ul>
+<li>照片详情的load预览</li>
+<li>照片详情初次加载error,展示重试页面,重试成功后照片没有加载成功<ul>
+<li>原因: 重试按钮调用的是loadRequest,但是loadRequest出来的数据需要二次加载</li>
+<li>解决办法: retry时调用retryLoad.子类重写retryLoad.retryLoad调用loadRequest</li>
+</ul>
+</li>
+<li>照片详情页面重新调整格式<ul>
+<li>封面单张照片改1-4</li>
+<li>总照片量限制为4张</li>
+<li>点赞,照片数量等信息添加浅色透明白底</li>
+</ul>
+</li>
+<li>发现bug 此页面的下拉箭头看不到<ul>
+<li>..颜色设置的白色,难怪</li>
+</ul>
+</li>
+<li>发布照片时,初始化冗余的照片数量</li>
+</ul>
+<h3 id="2021-11-03"><a href="#2021-11-03" class="headerlink" title="2021/11/03"></a>2021/11/03</h3><ul>
+<li>photoContentHome返回格式为objectName方式<ul>
+<li>照片圆角</li>
+</ul>
+</li>
+<li>发现bug 上滑加载卡顿,会error<ul>
+<li>经测试是因为双层foreach加grid造成的</li>
+<li>解决方案9宫格改4宫格</li>
+</ul>
+</li>
+<li>照片详情展示策略兼容新的展示方式<ul>
+<li>修改返回格式为cos模式,兼容sakiInfoLoad</li>
+</ul>
+</li>
+<li>照片详情实现likebutton</li>
+<li>将coser与pho部分融合,之前分离是因为第一版代码所致,第二版修改后本可以融合,但是搁置了,今天合并在一起</li>
+<li>发现bug,新的视图展现方式在前端展现较慢,多重if判断导致?已解决,同上</li>
+<li>发现bug,下啦刷新在linkview内点击likebutton后失效?已解决,同上</li>
+</ul>
+<h3 id="2021-11-02"><a href="#2021-11-02" class="headerlink" title="2021/11/02"></a>2021/11/02</h3><ul>
+<li>根据<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=XDH1KmI86b0">youtube的分享</a>修改了自己原有的ImageTabView,增加滑动返回,<br>  有一点点小瑕疵,zoom时缩小焦点在左上角,一时半会没找到什么好的解决方案,等全做完优化的时候和群友问问好了</li>
+<li>今天还是在尝试将effect融合进去,但是尝试了各种方法最后放弃了,这个模式还是有待改进,等待ios15的swiftui再看看好了</li>
+<li>突然发现上传策略还是有遗漏,比如用户上传照片失败如何删除失败照片(以判断存在失败上传不允许发布或发表)</li>
+<li>修复bug showCoserPhotoPicker为coser专用改为showPhotoPicker</li>
+<li>修复bug useExchangeDelegate为coser专用已修改</li>
+<li>想尝试解开上传时 禁止交换、禁止查看、禁止删除<ul>
+<li>交换bug,当group==8时还可以交换,上传成功后恢复限制()</li>
+<li>查看bug,上传过程中openImageTabView会加载old图片(已修复,问题是多层view其中一层objectName为@State,将此层去除即可)</li>
+</ul>
+</li>
+<li>优化体验,上传/保存/删除成功时,不重置另一方数据</li>
+</ul>
+<h3 id="2021-11-01"><a href="#2021-11-01" class="headerlink" title="2021/11/01"></a>2021/11/01</h3><ul>
+<li>尝试将sendCoserPanel有navigationLink改为类似与微博 推特 微信 bilibili从屏幕底部弹出,并且在退出是提示用户正在编辑,<br>  结合自己的ui实际测试后发现并不适合<ul>
+<li>因为结构导致,修改coser并且修改pho.同时发布pho,此时coser结构会被重制,但这并不是问题,很少可能会出现此类情况,而且就算出现问题也不大</li>
+<li>我认为返回应该随心所欲一点比较舒服,哪怕是未保存状态,滑动返回更舒服</li>
+<li>总体来说是因为我个人认为不适合</li>
+</ul>
+</li>
+<li>删除成功并且加载成功 输出成功提示框</li>
+<li>修改imageTabView策略,与现在的cos模式同步</li>
+<li>在尝试如何通过matchedGeometryEffect来让图像与图像查看器之间过渡展示<ul>
+<li>最后发现需要将scrollview隐藏,这样就就可以达到效果,但是scrollview隐藏再展示会让position重置</li>
+<li>尝试将问题发布于<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/69802975/use-if-else-to-display-scrollview-in-swiftui-how-to-make-the-position-not-be-re">stackoverflow</a><br>希望会有大佬回复我,嘤嘤嘤</li>
+</ul>
+</li>
+</ul>
+<h3 id="2021-10-31"><a href="#2021-10-31" class="headerlink" title="2021/10/31"></a>2021/10/31</h3><ul>
+<li>修改细节,存在历史状态按钮为保存,否则为发表</li>
+<li>发布错误弹出提示框,成功则重新loading</li>
+<li>修复bug快速划过item为nil,nil时退出负面效果为停止替换</li>
+<li>修复bug请求第一次alertshowing后,第二次成功依旧alertshowing-&gt;在loadrequest初始化true</li>
+</ul>
+<h3 id="2021-10-30"><a href="#2021-10-30" class="headerlink" title="2021/10/30"></a>2021/10/30</h3><ul>
+<li>修复滑动返回时顶部出现白条,原因是历史遗留问题navigationBarBackButtonHidden改成navigationBarHidden</li>
+<li>添加删除按钮与发布按钮</li>
+<li>完成sendpage删除接口调用</li>
+<li>待优化alert模块 因为成功时也有可能需要触动</li>
+</ul>
+<h3 id="2021-10-26"><a href="#2021-10-26" class="headerlink" title="2021/10/26"></a>2021/10/26</h3><ul>
+<li><p>删除框</p>
+<ul>
+<li>onDrop太敏感,滑动到上方就会被删除掉,看看有没有其他更好的解决方案.DropDelegate内存在一个方法可以解决这个问题</li>
+<li>onDrag展示删除框以后不知道该如何隐藏,考虑是否常显示deleteBox.DropDelegate内存在一个方法可以解决这个问题</li>
+</ul>
+</li>
+<li><p>上传过程中禁止切换到pho</p>
+</li>
+<li><p>重试按钮调整样式</p>
+</li>
+<li><p>发现bug,当组内容为空时,因为原逻辑需要获取appendIndex,计算没有对照组,没有获取到appedIndex,导致无法上传新照片</p>
+</li>
+<li><p>移动图片时添加细节,to&gt;from to&lt;from to == from + 1 || to - 1 == from</p>
+</li>
+<li><p>明日计划完成删除的业务逻辑,与上传服务器,完成将coserupload 修改为与pho通用,或者pho单独再copy一份,再说吧</p>
+<h3 id="2021-10-25"><a href="#2021-10-25" class="headerlink" title="2021/10/25"></a>2021/10/25</h3></li>
+<li><p>添加loading效果,以免多次上传</p>
+</li>
+<li><p>最后效果是将重新上传与上传整合在一起了,唯独有点小瑕疵,进度条偶尔鬼畜,再看看是哪里的问题</p>
+</li>
+</ul>
+<h3 id="2021-10-24"><a href="#2021-10-24" class="headerlink" title="2021/10/24"></a>2021/10/24</h3><ul>
+<li>为了进一步优化存储,决定再次修改json格式<ul>
+<li>添加originObjectName与miniObjectName,之前使用路径+originName方式弊端太大,还是区分开比较好</li>
+</ul>
+</li>
+<li>优化上传,先判断源数据是否存在相同md5<ul>
+<li>不存在,调用上传</li>
+<li>存在并且成功<ol>
+<li>将所有相同md5结果同步</li>
+</ol>
+</li>
+<li>存在并且失败<ol>
+<li>调用上传</li>
+<li>将所有相同md5结果同步</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>优化体验,添加重新上传工程<ul>
+<li>重新上传某一照片时,匹配所有md5结果</li>
+</ul>
+</li>
+<li>重构过程中,目前完成了上传,明天完成失败回调,重传,重传成功、进度、失败回调+测试</li>
+</ul>
+<h3 id="2021-10-23"><a href="#2021-10-23" class="headerlink" title="2021/10/23"></a>2021/10/23</h3><ul>
+<li>上传图片过程中不允许添加图片,将plus图标display</li>
+<li>上传图片过程中禁止拖放</li>
+<li>限制上传找片数量,每组8张</li>
+<li>当一组上传的照片达到8张,第二组拖放时采取交换策略 </li>
+</ul>
+<h3 id="2021-10-21"><a href="#2021-10-21" class="headerlink" title="2021/10/21"></a>2021/10/21</h3><ul>
+<li>上传图片时同时上传缩略图</li>
+<li>修改数据返回格式添加对应新上传的对应参数</li>
+</ul>
+<h3 id="2021-10-20"><a href="#2021-10-20" class="headerlink" title="2021/10/20"></a>2021/10/20</h3><ul>
+<li><p>缓存问题解决</p>
+<p>  我现在将图片存储在云平台的对象存储,但是有个疑问</p>
+<ol>
+<li>上传后的图片会返还对象访问url,此url不能直接访问,对象访问url加签后生成的预签名url才可以正确加载图片</li>
+<li>我服务端保存对象访问url</li>
+<li>前端加载图片的时候,先将对象访问url处理为预加签url,然后通过Kingfisher框架加载图片</li>
+<li>但因为预加签url会变化,导致Kingfisher的缓存功能失效</li>
+</ol>
+<p>  请问:像这种情况有什么比较好的处理措施吗,如何让缓存与防盗一定程度上的兼容</p>
+<p>  这一切的疑问伴随着人家告诉我,kingfisher有key缓存,话题终结,不用自己写一个一级缓存框架了,太好了<br>  修改MyKingfisherView展示策略ing</p>
+</li>
+<li><p>缓存策略调整后,图片展示已兼容</p>
+</li>
+<li><p>添加照片上传到cos 简单实现</p>
+</li>
+</ul>
+<h3 id="2021-10-19"><a href="#2021-10-19" class="headerlink" title="2021/10/19"></a>2021/10/19</h3><ul>
+<li>在理解cos,同时思考如何嵌入自己的系统内</li>
+<li>理解了如何生成下载url并且在线访问,<ol>
+<li>配置控制台的header</li>
+<li>后端获取临时密钥(密钥权限需要可下载)</li>
+<li>前端通过key与临时密钥生成签名url</li>
+<li>最后访问签名url</li>
+</ol>
+</li>
+<li>swift有点恶心人,暂时没有async/await,无法将闭包内的值return出来,暂时使用封装view结合onapper 与 combine封装url来实现</li>
+</ul>
+<h3 id="2021-10-18"><a href="#2021-10-18" class="headerlink" title="2021/10/18"></a>2021/10/18</h3><ul>
+<li>封装上传到cos策略<ul>
+<li>可监听上传进度与完成状态</li>
+</ul>
+</li>
+<li>封装 alertEnvironment挂在到contentView,修改request loadRequest方法,添加可选参数alertDTO辅助展示</li>
+<li>完善request try策略 转换error时递归执行</li>
+</ul>
+<h3 id="2021-10-15"><a href="#2021-10-15" class="headerlink" title="2021/10/15"></a>2021/10/15</h3><ul>
+<li>cos接口调通</li>
+<li>思考一下上传策略</li>
+</ul>
+<h3 id="2021-10-13"><a href="#2021-10-13" class="headerlink" title="2021/10/13"></a>2021/10/13</h3><ul>
+<li>除了动画,交换策略完美优化实现,可以跨天交换</li>
+<li>接下来准备改造list,可以实现添加照片,然后实现删除照片,核心重点是如何让list兼容显示url与name.或者说是url显示与image显示</li>
+<li>格式化名称environemnt-&gt;model module-&gt;VO</li>
+<li>封装上传照片model</li>
+</ul>
+<h3 id="2021-10-12"><a href="#2021-10-12" class="headerlink" title="2021/10/12"></a>2021/10/12</h3><ul>
+<li>决定重构数据库格式[{“date”:”2021/10/11”,”fdfsPath”:”<a href="http://xxxxx&quot;}],因为安卓所需要的格式可能与ios不同,数据库存储基础类型">http://xxxxx&quot;}],因为安卓所需要的格式可能与ios不同,数据库存储基础类型</a></li>
+<li>前端格式也修改了,但是遇到一个,我reorder gird时 必须在一个list内,但我展示时又要按天分段展示目前格式为<br>  {“content”:””,”holdDayList”:[“2021/10/11”],”imgList”:[{“date”:”2021/10/11”,”fdfsPath”:”<a href="http://xxxxx&quot;}]}">http://xxxxx&quot;}]}</a>  现在可以单独排序 也可以单独分段展示,如何分段展示又可以排序呢.因为我想先渲染holdDayList作为段落标题,段落标题内只渲染以日期为id的item  看看移动时能不能获取到对应item的信息吧,我不确定和我联想的是否一致,还有个问题,我将12日第三个图片想移动到11日最后一个,和12日第一个,所获取到的信息应该是一致的<ul>
+<li>效果实现的不错,但是,如果我将第一日的照片都移动到第二日,第一日为空时,我要如何将第一日数据移动到第二日呢…<ul>
+<li>完美实现,通过+号站位,然后通过日期相同找索引</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2021-10-11"><a href="#2021-10-11" class="headerlink" title="2021/10/11"></a>2021/10/11</h3><ul>
+<li>先尝试将预览视图展示出来,在此基础上实现拖动换位置<ul>
+<li>找了两种demo,第一个list<String> 第二个List<Object></li>
+<li>第一个用url做id,交换时会因为id重复导致交换错位</li>
+<li>在尝试第二种时要更改数据格式,挺麻烦的,前后端改完才想起来,生产环境我用fastdfs url好像并不会重复- -靠</li>
+<li>期间遇到了fastdfs无法使用的问题,日后再说先记一笔</li>
+</ul>
+</li>
+<li>有个bug,跨list拖动会error,以为是都在用一个dragged的问题,拆开后发现还是不行…,明天考虑一下其他方案<ul>
+<li>可以跨天拖动 改动较多</li>
+<li>查找约束单天list 未知</li>
+</ul>
+</li>
+</ul>
+<h3 id="2021-10-08"><a href="#2021-10-08" class="headerlink" title="2021/10/08"></a>2021/10/08</h3><ul>
+<li>页面关闭再打开refreshing箭头会露出一半… 最后发现是历史遗留问题,当年的navigationbar方式过时了,<br>  第二次加载有隐藏的lineText</li>
+<li>发现一个新问题,如果一次loading时间过长,在open view-&gt;close view 不断重复这个过程,<br>  会因为之前的n次request未中断,全部延迟到最后一次.原因:存储在environment,所以这个request不会销毁,会累加</li>
+<li>和群里学到一招,把声明方式改为StateObject 绑定单个页面即可,也确实,我其他页面用不到,也没必要非要放环境</li>
+<li>优化一下分页的view封装   </li>
+</ul>
+<h3 id="2021-10-06"><a href="#2021-10-06" class="headerlink" title="2021/10/06"></a>2021/10/06</h3><ul>
+<li>尝试解决因toppost的高度变化影响scrollview刷新,最后发现可以在scrollviewwithrefresh内加一层scrollview解决,<br>  只不过显示效果会差一内内,可以接受</li>
+<li>存在异步线程问题,会导致清空dataarray后,视图获取不到对象更新而导致的数组越界 第三层视图binding属性时出现问题<br>  在第二层建立中间变量过度一下,虽然代码有所冗余,凑合用吧</li>
+<li>和首页的下拉刷新效果还是有差距,在查找是哪里问题 添加动画解决</li>
+<li>页面关闭再打开error 原因是async加错位置</li>
+<li>页面关闭再打开refreshing箭头会露出一半… 原因是关闭视图再打开后高度会变化,设置固定值解决,就还挺离谱的,偏偏第一次正常</li>
+</ul>
+<h3 id="2021-10-05"><a href="#2021-10-05" class="headerlink" title="2021/10/05"></a>2021/10/05</h3><ul>
+<li>完美兼容继承方式来实现接口对接,代码简洁的一批</li>
+<li>测试了相集主页分页加载,当前代码下完美兼容</li>
+</ul>
+<h3 id="2021-10-03"><a href="#2021-10-03" class="headerlink" title="2021/10/03"></a>2021/10/03</h3><ul>
+<li>coser/pho发布照片预览数据展示</li>
+<li>优化environment api封装,将loading、result等,添加到控制参数对象,方便管理与调用,简洁化environment</li>
+<li>改造所有environment</li>
+</ul>
+<h3 id="2021-10-02"><a href="#2021-10-02" class="headerlink" title="2021/10/02"></a>2021/10/02</h3><ul>
+<li>找到合适的loading提示方法</li>
+<li>coser/pho发布照片预览接口对接完毕</li>
+</ul>
+<h3 id="2021-09-28"><a href="#2021-09-28" class="headerlink" title="2021/09/28"></a>2021/09/28</h3><ul>
+<li>封装toastMessage模块添加到content上,但是发现一个问题,sheet弹出后是覆盖在content上的,还是需要调整</li>
+<li>修改封装TextTips,将string替换为anyview,提高自由度</li>
+</ul>
+<h3 id="2021-09-26"><a href="#2021-09-26" class="headerlink" title="2021/09/26"></a>2021/09/26</h3><ul>
+<li>coser/pho发布照片预览接口对接</li>
+</ul>
+<h3 id="2021-09-24"><a href="#2021-09-24" class="headerlink" title="2021/09/24"></a>2021/09/24</h3><ul>
+<li>coser/pho发布照片的api封装</li>
+</ul>
+<h3 id="2021-09-15"><a href="#2021-09-15" class="headerlink" title="2021/09/15"></a>2021/09/15</h3><ul>
+<li>点赞模块改写callback</li>
+<li>取消点赞</li>
+</ul>
+<h3 id="2021-09-13"><a href="#2021-09-13" class="headerlink" title="2021/09/13"></a>2021/09/13</h3><ul>
+<li>开始改写点赞模块</li>
+<li>添加测试token</li>
+<li>调试完like server时回来看list,九空格达到3行时scrollview会鬼畜- -.后来发现是因为读取arraycount的原因,很迷惑,改成了固定索引9,无伤大雅</li>
+</ul>
+<h3 id="2021-09-10"><a href="#2021-09-10" class="headerlink" title="2021/09/10"></a>2021/09/10</h3><ul>
+<li>我的照片主页浏览完成</li>
+<li>封装单页预览</li>
+<li>开始集邮页面,后续又思考了一下,集邮页面应该单纯一点,只放用户集邮,将我的照片与集邮照片共有的header删除<br>,并且需要为集邮用户添加点赞功能,即使是集邮,也想被人关注吧</li>
+<li>集邮为用户添加留言,但是就会比较臃肿,可能要改结构</li>
+<li>完成集邮展示,还算是顺利</li>
+<li>开始实现点赞功能,比较麻烦,需要集成coredata存储点赞记录,用于比对是否可以点赞的第一重拦截,帮助后端减轻压力</li>
+</ul>
+<h3 id="2021-09-09"><a href="#2021-09-09" class="headerlink" title="2021/09/09"></a>2021/09/09</h3><ul>
+<li>将coser详情渲染出来</li>
+<li>遇到一个swiftui的bug,第二层navigationlink onAppear会被触发两次,头疼.</li>
+<li>再次测试后发现不是onappear触发两次,而是跳转了两次?但是视觉上并没有这种效果.我淦</li>
+<li>问题出在第二层的HScrollViewController内的navigationLink跳转时会触发这个bug,这个问题太严重了,有很多页面在用这套分页模式,和难受,伤及根本</li>
+<li>我以为是HScrollController的问题,换成tabview后发现,是这种分页策略的问题一,一时间很无语</li>
+<li>最后在NavigationView添加.navigationViewStyle(StackNavigationViewStyle())解决,就物语 </li>
+</ul>
+<h3 id="2021-09-08"><a href="#2021-09-08" class="headerlink" title="2021/09/08"></a>2021/09/08</h3><ul>
+<li>煎熬的尝试matchedGeometryEffect,最后勉强达到效果,但是切换tabview时由于切换了matchedGeometryEffect id来达到关闭tabview时提示用户当<br>前查看的照片索引.但,正因如此,导致滑动tabview切换item时,会因id的变化让上一张照片闪现消失缩小.</li>
+</ul>
+<blockquote>
+<p><strong>matchedGeometryEffect效果</strong></p>
+</blockquote>
+<div class="justified-gallery"> 
+
+<p><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/QQ20210908-165215.gif" alt="matchedGeometryEffect效果"></p>
+</div>
+
+<ul>
+<li>最后修改后的效果为,关闭弹窗后,为当前照片添加描边效果,以提示用户照片索引</li>
+</ul>
+<blockquote>
+<p><strong>最后效果</strong></p>
+</blockquote>
+<div class="justified-gallery"> 
+
+<p><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/QQ20210908-175839.gif" alt="最后效果"></p>
+</div>
+
+<h3 id="2021-09-07"><a href="#2021-09-07" class="headerlink" title="2021/09-07"></a>2021/09-07</h3><ul>
+<li>封装tabview实现图片查看,实现zoom.通过tabview实现有局限性,关于缩放自己实现没有很好的体验.找到了一个uikit的缩放封装,完美兼容tabview,<br>可以实现缩放+移动,并且还可以放大滑动到边缘时切换到下一张图片,体验和微信朋友圈的查看方式很相似.关闭方式采用单击返回,没有采用滑动缩放返回,因为我的能力无法实现,同时我认为牺牲的这点体验问题不大.<br>{ % post_link learn/language/swift/swiftui/technical-point/image-zoom % }</li>
+<li>纠结一下是否需要实现,tabview的出现与消失动画,最后实现的效果不是特别理想,但解决一个问题:用户知道当前看到了哪张照片,只是动画有点奇怪</li>
+</ul>
+<h3 id="2021-09-06"><a href="#2021-09-06" class="headerlink" title="2021/09-06"></a>2021/09-06</h3><ul>
+<li>网络图片加载,开始使用的是sdwebimage,但是没有缓存,经考虑,更换为url-image.缓存时遇到一个问题就是,调用enviroment加载vo时以加载图片会由<br>success -&gt; initial 很迷惑.最后选择了老牌的kingfisher</li>
+</ul>
+<h3 id="2021-08-24"><a href="#2021-08-24" class="headerlink" title="2021/08/24"></a>2021/08/24</h3><ul>
+<li>巨大优化分页代码结构,方便以后直接套用</li>
+</ul>
+<h3 id="2021-08-23"><a href="#2021-08-23" class="headerlink" title="2021/08/23"></a>2021/08/23</h3><ul>
+<li>相集用户照片分页展示</li>
+<li>分页模块添加空集tips</li>
+</ul>
+<h3 id="2021-08-22"><a href="#2021-08-22" class="headerlink" title="2021/08/22"></a>2021/08/22</h3><ul>
+<li>当前技术下完美兼容下拉刷新,上滑加载</li>
+</ul>
+<h3 id="2021-08-19"><a href="#2021-08-19" class="headerlink" title="2021/08/19"></a>2021/08/19</h3><ul>
+<li>初次加载网络异常重试界面</li>
+<li>耦合分页查询调用规范</li>
+</ul>
+<h3 id="2021-08-18"><a href="#2021-08-18" class="headerlink" title="2021/08/18"></a>2021/08/18</h3><ul>
+<li>网络请求未授权时,接口会加载异常</li>
+<li>调整网络请求策略时,跳到了图片选择.结果意识在想图片权限的问题,为什么选了拒绝图片权限,还可以添加图片,我很蒙蔽,最后求助群友,说系统的imagePicker不需要权限…</li>
+<li>由于苹果没有开放对于网络权限请求的api.不知道用户授权的结果.一般来说只能通过去检测网络状态来判断用户授权情况</li>
+</ul>
+<h3 id="2021-08-17"><a href="#2021-08-17" class="headerlink" title="2021/08/17"></a>2021/08/17</h3><ul>
+<li>摸索网络请求</li>
+<li>摸索分页查询,初始加载</li>
+</ul>
+<h3 id="2021-08-02"><a href="#2021-08-02" class="headerlink" title="2021/08/02"></a>2021/08/02</h3><ul>
 <li>用户中心所有模块原型基本完成</li>
 <li>暂告一段落,开始后端开发</li>
 <li>说实话我写前端很头痛,应该是做产品很头痛,要设想功能点.做ui很头痛,要设想布局</li>
@@ -151,7 +783,7 @@
 <li>一级评论和二级评论单页面</li>
 <li>看视频</li>
 </ul>
-</div><div class="article-licensing box"><div class="licensing-title"><p>早季ios客户端兼产品原型</p><p><a href="http://example.com/2021/07/19/project/saki/client/ios/saki-client-ios/">http://example.com/2021/07/19/project/saki/client/ios/saki-client-ios/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><a href="http://example.com"><p>声控周不鸽</p></a></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-07-19</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-08-02</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="recommend-area"><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 推荐文章</span><br><span>  1.<a class="is-size-6" href="/2021/06/03/project/ios/project-planning-lifetrip/" target="_blank">项目规划生命之旅其一</a><br></span><span>  2.<a class="is-size-6" href="/2021/06/03/project/java/saki-server-base/" target="_blank">saki-server-2.0-base框架</a><br></span><span>  3.<a class="is-size-6" href="/2021/06/08/life/summary/perception/selfdelivery/" target="_blank">《自我救赎》</a><br></span><span>  4.<a class="is-size-6" href="/2021/07/19/project/saki/base/saki-base-think/" target="_blank">早季base思考</a><br></span><span>  5.<a class="is-size-6" href="/2021/07/19/project/saki/client/ios/saki-client-ios/" target="_blank">早季ios客户端兼产品原型</a><br></span><span>  6.<a class="is-size-6" href="/2021/08/02/project/saki/client/java/saki-client-java/" target="_blank">早季ios客户端服务接口</a><br></span></div></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/20210527101118.png" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/20210527101100.png" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/07/19/project/saki/base/saki-base-think/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">早季base思考</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/07/19/learn/book/elements_of_influence/"><span class="level-item">《影响力》阅读</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">评论</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
+</div><div class="article-licensing box"><div class="licensing-title"><p>早季ios客户端兼产品原型</p><p><a href="http://example.com/2021/07/19/project/saki/client/ios/saki-client-ios/">http://example.com/2021/07/19/project/saki/client/ios/saki-client-ios/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><a href="http://example.com"><p>声控周不鸽</p></a></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-07-19</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-01-15</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="recommend-area"><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 推荐文章</span><br><span>  1.<a class="is-size-6" href="/2021/09/05/life/log/weekly/weekly-review-end/" target="_blank">《每周回顾终》</a><br></span><span>  2.<a class="is-size-6" href="/2021/06/03/project/ios/project-planning-lifetrip/" target="_blank">项目规划生命之旅其一</a><br></span><span>  3.<a class="is-size-6" href="/2021/06/03/project/java/saki-server-base/" target="_blank">saki-server-2.0-base框架</a><br></span><span>  4.<a class="is-size-6" href="/2021/08/25/project/uniapp/steam70off/" target="_blank">7折steam</a><br></span><span>  5.<a class="is-size-6" href="/2021/06/08/life/summary/perception/selfdelivery/" target="_blank">《自我救赎》</a><br></span><span>  6.<a class="is-size-6" href="/2021/07/19/project/saki/base/saki-base-think/" target="_blank">早季base思考</a><br></span></div></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/20210527101118.png" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/20210527101100.png" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/07/19/project/saki/base/saki-base-think/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">早季base思考</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/07/19/learn/book/elements_of_influence/"><span class="level-item">《影响力》阅读</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">评论</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
             var gitalk = new Gitalk({
             language:'zh-CN',
             id: '72120452f2207bc409cb745d6d3b4f55',
@@ -169,14 +801,14 @@
             enableHotKey: true,
             isLocked: false
         })
-        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg" alt="声控周不鸽"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">声控周不鸽</p><p class="is-size-6 is-block">敲喜欢细雨的夜景，街道积水打出的镜面宛如异世界</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>杭州</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">110</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">47</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">14</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/sakiraven" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/sakiraven"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="https://weibo.com/声控周不鸽"><i class="fab fa-weibo"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:sakiraven@icloud.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Next" href="https://sakiraven.github.io"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg" alt="声控周不鸽"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">声控周不鸽</p><p class="is-size-6 is-block">敲喜欢细雨的夜景，街道积水打出的镜面宛如异世界</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>杭州</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">154</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">59</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">25</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/sakiraven" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/sakiraven"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="https://weibo.com/声控周不鸽"><i class="fab fa-weibo"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:sakiraven@icloud.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Next" href="https://sakiraven.github.io"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
                                 $.getJSON("https://v1.hitokoto.cn/", function (data) {
                                 if(data){
                                     $('#hitokoto').html("");
                                     $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
                                     "<p>"+"来源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
                                 }});}
-                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新评论</h3><span class="body_hot_comment">加载中，最新评论有1分钟缓存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><figure class="media-left"><a class="image" href="/2021/08/11/life/log/diary/hello-world73/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/helloworld-poster.jpeg" alt="来自新世界的第七十三期"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-08-10T22:48:10.000Z">2021-08-11</time></p><p class="title"><a href="/2021/08/11/life/log/diary/hello-world73/">来自新世界的第七十三期</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/">日志</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/%E6%97%A5%E8%AE%B0/">日记</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/08/10/life/log/diary/hello-world72/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/helloworld-poster.jpeg" alt="来自新世界的第七十二期"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-08-09T22:48:10.000Z">2021-08-10</time></p><p class="title"><a href="/2021/08/10/life/log/diary/hello-world72/">来自新世界的第七十二期</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/">日志</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/%E6%97%A5%E8%AE%B0/">日记</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/08/10/life/log/diary/hello-world71/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/helloworld-poster.jpeg" alt="来自新世界的第七十一期"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-08-09T22:48:10.000Z">2021-08-10</time></p><p class="title"><a href="/2021/08/10/life/log/diary/hello-world71/">来自新世界的第七十一期</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/">日志</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/%E6%97%A5%E8%AE%B0/">日记</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/08/09/life/log/diary/hello-world70/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/helloworld-poster.jpeg" alt="来自新世界的第七十期"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-08-08T22:48:10.000Z">2021-08-09</time></p><p class="title"><a href="/2021/08/09/life/log/diary/hello-world70/">来自新世界的第七十期</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/">日志</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/%E6%97%A5%E8%AE%B0/">日记</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/08/08/life/log/weekly/weekly-review10/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/彩旗1.JPG" alt="每周回顾的第十回"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-08-08T14:02:30.000Z">2021-08-08</time></p><p class="title"><a href="/2021/08/08/life/log/weekly/weekly-review10/">每周回顾的第十回</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/">日志</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/%E5%91%A8%E8%AE%B0/">周记</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/"><span class="level-start"><span class="level-item">学习</span></span><span class="level-end"><span class="level-item tag">14</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/"><span class="level-start"><span class="level-item">中间件</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/mysql/"><span class="level-start"><span class="level-item">mysql</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/mysql/%E6%9D%82%E8%AE%B0/"><span class="level-start"><span class="level-item">杂记</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B9%A6/"><span class="level-start"><span class="level-item">书</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/"><span class="level-start"><span class="level-item">系统与服务</span></span><span class="level-end"><span class="level-item tag">5</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/"><span class="level-start"><span class="level-item">linux</span></span><span class="level-end"><span class="level-item tag">5</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/docker/"><span class="level-start"><span class="level-item">docker</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/docker/mysql/"><span class="level-start"><span class="level-item">mysql</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/jenkins/"><span class="level-start"><span class="level-item">jenkins</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li></ul></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2021/08/"><span class="level-start"><span class="level-item">八月 2021</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/07/"><span class="level-start"><span class="level-item">七月 2021</span></span><span class="level-end"><span class="level-item tag">43</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/06/"><span class="level-start"><span class="level-item">六月 2021</span></span><span class="level-end"><span class="level-item tag">49</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/05/"><span class="level-start"><span class="level-item">五月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E6%97%A5%E6%80%BB%E7%BB%93/"><span class="tag">每日总结</span><span class="tag is-grey-lightest">76</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E5%91%A8%E6%80%BB%E7%BB%93/"><span class="tag">每周总结</span><span class="tag is-grey-lightest">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mysql%E4%B8%93%E6%A0%8F/"><span class="tag">mysql专栏</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ios%E9%A1%B9%E7%9B%AE%E8%A7%84%E5%88%92/"><span class="tag">ios项目规划</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/swift%E4%B8%93%E6%A0%8F/"><span class="tag">swift专栏</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/swift%E6%9D%82%E8%AE%B0/"><span class="tag">swift杂记</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E6%9C%88%E6%80%BB%E7%BB%93/"><span class="tag">每月总结</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mysql%E6%9D%82%E8%AE%B0/"><span class="tag">Mysql杂记</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/node/"><span class="tag">node</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%9F%8E/"><span class="tag">天空之城</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%9F%E6%B4%BB%E6%80%BB%E7%BB%93/"><span class="tag">生活总结</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%A7%81%E6%B4%BB/"><span class="tag">私活</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%BB%E4%B9%A6/"><span class="tag">读书</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%A1%B9%E7%9B%AE%E6%80%9D%E8%80%83/"><span class="tag">项目思考</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><!--!--><div class="column-right-shadow is-hidden-widescreen"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/声控周不鸽logoblue.png" alt="声控周不鸽的开发者日志" height="28"></a><p class="size-small"><span>&copy; 2021 声控周不鸽</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© <a href="http://www.beian.miit.gov.cn/" target="_blank">冀ICP备20012150号-1</a><br></span><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br/>&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br/></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新评论</h3><span class="body_hot_comment">加载中，最新评论有1分钟缓存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-12T08:59:48.000Z">2022-07-12</time></p><p class="title"><a href="/2022/07/12/work/project/shici/">中华诗词库</a></p><p class="categories"><a href="/categories/%E5%B7%A5%E4%BD%9C/">工作</a> / <a href="/categories/%E5%B7%A5%E4%BD%9C/%E9%A1%B9%E7%9B%AE/">项目</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-06T07:22:44.000Z">2022-07-06</time></p><p class="title"><a href="/2022/07/06/docker/dnf/">dnf容器</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/docker/">docker</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/docker/dnf/">dnf</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-04T07:22:44.000Z">2022-07-04</time></p><p class="title"><a href="/2022/07/04/learn/language/js/vue/html-use-vue-template/">html使用vue模版</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AF%AD%E8%A8%80/">语言</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AF%AD%E8%A8%80/js/">js</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AF%AD%E8%A8%80/js/vue/">vue</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-21T06:51:56.000Z">2022-06-21</time></p><p class="title"><a href="/2022/06/21/learn/systemserver/linux/ubuntu/docker/portdynasetting/">mac动态添加端口号</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/">系统与服务</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/">linux</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/ubuntu/">ubuntu</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/ubuntu/docker/">docker</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-20T07:22:44.000Z">2022-06-20</time></p><p class="title"><a href="/2022/06/20/learn/language/java/jdk-add-ssl/">jdk添加ssl证书</a></p><p class="categories"><a href="/categories/java/">java</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/java/"><span class="level-start"><span class="level-item">java</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/"><span class="level-start"><span class="level-item">学习</span></span><span class="level-end"><span class="level-item tag">23</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/docker/"><span class="level-start"><span class="level-item">docker</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/docker/dnf/"><span class="level-start"><span class="level-item">dnf</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/"><span class="level-start"><span class="level-item">中间件</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/mysql/"><span class="level-start"><span class="level-item">mysql</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/mysql/%E6%9D%82%E8%AE%B0/"><span class="level-start"><span class="level-item">杂记</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B9%A6/"><span class="level-start"><span class="level-item">书</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/"><span class="level-start"><span class="level-item">系统与服务</span></span><span class="level-end"><span class="level-item tag">10</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/"><span class="level-start"><span class="level-item">linux</span></span><span class="level-end"><span class="level-item tag">10</span></span></a><ul class="mr-0"></ul></li></ul></li></ul></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2022/07/"><span class="level-start"><span class="level-item">七月 2022</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/06/"><span class="level-start"><span class="level-item">六月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/05/"><span class="level-start"><span class="level-item">五月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/10/"><span class="level-start"><span class="level-item">十月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/09/"><span class="level-start"><span class="level-item">九月 2021</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E6%97%A5%E6%80%BB%E7%BB%93/"><span class="tag">每日总结</span><span class="tag is-grey-lightest">99</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E5%91%A8%E6%80%BB%E7%BB%93/"><span class="tag">每周总结</span><span class="tag is-grey-lightest">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mysql%E4%B8%93%E6%A0%8F/"><span class="tag">mysql专栏</span><span class="tag is-grey-lightest">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/swift%E4%B8%93%E6%A0%8F/"><span class="tag">swift专栏</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E6%9C%88%E6%80%BB%E7%BB%93/"><span class="tag">每月总结</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ios%E9%A1%B9%E7%9B%AE%E8%A7%84%E5%88%92/"><span class="tag">ios项目规划</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/docker%E4%B8%93%E6%A0%8F/"><span class="tag">docker专栏</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/swift%E6%9D%82%E8%AE%B0/"><span class="tag">swift杂记</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%A5%E4%BD%9C/"><span class="tag">工作</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%A7%84%E5%88%92/"><span class="tag">规划</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mysql%E6%9D%82%E8%AE%B0/"><span class="tag">Mysql杂记</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dnf/"><span class="tag">dnf</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/docker/"><span class="tag">docker</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/java/"><span class="tag">java</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/java%E6%9D%82%E8%AE%B0/"><span class="tag">java杂记</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/node/"><span class="tag">node</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/redis%E4%B8%93%E6%A0%8F/"><span class="tag">redis专栏</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/vue/"><span class="tag">vue</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%9F%8E/"><span class="tag">天空之城</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%84%E5%88%92/"><span class="tag">小程序规划</span><span class="tag is-grey-lightest">1</span></a></div></div><div class="field is-grouped is-grouped-multiline"><a class="tags has-addons" href="/tags/"><span class="tag">查看全部&gt;&gt;</span></a></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><!--!--><div class="column-right-shadow is-hidden-widescreen"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/声控周不鸽logoblue.png" alt="声控周不鸽的开发者日志" height="28"></a><p class="size-small"><span>&copy; 2022 声控周不鸽</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© <a href="http://www.beian.miit.gov.cn/" target="_blank">冀ICP备20012150号-1</a><br></span><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br/>&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br/></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
             var n = new Date(time);
             now.setTime(now.getTime() + 250),
                 days = (now - n) / 1e3 / 60 / 60 / 24,

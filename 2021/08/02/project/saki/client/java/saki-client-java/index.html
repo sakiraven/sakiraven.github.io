@@ -1,9 +1,45 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>早季ios客户端服务接口 - 声控周不鸽的开发者日志</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="声控周不鸽的开发者日志"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="声控周不鸽的开发者日志"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="摘要早季社区的ios客户端java接口日志"><meta property="og:type" content="blog"><meta property="og:title" content="声控周不鸽"><meta property="og:url" content="https://sakiraven.github.io/"><meta property="og:site_name" content="声控周不鸽"><meta property="og:description" content="摘要早季社区的ios客户端java接口日志"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta property="article:published_time" content="2021-08-02T10:15:55.000Z"><meta property="article:modified_time" content="2021-08-12T01:06:56.985Z"><meta property="article:author" content="声控周不鸽"><meta property="article:tag" content="ios项目规划"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/08/02/project/saki/client/java/saki-client-java/"},"headline":"声控周不鸽的开发者日志","image":["http://example.com/img/og_image.png"],"datePublished":"2021-08-02T10:15:55.000Z","dateModified":"2021-08-12T01:06:56.985Z","author":{"@type":"Person","name":"声控周不鸽"},"description":"摘要早季社区的ios客户端java接口日志"}</script><link rel="canonical" href="http://example.com/2021/08/02/project/saki/client/java/saki-client-java/"><link rel="icon" href="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/声控周不鸽logoblue.png" alt="声控周不鸽的开发者日志" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/about/index.html">自述</a><a class="navbar-item" href="/album/index.html">相册</a><a class="navbar-item" href="/self-talking/index.html">碎碎念</a><a class="navbar-item" href="/friend/index.html">友链</a><a class="navbar-item" href="/message/index.html">留言</a><a class="navbar-item" href="/thanks/index.html">鸣谢</a><a class="navbar-item" href="/categories/index.html">分类</a><a class="navbar-item" href="/tags/index.html">标签</a><a class="navbar-item" href="/archives/index.html">归档</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/hexo-theme-amazing/community"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-08-02  <a class="commentCountImg" href="/2021/08/02/project/saki/client/java/saki-client-java/#comment-container"><span class="display-none-class">8bc524048d2dfa86b09508d0a9029a12</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="8bc524048d2dfa86b09508d0a9029a12">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>5 分钟  <i class="fas fa-pencil-alt"> </i>0.7 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">早季ios客户端服务接口</h1><div class="content"><blockquote>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>早季ios客户端服务接口 - 声控周不鸽的开发者日志</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="声控周不鸽的开发者日志"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="声控周不鸽的开发者日志"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="摘要早季社区的ios客户端java接口日志"><meta property="og:type" content="blog"><meta property="og:title" content="声控周不鸽"><meta property="og:url" content="https://sakiraven.github.io/"><meta property="og:site_name" content="声控周不鸽"><meta property="og:description" content="摘要早季社区的ios客户端java接口日志"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta property="article:published_time" content="2021-08-02T10:15:55.000Z"><meta property="article:modified_time" content="2022-07-15T06:32:36.933Z"><meta property="article:author" content="声控周不鸽"><meta property="article:tag" content="ios项目规划"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/08/02/project/saki/client/java/saki-client-java/"},"headline":"声控周不鸽的开发者日志","image":["http://example.com/img/og_image.png"],"datePublished":"2021-08-02T10:15:55.000Z","dateModified":"2022-07-15T06:32:36.933Z","author":{"@type":"Person","name":"声控周不鸽"},"description":"摘要早季社区的ios客户端java接口日志"}</script><link rel="canonical" href="http://example.com/2021/08/02/project/saki/client/java/saki-client-java/"><link rel="icon" href="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/声控周不鸽logoblue.png" alt="声控周不鸽的开发者日志" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/about/index.html">自述</a><a class="navbar-item" href="/album/index.html">相册</a><a class="navbar-item" href="/self-talking/index.html">碎碎念</a><a class="navbar-item" href="/friend/index.html">友链</a><a class="navbar-item" href="/message/index.html">留言</a><a class="navbar-item" href="/thanks/index.html">鸣谢</a><a class="navbar-item" href="/categories/index.html">分类</a><a class="navbar-item" href="/tags/index.html">标签</a><a class="navbar-item" href="/archives/index.html">归档</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/hexo-theme-amazing/community"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2021-08-02  <a class="commentCountImg" href="/2021/08/02/project/saki/client/java/saki-client-java/#comment-container"><span class="display-none-class">8bc524048d2dfa86b09508d0a9029a12</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="8bc524048d2dfa86b09508d0a9029a12">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>31 分钟  <i class="fas fa-pencil-alt"> </i>4.6 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">早季ios客户端服务接口</h1><div class="content"><blockquote>
 <p>摘要<br>早季社区的ios客户端java接口日志</p>
 </blockquote>
 <span id="more"></span>
 
+<h2 id="新功能"><a href="#新功能" class="headerlink" title="新功能"></a>新功能</h2><ul>
+<li>这几天很怠惰,定一个两周小目标: 要完成早季2.2的更新.每天22点到24点,周日非特殊情况全天.如果做不到请让我以后没有键盘可用.<ul>
+<li>服务端<ul>
+<li><input checked="" disabled="" type="checkbox"> 更新-发布相集接口添加标签</li>
+<li><input checked="" disabled="" type="checkbox"> 更新-发布相集预览接口返回标签字段</li>
+<li><input checked="" disabled="" type="checkbox"> 更新-相集分页接口返回标签字段</li>
+<li><input checked="" disabled="" type="checkbox"> 更新-相集详情接口返回标签字段</li>
+<li><input checked="" disabled="" type="checkbox"> 更新-添加相集时更新用户标签集</li>
+<li><input checked="" disabled="" type="checkbox"> 更新-添加相集时更新相集标签集</li>
+<li><input checked="" disabled="" type="checkbox"> 更新-用户中心返回标签字段</li>
+<li><input checked="" disabled="" type="checkbox"> 更新-相集发布预览接口,获取本场漫展内的标签</li>
+<li><input checked="" disabled="" type="checkbox"> 新增-根据漫展id查询所有标签</li>
+<li><input disabled="" type="checkbox"> 新增-根据标签检索相集</li>
+<li><input disabled="" type="checkbox"> 新增-根据标签与用户id检索相集</li>
+<li><input disabled="" type="checkbox"> 新增-妆娘类型</li>
+</ul>
+</li>
+<li>客户端(android ios)<ul>
+<li><input disabled="" type="checkbox"> 更新-发布页面添加标签功能</li>
+<li><input disabled="" type="checkbox"> 更新-相集分页item添加标签展示</li>
+<li><input disabled="" type="checkbox"> 更新-相集详情页面添加标签展示</li>
+<li><input disabled="" type="checkbox"> 新增-用户详情页面添加标签展示</li>
+<li><input disabled="" type="checkbox"> 新增-根据标签检索相集页面</li>
+<li><input disabled="" type="checkbox"> 新增-点击任意标签可以跳转到检索相集页面</li>
+<li><input disabled="" type="checkbox"> 新增-相集添加妆娘tag</li>
+</ul>
+</li>
+<li>ps<ul>
+<li>通过canal使mysql与es进行同步</li>
+<li>列表查询走mysql</li>
+<li>标签检索走es</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="预计开发周期"><a href="#预计开发周期" class="headerlink" title="预计开发周期"></a>预计开发周期</h2><ul>
 <li>写java就要快乐很多了,因为原型基本定下来了,只需要完形填空就好了.这一版不考虑性能优化,主要用作测试</li>
 <li>预计1到两周完成最晚时间节点8.16</li>
@@ -17,15 +53,507 @@
 <h2 id="策略"><a href="#策略" class="headerlink" title="策略"></a>策略</h2><h3 id="1-xxx数量策略"><a href="#1-xxx数量策略" class="headerlink" title="1. xxx数量策略"></a>1. xxx数量策略</h3><p>例如喜欢,redis缓存like与cancel_like.每天持久化到mysql</p>
 <p>查询mysql -&gt; 查询redis -&gt; mysql_num + redis_num</p>
 <h3 id="2-通知、我的点赞、我的评论"><a href="#2-通知、我的点赞、我的评论" class="headerlink" title="2. 通知、我的点赞、我的评论"></a>2. 通知、我的点赞、我的评论</h3><p>用户查询首页时清零提醒</p>
-<h3 id="3-未查看点赞通知情况下-用户取消点赞展示策略"><a href="#3-未查看点赞通知情况下-用户取消点赞展示策略" class="headerlink" title="3. 未查看点赞通知情况下,用户取消点赞展示策略"></a>3. 未查看点赞通知情况下,用户取消点赞展示策略</h3><p>参考微信朋友圈</p>
-<p>1). 用户A点赞用户B -&gt; 用户B收到点赞通知<br>2). 用户B未查看点赞通知,用户A取消点赞 -&gt; 用户B依旧有新消息提醒,通知列表依旧存在用户A的点赞记录,但此条动态详情并没有用户A点赞记录<br>3). 用户A点赞用户B -&gt; 并未收到新消息提示</p>
-<p>前端缓存用户点赞记录,只有第一次赞消息才有点赞通知,减少服务端压力</p>
+<h3 id="3-未查看点赞通知情况下-用户取消点赞展示策略"><a href="#3-未查看点赞通知情况下-用户取消点赞展示策略" class="headerlink" title="3. 未查看点赞通知情况下,用户取消点赞展示策略"></a>3. 未查看点赞通知情况下,用户取消点赞展示策略</h3><h4 id="client"><a href="#client" class="headerlink" title="client:"></a>client:</h4><ul>
+<li>点赞时前端记录主键id与类型.</li>
+<li>展示时检索是否存在,存在展示已点赞,不存在展示未点赞.</li>
+<li>前端缓存用户点赞记录,只有第一次赞消息才有点赞通知,减少服务端压力<h4 id="server"><a href="#server" class="headerlink" title="server"></a>server</h4></li>
+</ul>
+<p>参考微信朋友圈</p>
+<ol>
+<li>用户A点赞用户B -&gt; 用户B收到点赞通知</li>
+<li>用户B未查看点赞通知,用户A取消点赞 -&gt; 用户B依旧有新消息提醒,通知列表依旧存在用户A的点赞记录,但此条动态详情并没有用户A点赞记录</li>
+<li>用户A点赞用户B -&gt; 并未收到新消息提示</li>
+</ol>
 <h3 id="4-未查看点赞通知情况下-用户删除评论与回复展示策略"><a href="#4-未查看点赞通知情况下-用户删除评论与回复展示策略" class="headerlink" title="4. 未查看点赞通知情况下,用户删除评论与回复展示策略"></a>4. 未查看点赞通知情况下,用户删除评论与回复展示策略</h3><p>区别于点赞,评论属于互动消息,需要同时删除新消息、通知、评论</p>
 <h3 id="5-删除评论策略"><a href="#5-删除评论策略" class="headerlink" title="5. 删除评论策略"></a>5. 删除评论策略</h3><p>只删除本条评论,删除本条通知</p>
 <p>评论删除后回复,点开回复通知时,展示此条评论不存在</p>
 <h3 id="6-删除回复"><a href="#6-删除回复" class="headerlink" title="6. 删除回复"></a>6. 删除回复</h3><p>删除本条回复,删除本条通知</p>
-<h2 id="后置功能模块"><a href="#后置功能模块" class="headerlink" title="后置功能模块"></a>后置功能模块</h2><p>1). 点赞、评论、回复的通知app模块与即时通知策略</p>
-<h2 id="开发日志"><a href="#开发日志" class="headerlink" title="开发日志"></a>开发日志</h2><h3 id="2021-08-11"><a href="#2021-08-11" class="headerlink" title="2021/08/11"></a>2021/08/11</h3><ul>
+<h3 id="7-接口固定返回值"><a href="#7-接口固定返回值" class="headerlink" title="7. 接口固定返回值"></a>7. 接口固定返回值</h3><p>1). 301 接口异常<br>2). 401 权限不足<br>3). 403 未登录</p>
+<h3 id="8-分页策略"><a href="#8-分页策略" class="headerlink" title="8. 分页策略"></a>8. 分页策略</h3><ul>
+<li>数据全部保存在mysql并且不存在分表分库的单一情况</li>
+<li>涉及到用户信息但是又无法查询到用户时,将此条信息完全移除</li>
+<li>如果当前页查询到list为空时,查询下一页,并且当前页+1</li>
+<li>返回时只返回当前页,不返回总页数</li>
+</ul>
+<h3 id="9-图片上传策略-暂未确定"><a href="#9-图片上传策略-暂未确定" class="headerlink" title="9. 图片上传策略(暂未确定)"></a>9. 图片上传策略(暂未确定)</h3><p>图片策略应该是本app的核心功能,所以必须仔细推敲</p>
+<h4 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h4><ul>
+<li><p>由fastdfs实现图片存储</p>
+</li>
+<li><p>由fastdht实现文件查重</p>
+<h4 id="业务"><a href="#业务" class="headerlink" title="业务"></a>业务</h4></li>
+<li><p>(废弃,采用COS)文件上传有两个接口实现</p>
+<ul>
+<li>文件上传接口(负责将文件上传到文件服务器,缓存到redis)</li>
+<li>保存文件接口(确认保存,删除缓存redis)</li>
+<li>定时清理(redis的超时文件)</li>
+</ul>
+</li>
+<li><p>(废弃,采用COS)fastdfs会储存源文件,并建立文件索引,如果图片的hash值重复(fastdht检索),则只创建文件索引,删除时也是先删除索引,当最后一个索引被</p>
+</li>
+<li><p>(废弃,采用COS)删除时,源文件将被删除.以解决,单用户或多用户上传相同文件问题.此接口返回文件路径</p>
+</li>
+<li><h3 id="注册与登录"><a href="#注册与登录" class="headerlink" title="注册与登录"></a>注册与登录</h3><ol>
+<li>判断类型<ol>
+<li>手机号登录<ol>
+<li>根据手机号查询用户</li>
+<li>存在登录成功</li>
+<li>不存在 调用注册接口</li>
+</ol>
+</li>
+<li>其他授权登录<ol>
+<li>根据授权id查询用户</li>
+<li>存在登录成功</li>
+<li>不存在 throw 绑定手机号</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><h3 id="手机验证码"><a href="#手机验证码" class="headerlink" title="手机验证码"></a>手机验证码</h3><ol>
+<li>每天只能请求10次</li>
+<li>校验验证码是否符合规则</li>
+<li>判断最后一次发送验证码时间 每分钟只能请求一次</li>
+<li>根据类型发送不同模版验证码<ol>
+<li>注册或登录验证码: 判断手机号是否为注册用户 如果是发送登录模版 否则发送注册模版</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><h3 id="关注动态采用队列推送"><a href="#关注动态采用队列推送" class="headerlink" title="关注动态采用队列推送"></a>关注动态采用队列推送</h3><ul>
+<li>暂时搁置 可选替换方案</li>
+<li>基于用户关注</li>
+<li>动态页面展示一级用户列表，如果想查看动态需要手动点开用户信息</li>
+</ul>
+</li>
+<li><h3 id="通知策略1-0-废弃"><a href="#通知策略1-0-废弃" class="headerlink" title="通知策略1.0 (废弃)"></a>通知策略1.0 (废弃)</h3><ul>
+<li>使用redis集合消息队列实现</li>
+<li>除点赞通知,其他通知实现策略<ul>
+<li>redis未读消息字段+1</li>
+<li>具体信息丢进消息队列</li>
+<li>前端保存通知消息,后端不存储</li>
+</ul>
+</li>
+<li>点赞通知策略,与评论等通知需求有点出入,点赞需要的是一个相对宏观数据,无需每个人的信息,所以   <ul>
+<li>key1存储: 总未读数量 例如: likeNum_{userInfoId} 代表此用户存在x条未读消息数量 </li>
+<li>key2: 存储具体信息 例如: likeNotice_{userInfoId} 代表此用户的某个点赞信息的数量 hash_key = {type}_{fk_id}</li>
+<li>触发点赞:<ul>
+<li>redis总未读数+1</li>
+<li>判断点赞hash_key是否存在<ul>
+<li>存在: <ol>
+<li>hash_key increase 1</li>
+</ol>
+</li>
+<li>不存在:<ol>
+<li>hash_key increase 1</li>
+<li>添加消息队列</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="通知策略2-0-废弃"><a href="#通知策略2-0-废弃" class="headerlink" title="通知策略2.0 (废弃)"></a>通知策略2.0 (废弃)</h3><ul>
+<li>劣势<ul>
+<li>假设用户30天未登录, 第31天登陆, 无法看到第29天的点赞通知提醒(未读数量不精准)</li>
+<li>未读消息服务端不会长时间保存</li>
+</ul>
+</li>
+<li>保存:<ol>
+<li>信息存储到mysql 过期时间30天</li>
+<li>未读数增加到redis 过期时间30天</li>
+</ol>
+</li>
+<li>查询<ol>
+<li>后端参数为 noticeIdList</li>
+<li>如果noticeIdList存在,则先删除.后根据userInfoId typeKey 查询 limit 20</li>
+<li>前端保存服务端数据</li>
+<li>前端查询时需要传递参数 上一次查询到的id</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><h3 id="一级评论附加二级评论缓存策略"><a href="#一级评论附加二级评论缓存策略" class="headerlink" title="一级评论附加二级评论缓存策略"></a>一级评论附加二级评论缓存策略</h3><ul>
+<li>优势: <ol>
+<li>逻辑简洁,不占用内存空间</li>
+</ol>
+</li>
+<li>劣势: <ol>
+<li>增加mysql 记录长度 会影响评论查询效率(具体影响如何有待测试,但比较适合当前系统环境)</li>
+<li>如果只有删除没有新增,会导致预览为空</li>
+<li>昵称如果用户修改 无法得到对应刷新</li>
+</ol>
+</li>
+<li>漏洞: 并发时有概率出现超出规范长度范围的更多数据 4 5条.可以通过消息队列解决,但是优先级暂不考虑</li>
+<li>分页<ul>
+<li>将previewCommentTwoListJson字段反序列化即可</li>
+</ul>
+</li>
+<li>添加<ul>
+<li>判断一级评论长度&lt;3更新预览字段</li>
+</ul>
+</li>
+<li>删除<ul>
+<li>如果删除的是预览二级评论则重新更新一级评论预览字段</li>
+</ul>
+</li>
+<li>已废弃,就目前系统架构来说,有点画蛇添足,采用更简洁的方式实现<ul>
+<li>劣势: 比较浪费内存空间 初次加载比较慢</li>
+<li>优势: 查询速度较快 虽然浪费内存空间,但因为缓存时间为24小时,长时间未看的消息并不会被缓存</li>
+<li>分页<ol>
+<li>获取分页列表</li>
+<li>通过redis获取一级评论下二级评论数量</li>
+<li>通过redis获取一级评论下的二级评论预览list json<ul>
+<li>获取到<ul>
+<li>判断list json长度<ul>
+<li>list json 长度 &gt;= 3<ul>
+<li>使用此json</li>
+</ul>
+</li>
+<li>list json 长度 &lt; 3<ul>
+<li>判断二级评论数量<ul>
+<li>二级评论数量 &gt; list json长度<ul>
+<li>获取子评论 limit 3</li>
+<li>将子评论 limit 3 缓存进redis</li>
+<li>expiretime 24hours</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>未获取到<ul>
+<li>判断二级评论数量<ul>
+<li>二级评论数量 &gt; list json长度<ul>
+<li>获取子评论 limit 3</li>
+<li>将子评论 limit 3 缓存进redis</li>
+<li>expiretime 24hours</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>添加<ul>
+<li>重新获取子评论并添加缓存</li>
+</ul>
+</li>
+<li>删除<ul>
+<li>重新获取子评论并添加缓存</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="删除一级评论逻辑"><a href="#删除一级评论逻辑" class="headerlink" title="删除一级评论逻辑"></a>删除一级评论逻辑</h3><ol>
+<li>一级评论发布账号id是否与登陆账号id相同</li>
+<li>不相同则验证是否为相集类型评论 不是则跳出</li>
+<li>相同则验证登陆账号是否为相集发布者 不是则跳出</li>
+<li>删除一级评论</li>
+<li>删除二级评论<ol>
+<li>删除二级评论</li>
+<li>删除点赞对象</li>
+<li>删除点赞数量 </li>
+<li>删除二级评论数</li>
+</ol>
+</li>
+<li>减少一级评论数量</li>
+<li>删除点赞记录</li>
+<li>删除点赞数量</li>
+</ol>
+</li>
+<li><h3 id="删除二级"><a href="#删除二级" class="headerlink" title="删除二级"></a>删除二级</h3><ol>
+<li>二级评论发布账号id是否与登陆账号id相同</li>
+<li>不相同则验证是否为相集类型评论 不是则跳出</li>
+<li>相同则验证登陆账号是否为相集发布者 不是则跳出</li>
+<li>删除二级评论</li>
+<li>删除二级评论数</li>
+<li>减少二级评论数量</li>
+<li>重置一级评论预览</li>
+<li>删除点赞记录</li>
+<li>删除点赞数量</li>
+</ol>
+</li>
+<li><h3 id="删除相集"><a href="#删除相集" class="headerlink" title="删除相集"></a>删除相集</h3><ol>
+<li>删除帖子</li>
+<li>删除目录</li>
+<li>相集参加人数 -1</li>
+<li>用户参展数 -1</li>
+<li>点赞数删除</li>
+<li>点赞对象删除</li>
+<li>删除集邮(参考删除集邮逻辑)</li>
+<li>一级评论删除(逻辑参考一级评论删除)</li>
+<li>二级评论删除(逻辑参考二级评论删除)</li>
+</ol>
+</li>
+<li><h3 id="删除集邮"><a href="#删除集邮" class="headerlink" title="删除集邮"></a>删除集邮</h3><ol>
+<li>删除源数据</li>
+<li>删除目录</li>
+<li>相集内用户被集邮次数 - 1</li>
+<li>我与此用户集邮次数 - 1</li>
+<li>我的总集邮次数 - 1</li>
+<li>我在此漫展内的集邮次数 - 1</li>
+<li>一级评论删除(逻辑参考一级评论删除)</li>
+<li>二级评论删除(逻辑参考二级评论删除)</li>
+</ol>
+</li>
+<li><h3 id="发布日推"><a href="#发布日推" class="headerlink" title="发布日推"></a>发布日推</h3><ol>
+<li>保存</li>
+<li>增加日推数量</li>
+</ol>
+</li>
+<li><h3 id="添加一级评论"><a href="#添加一级评论" class="headerlink" title="添加一级评论"></a>添加一级评论</h3><ol>
+<li>保存</li>
+<li>增加评论数量</li>
+<li>通知</li>
+</ol>
+</li>
+<li><h3 id="添加二级评论"><a href="#添加二级评论" class="headerlink" title="添加二级评论"></a>添加二级评论</h3><ol>
+<li>保存</li>
+<li>更新一级评论预览字段</li>
+<li>增加一级评论下的二级评论数量</li>
+<li>插入通知</li>
+</ol>
+</li>
+<li><h3 id="非点赞的其他通知"><a href="#非点赞的其他通知" class="headerlink" title="非点赞的其他通知"></a>非点赞的其他通知</h3><ol>
+<li>查重</li>
+<li>增加未读点赞数量</li>
+<li>websocket获取未读消息数量</li>
+</ol>
+</li>
+<li><h3 id="点赞通知"><a href="#点赞通知" class="headerlink" title="点赞通知"></a>点赞通知</h3><ol>
+<li>查重</li>
+<li>增加未读点赞数量</li>
+<li>websocket获取未读消息数量</li>
+<li>更新本通知的最新用户是谁</li>
+</ol>
+</li>
+</ul>
+<h2 id="后置功能模块"><a href="#后置功能模块" class="headerlink" title="后置功能模块"></a>后置功能模块</h2><ol>
+<li><input disabled="" type="checkbox"> 点赞、评论、回复的通知app模块与即时通知策略</li>
+<li><input disabled="" type="checkbox"> 打赏的回调</li>
+<li><input disabled="" type="checkbox"> 有一个开源想法</li>
+<li><input disabled="" type="checkbox"> 所有getbypk 进入redis</li>
+<li><input disabled="" type="checkbox"> 注意所有保留回传url接口,需要验证文件是否存在,以防止有人恶意上传url</li>
+<li><input disabled="" type="checkbox"> 我与ta的集邮数量,计划进redis缓存</li>
+<li><input disabled="" type="checkbox"> coser删除集邮删除,并选择通知类型</li>
+<li><input disabled="" type="checkbox"> 点赞取消点赞进队列,因为在异步点赞与取消但赞时,点赞可能还没执行,取消点赞已经开始</li>
+<li><input disabled="" type="checkbox"> 数量相关的字段,全部放置于redis,不再考虑mysql</li>
+<li><input disabled="" type="checkbox"> 相集删除时,将stamp删除,相关的num归位</li>
+<li><input disabled="" type="checkbox"> 相集删除时通知集邮用户,相集已被删除</li>
+</ol>
+<h2 id="开发日志"><a href="#开发日志" class="headerlink" title="开发日志"></a>开发日志</h2><h3 id="2021-12-22"><a href="#2021-12-22" class="headerlink" title="2021/12/22"></a>2021/12/22</h3><ul>
+<li>添加接口-获取版本号</li>
+</ul>
+<h3 id="2021-12-21"><a href="#2021-12-21" class="headerlink" title="2021/12/21"></a>2021/12/21</h3><ul>
+<li>添加接口-绑定手机号</li>
+<li>修改接口-获取验证码只有数字</li>
+</ul>
+<h3 id="2021-12-20"><a href="#2021-12-20" class="headerlink" title="2021/12/20"></a>2021/12/20</h3><ul>
+<li>添加接口-获取短信验证码</li>
+<li>修改接口-微信、苹果、qq第三方授权登录,手机号登录与手机号注册整合为同一接口</li>
+</ul>
+<h3 id="2021-12-19"><a href="#2021-12-19" class="headerlink" title="2021/12/19"></a>2021/12/19</h3><ul>
+<li>思考注册整合流程,与防刷策略</li>
+<li>想做滑块验证的但是受限于个人技术和服务器性能决定妥协为图形验证码,体验肯定是没有滑块要好</li>
+<li>添加接口-获取图形验证码</li>
+</ul>
+<h3 id="2021-12-11"><a href="#2021-12-11" class="headerlink" title="2021/12/11"></a>2021/12/11</h3><ul>
+<li>评论接口 只有特定类型需要通知</li>
+</ul>
+<h3 id="2021-12-9"><a href="#2021-12-9" class="headerlink" title="2021/12/9"></a>2021/12/9</h3><ul>
+<li>添加接口<ul>
+<li>关注/取消关注</li>
+<li>关注列表</li>
+<li>粉丝列表</li>
+<li>留言</li>
+<li>回复留言</li>
+<li>删除留言</li>
+</ul>
+</li>
+</ul>
+<h3 id="2021-12-4"><a href="#2021-12-4" class="headerlink" title="2021/12/4"></a>2021/12/4</h3><ul>
+<li>修改通知接口 针对点赞通知需要特殊优化部分字段</li>
+<li>修改通知接口 清空未读通知数</li>
+</ul>
+<h3 id="2021-12-3"><a href="#2021-12-3" class="headerlink" title="2021/12/3"></a>2021/12/3</h3><ul>
+<li>一级评论通知详情 接口开发</li>
+<li>二级评论通知详情 接口开发</li>
+</ul>
+<h3 id="2021-12-2"><a href="#2021-12-2" class="headerlink" title="2021/12/2"></a>2021/12/2</h3><ul>
+<li>优化通知接口 更具不同通知类型返回更多信息 用于页面跳转使用</li>
+<li>删除集邮时多余的上传字段 漫展封面 漫展标题 用户相集封面</li>
+<li>通知相集集邮详情接口</li>
+</ul>
+<h3 id="2021-11-30"><a href="#2021-11-30" class="headerlink" title="2021/11/30"></a>2021/11/30</h3><ul>
+<li>将点赞记录完全存于redis,不再考虑持久化</li>
+<li>一级评论通知</li>
+<li>二级评论通知</li>
+<li>点赞通知</li>
+<li>集邮通知<h3 id="2021-11-29"><a href="#2021-11-29" class="headerlink" title="2021/11/29"></a>2021/11/29</h3></li>
+<li>根据sa-token修改验证websocket风格,传入token,根据token获取userInfoId</li>
+<li>通知未读消息</li>
+<li>改造所有模块分页模式, 不再采用order by id (ase/desc) limit 1,20 方式.<br>  改为where id &gt; ? order by id (ase/desc) limit 20</li>
+<li>将主键id 由varchar改bigint  因为需要主键排序 其中comment_two parentid与 as_photo_participated photo_coser_id photo_pho_id<br>需要特别注意一下 涉及到逻辑修改</li>
+</ul>
+<h3 id="2021-11-25"><a href="#2021-11-25" class="headerlink" title="2021/11/25"></a>2021/11/25</h3><ul>
+<li>一级评论-删除</li>
+<li>二级评论-删除</li>
+<li>timestamp改dateTime</li>
+<li>shiro+jwt改sa-token</li>
+<li>如果获取不到信息,将throw not_found 前端要做相对应的提示</li>
+<li>完善删除联动的逻辑</li>
+</ul>
+<h3 id="2021-11-24"><a href="#2021-11-24" class="headerlink" title="2021/11/24"></a>2021/11/24</h3><ul>
+<li>使用shiro+jwt代替shiro框架转变为无状态权限验证。对jwt与shiro有了进一步的理解,shiro会将用户会话保存在服务端,<br>  这也就是为什么,可以直接通过shiroutils获取到用户信息,即使将redis超时时间设置为-1,也会超时.  结合jwt以后,变为无状态,服务将不会再保存session,生成的token将保存用户信息.</li>
+</ul>
+<h3 id="2021-11-23"><a href="#2021-11-23" class="headerlink" title="2021/11/23"></a>2021/11/23</h3><ul>
+<li>修正接口-一级评论附加部分二级评论预览</li>
+<li>一级评论下二级评论数量修成</li>
+<li>添加接口-展示楼中楼对话</li>
+<li>修正接口-评论为正序展示,回复为正序展示,楼中接对话为正序展示</li>
+<li>修改模块策略 - 获取用户失败时 原策略为删除此item, 现改为获取用户时return一个是否存在的字段<ul>
+<li>前端配合相应的修改<ul>
+<li>展示时根据是否存在判断展示用户头像或者default图片</li>
+<li>评论时需要先判断一个用户是否存在,在进行下一步操作</li>
+</ul>
+</li>
+<li>后端在点赞评论时需要进一步验证用户是否存在,不存在throw一个用户不存在异常<ul>
+<li>前端需要配合添加相应异常提示</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>修改二级评论数量的展现方式,将comment icon 的数字删除,改为b站方式 共x条回复 &gt;</li>
+<li>likeButton添加padding 增加点击面积</li>
+</ul>
+<h3 id="2021-11-20"><a href="#2021-11-20" class="headerlink" title="2021/11/20"></a>2021/11/20</h3><ul>
+<li>评论模块接口改写</li>
+</ul>
+<h3 id="2021-11-19"><a href="#2021-11-19" class="headerlink" title="2021/11/19"></a>2021/11/19</h3><ul>
+<li>websocket 服务端搭建 兼容shiro</li>
+</ul>
+<h3 id="2021-11-18"><a href="#2021-11-18" class="headerlink" title="2021/11/18"></a>2021/11/18</h3><ul>
+<li>改写接口-发布相集<ul>
+<li>保存时,我的参展次数+1</li>
+<li>保存时,我的参展目录信息记录</li>
+</ul>
+</li>
+<li>改写接口-删除相集<ul>
+<li>删除时,我的参展次数-1</li>
+<li>pho coser都为删除时,我的参展目录信息删除</li>
+</ul>
+</li>
+<li>改写接口-发布集邮<ul>
+<li>保存时,我的集邮总数+1</li>
+<li>保存时,我在此漫展内的数量+1</li>
+<li>保存时,记录到目录</li>
+</ul>
+</li>
+<li>改写接口-发布集邮<ul>
+<li>保存时,我的集邮总数-1</li>
+<li>保存时,我在此漫展内的数量-1</li>
+<li>保存时,删除到目录</li>
+</ul>
+</li>
+<li>添加接口-我的参展-集邮</li>
+<li>添加后置功能 10. 11.</li>
+</ul>
+<h3 id="2021-11-17"><a href="#2021-11-17" class="headerlink" title="2021/11/17"></a>2021/11/17</h3><ul>
+<li>实现接口-我参加的漫展列表</li>
+</ul>
+<h3 id="2021-11-12"><a href="#2021-11-12" class="headerlink" title="2021/11/12"></a>2021/11/12</h3><ul>
+<li>集邮数相关的接口改造</li>
+</ul>
+<h3 id="2021-11-08"><a href="#2021-11-08" class="headerlink" title="2021/11/08"></a>2021/11/08</h3><ul>
+<li>集邮的发布接口,删除接口编写 </li>
+<li>改造photoContentHomePage 返回img 以cosImageDTO形式</li>
+</ul>
+<h3 id="2021-11-07"><a href="#2021-11-07" class="headerlink" title="2021/11/07"></a>2021/11/07</h3><ul>
+<li>集邮页面的预览</li>
+</ul>
+<h3 id="2021-11-06"><a href="#2021-11-06" class="headerlink" title="2021/11/06"></a>2021/11/06</h3><ul>
+<li>发现bug,点赞可能出现负数<ul>
+<li>判断不允许出现负数</li>
+</ul>
+</li>
+<li>发现bug,连续点赞,num会增加<ul>
+<li>好像是因为高强度点赞、取消点赞.单纯的连续点赞通过调用接口测试是不会出现问题,暂时不考虑这些问题</li>
+</ul>
+</li>
+<li>与我集邮删除权限,被集邮者可以删除集邮,同时发布通知给集邮者</li>
+</ul>
+<h3 id="2021-10-30"><a href="#2021-10-30" class="headerlink" title="2021/10/30"></a>2021/10/30</h3><ul>
+<li>获取预览图片接口返回是是否为第一次发布,通过此字段判断前端是否展示删除按钮</li>
+<li>添加pagesend删除结构</li>
+<li>修改pagesend发布接口</li>
+</ul>
+<h3 id="2021-10-19"><a href="#2021-10-19" class="headerlink" title="2021/10/19"></a>2021/10/19</h3><ul>
+<li>测试cos与sts部分功能(生成下载链接)辅助理解swift版本</li>
+</ul>
+<h3 id="2021-10-18"><a href="#2021-10-18" class="headerlink" title="2021/10/18"></a>2021/10/18</h3><ul>
+<li>参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41896463/article/details/110003340">shiro整合jwt</a>修改自己的框架</li>
+</ul>
+<h3 id="2021-10-15"><a href="#2021-10-15" class="headerlink" title="2021/10/15"></a>2021/10/15</h3><ul>
+<li>获取临时密钥timing</li>
+<li>获取临时密钥controller</li>
+</ul>
+<h3 id="2021-10-14"><a href="#2021-10-14" class="headerlink" title="2021/10/14"></a>2021/10/14</h3><ul>
+<li>决定将图片存储由fastdfs搬运到七牛云文件系统.原因是比较省心,如果是自己维护一个文件系统初期的费用较高</li>
+</ul>
+<h3 id="2021-10-05"><a href="#2021-10-05" class="headerlink" title="2021/10/05"></a>2021/10/05</h3><ul>
+<li>测试将分页接口改为 没有下页数据抛出异常,前端页面根据异常拦截</li>
+</ul>
+<h3 id="2021-09-26"><a href="#2021-09-26" class="headerlink" title="2021/09/26"></a>2021/09/26</h3><ul>
+<li>coser/pho上传照片预览视图接口</li>
+</ul>
+<h3 id="2021-09-24"><a href="#2021-09-24" class="headerlink" title="2021/09/24"></a>2021/09/24</h3><ul>
+<li>测试了fastdht的去重效果,符合要求</li>
+</ul>
+<h3 id="2021-09-23"><a href="#2021-09-23" class="headerlink" title="2021/09/23"></a>2021/09/23</h3><ul>
+<li>最后使用docker-compose搭建完成</li>
+</ul>
+<h3 id="2021-09-22"><a href="#2021-09-22" class="headerlink" title="2021/09/22"></a>2021/09/22</h3><ul>
+<li>通用文件上传接口</li>
+<li>用docker方式搭建 fdfs 遇到点问题,挺恶心的<ol>
+<li>mac与win无法使用–net=host参数</li>
+<li>因为i.导致后续fdht的配置问题</li>
+</ol>
+</li>
+</ul>
+<h3 id="2021-09-13"><a href="#2021-09-13" class="headerlink" title="2021/09/13"></a>2021/09/13</h3><ul>
+<li>修复点赞bug</li>
+<li>发送id与接收id相同时不添加notice</li>
+<li>经过最后的考虑,还是决定点赞进入redis缓存</li>
+</ul>
+<h3 id="2021-08-17"><a href="#2021-08-17" class="headerlink" title="2021/08/17"></a>2021/08/17</h3><ul>
+<li>调整捕捉异常返回格式</li>
+<li>调整分页返回格式</li>
+<li>调整相集主页接口</li>
+<li>调整redisService参数</li>
+</ul>
+<h3 id="2021-08-12"><a href="#2021-08-12" class="headerlink" title="2021/08/12"></a>2021/08/12</h3><ul>
+<li>添加留言</li>
+<li>添加打赏</li>
+<li>打赏分页查询记录</li>
+<li>用户基本信息</li>
+<li>补充添加喜欢时userinfo like+1</li>
+<li>添加关注</li>
+</ul>
+<h3 id="2021-08-11"><a href="#2021-08-11" class="headerlink" title="2021/08/11"></a>2021/08/11</h3><ul>
 <li>用户中心ta喜欢</li>
 <li>用户中心动态</li>
 <li>用户中心参展</li>
@@ -72,7 +600,7 @@
 <h3 id="2021-08-03"><a href="#2021-08-03" class="headerlink" title="2021/08/03"></a>2021/08/03</h3><ul>
 <li>相集首页分页查询</li>
 </ul>
-</div><div class="article-licensing box"><div class="licensing-title"><p>早季ios客户端服务接口</p><p><a href="http://example.com/2021/08/02/project/saki/client/java/saki-client-java/">http://example.com/2021/08/02/project/saki/client/java/saki-client-java/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><a href="http://example.com"><p>声控周不鸽</p></a></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-08-02</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-08-12</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="recommend-area"><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 推荐文章</span><br><span>  1.<a class="is-size-6" href="/2021/06/03/project/ios/project-planning-lifetrip/" target="_blank">项目规划生命之旅其一</a><br></span><span>  2.<a class="is-size-6" href="/2021/06/03/project/java/saki-server-base/" target="_blank">saki-server-2.0-base框架</a><br></span><span>  3.<a class="is-size-6" href="/2021/06/08/life/summary/perception/selfdelivery/" target="_blank">《自我救赎》</a><br></span><span>  4.<a class="is-size-6" href="/2021/07/19/project/saki/base/saki-base-think/" target="_blank">早季base思考</a><br></span><span>  5.<a class="is-size-6" href="/2021/07/19/project/saki/client/ios/saki-client-ios/" target="_blank">早季ios客户端兼产品原型</a><br></span><span>  6.<a class="is-size-6" href="/2021/08/02/project/saki/client/java/saki-client-java/" target="_blank">早季ios客户端服务接口</a><br></span></div></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/20210527101118.png" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/20210527101100.png" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/08/03/life/log/diary/hello-world64/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">来自新世界的第六十四期</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/08/02/life/log/diary/hello-world63/"><span class="level-item">来自新世界的第六十三期</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">评论</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
+</div><div class="article-licensing box"><div class="licensing-title"><p>早季ios客户端服务接口</p><p><a href="http://example.com/2021/08/02/project/saki/client/java/saki-client-java/">http://example.com/2021/08/02/project/saki/client/java/saki-client-java/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><a href="http://example.com"><p>声控周不鸽</p></a></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-08-02</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-07-15</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="recommend-area"><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 推荐文章</span><br><span>  1.<a class="is-size-6" href="/2021/09/05/life/log/weekly/weekly-review-end/" target="_blank">《每周回顾终》</a><br></span><span>  2.<a class="is-size-6" href="/2021/06/03/project/ios/project-planning-lifetrip/" target="_blank">项目规划生命之旅其一</a><br></span><span>  3.<a class="is-size-6" href="/2021/06/03/project/java/saki-server-base/" target="_blank">saki-server-2.0-base框架</a><br></span><span>  4.<a class="is-size-6" href="/2021/08/25/project/uniapp/steam70off/" target="_blank">7折steam</a><br></span><span>  5.<a class="is-size-6" href="/2021/06/08/life/summary/perception/selfdelivery/" target="_blank">《自我救赎》</a><br></span><span>  6.<a class="is-size-6" href="/2021/07/19/project/saki/base/saki-base-think/" target="_blank">早季base思考</a><br></span></div></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/20210527101118.png" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/20210527101100.png" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/08/03/life/log/diary/hello-world64/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">来自新世界的第六十四期</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/08/02/life/log/diary/hello-world63/"><span class="level-item">来自新世界的第六十三期</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">评论</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
             var gitalk = new Gitalk({
             language:'zh-CN',
             id: '8bc524048d2dfa86b09508d0a9029a12',
@@ -90,14 +618,14 @@
             enableHotKey: true,
             isLocked: false
         })
-        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg" alt="声控周不鸽"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">声控周不鸽</p><p class="is-size-6 is-block">敲喜欢细雨的夜景，街道积水打出的镜面宛如异世界</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>杭州</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">110</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">47</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">14</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/sakiraven" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/sakiraven"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="https://weibo.com/声控周不鸽"><i class="fab fa-weibo"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:sakiraven@icloud.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Next" href="https://sakiraven.github.io"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><!--!--><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/51615538.jpeg" alt="声控周不鸽"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">声控周不鸽</p><p class="is-size-6 is-block">敲喜欢细雨的夜景，街道积水打出的镜面宛如异世界</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>杭州</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">154</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">59</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">25</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/sakiraven" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/sakiraven"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="https://weibo.com/声控周不鸽"><i class="fab fa-weibo"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:sakiraven@icloud.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Next" href="https://sakiraven.github.io"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
                                 $.getJSON("https://v1.hitokoto.cn/", function (data) {
                                 if(data){
                                     $('#hitokoto').html("");
                                     $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
                                     "<p>"+"来源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
                                 }});}
-                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新评论</h3><span class="body_hot_comment">加载中，最新评论有1分钟缓存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><figure class="media-left"><a class="image" href="/2021/08/11/life/log/diary/hello-world73/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/helloworld-poster.jpeg" alt="来自新世界的第七十三期"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-08-10T22:48:10.000Z">2021-08-11</time></p><p class="title"><a href="/2021/08/11/life/log/diary/hello-world73/">来自新世界的第七十三期</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/">日志</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/%E6%97%A5%E8%AE%B0/">日记</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/08/10/life/log/diary/hello-world72/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/helloworld-poster.jpeg" alt="来自新世界的第七十二期"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-08-09T22:48:10.000Z">2021-08-10</time></p><p class="title"><a href="/2021/08/10/life/log/diary/hello-world72/">来自新世界的第七十二期</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/">日志</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/%E6%97%A5%E8%AE%B0/">日记</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/08/10/life/log/diary/hello-world71/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/helloworld-poster.jpeg" alt="来自新世界的第七十一期"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-08-09T22:48:10.000Z">2021-08-10</time></p><p class="title"><a href="/2021/08/10/life/log/diary/hello-world71/">来自新世界的第七十一期</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/">日志</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/%E6%97%A5%E8%AE%B0/">日记</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/08/09/life/log/diary/hello-world70/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/helloworld-poster.jpeg" alt="来自新世界的第七十期"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-08-08T22:48:10.000Z">2021-08-09</time></p><p class="title"><a href="/2021/08/09/life/log/diary/hello-world70/">来自新世界的第七十期</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/">日志</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/%E6%97%A5%E8%AE%B0/">日记</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/08/08/life/log/weekly/weekly-review10/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/彩旗1.JPG" alt="每周回顾的第十回"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-08-08T14:02:30.000Z">2021-08-08</time></p><p class="title"><a href="/2021/08/08/life/log/weekly/weekly-review10/">每周回顾的第十回</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/">日志</a> / <a href="/categories/%E7%94%9F%E6%B4%BB/%E6%97%A5%E5%BF%97/%E5%91%A8%E8%AE%B0/">周记</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/"><span class="level-start"><span class="level-item">学习</span></span><span class="level-end"><span class="level-item tag">14</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/"><span class="level-start"><span class="level-item">中间件</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/mysql/"><span class="level-start"><span class="level-item">mysql</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/mysql/%E6%9D%82%E8%AE%B0/"><span class="level-start"><span class="level-item">杂记</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B9%A6/"><span class="level-start"><span class="level-item">书</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/"><span class="level-start"><span class="level-item">系统与服务</span></span><span class="level-end"><span class="level-item tag">5</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/"><span class="level-start"><span class="level-item">linux</span></span><span class="level-end"><span class="level-item tag">5</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/docker/"><span class="level-start"><span class="level-item">docker</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/docker/mysql/"><span class="level-start"><span class="level-item">mysql</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/jenkins/"><span class="level-start"><span class="level-item">jenkins</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li></ul></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2021/08/"><span class="level-start"><span class="level-item">八月 2021</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/07/"><span class="level-start"><span class="level-item">七月 2021</span></span><span class="level-end"><span class="level-item tag">43</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/06/"><span class="level-start"><span class="level-item">六月 2021</span></span><span class="level-end"><span class="level-item tag">49</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/05/"><span class="level-start"><span class="level-item">五月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E6%97%A5%E6%80%BB%E7%BB%93/"><span class="tag">每日总结</span><span class="tag is-grey-lightest">76</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E5%91%A8%E6%80%BB%E7%BB%93/"><span class="tag">每周总结</span><span class="tag is-grey-lightest">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mysql%E4%B8%93%E6%A0%8F/"><span class="tag">mysql专栏</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ios%E9%A1%B9%E7%9B%AE%E8%A7%84%E5%88%92/"><span class="tag">ios项目规划</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/swift%E4%B8%93%E6%A0%8F/"><span class="tag">swift专栏</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/swift%E6%9D%82%E8%AE%B0/"><span class="tag">swift杂记</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E6%9C%88%E6%80%BB%E7%BB%93/"><span class="tag">每月总结</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mysql%E6%9D%82%E8%AE%B0/"><span class="tag">Mysql杂记</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/node/"><span class="tag">node</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%9F%8E/"><span class="tag">天空之城</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%9F%E6%B4%BB%E6%80%BB%E7%BB%93/"><span class="tag">生活总结</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%A7%81%E6%B4%BB/"><span class="tag">私活</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AF%BB%E4%B9%A6/"><span class="tag">读书</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%A1%B9%E7%9B%AE%E6%80%9D%E8%80%83/"><span class="tag">项目思考</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><!--!--><div class="column-right-shadow is-hidden-widescreen"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/声控周不鸽logoblue.png" alt="声控周不鸽的开发者日志" height="28"></a><p class="size-small"><span>&copy; 2021 声控周不鸽</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© <a href="http://www.beian.miit.gov.cn/" target="_blank">冀ICP备20012150号-1</a><br></span><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br/>&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br/></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新评论</h3><span class="body_hot_comment">加载中，最新评论有1分钟缓存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-12T08:59:48.000Z">2022-07-12</time></p><p class="title"><a href="/2022/07/12/work/project/shici/">中华诗词库</a></p><p class="categories"><a href="/categories/%E5%B7%A5%E4%BD%9C/">工作</a> / <a href="/categories/%E5%B7%A5%E4%BD%9C/%E9%A1%B9%E7%9B%AE/">项目</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-06T07:22:44.000Z">2022-07-06</time></p><p class="title"><a href="/2022/07/06/docker/dnf/">dnf容器</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/docker/">docker</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/docker/dnf/">dnf</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-04T07:22:44.000Z">2022-07-04</time></p><p class="title"><a href="/2022/07/04/learn/language/js/vue/html-use-vue-template/">html使用vue模版</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AF%AD%E8%A8%80/">语言</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AF%AD%E8%A8%80/js/">js</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AF%AD%E8%A8%80/js/vue/">vue</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-21T06:51:56.000Z">2022-06-21</time></p><p class="title"><a href="/2022/06/21/learn/systemserver/linux/ubuntu/docker/portdynasetting/">mac动态添加端口号</a></p><p class="categories"><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/">系统与服务</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/">linux</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/ubuntu/">ubuntu</a> / <a href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/ubuntu/docker/">docker</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-20T07:22:44.000Z">2022-06-20</time></p><p class="title"><a href="/2022/06/20/learn/language/java/jdk-add-ssl/">jdk添加ssl证书</a></p><p class="categories"><a href="/categories/java/">java</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/java/"><span class="level-start"><span class="level-item">java</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/"><span class="level-start"><span class="level-item">学习</span></span><span class="level-end"><span class="level-item tag">23</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/docker/"><span class="level-start"><span class="level-item">docker</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/docker/dnf/"><span class="level-start"><span class="level-item">dnf</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/"><span class="level-start"><span class="level-item">中间件</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/mysql/"><span class="level-start"><span class="level-item">mysql</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B8%AD%E9%97%B4%E4%BB%B6/mysql/%E6%9D%82%E8%AE%B0/"><span class="level-start"><span class="level-item">杂记</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E4%B9%A6/"><span class="level-start"><span class="level-item">书</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/"><span class="level-start"><span class="level-item">系统与服务</span></span><span class="level-end"><span class="level-item tag">10</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/%E5%AD%A6%E4%B9%A0/%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%9C%8D%E5%8A%A1/linux/"><span class="level-start"><span class="level-item">linux</span></span><span class="level-end"><span class="level-item tag">10</span></span></a><ul class="mr-0"></ul></li></ul></li></ul></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2022/07/"><span class="level-start"><span class="level-item">七月 2022</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/06/"><span class="level-start"><span class="level-item">六月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/05/"><span class="level-start"><span class="level-item">五月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/10/"><span class="level-start"><span class="level-item">十月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/09/"><span class="level-start"><span class="level-item">九月 2021</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E6%97%A5%E6%80%BB%E7%BB%93/"><span class="tag">每日总结</span><span class="tag is-grey-lightest">99</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E5%91%A8%E6%80%BB%E7%BB%93/"><span class="tag">每周总结</span><span class="tag is-grey-lightest">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mysql%E4%B8%93%E6%A0%8F/"><span class="tag">mysql专栏</span><span class="tag is-grey-lightest">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/swift%E4%B8%93%E6%A0%8F/"><span class="tag">swift专栏</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AF%8F%E6%9C%88%E6%80%BB%E7%BB%93/"><span class="tag">每月总结</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ios%E9%A1%B9%E7%9B%AE%E8%A7%84%E5%88%92/"><span class="tag">ios项目规划</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/docker%E4%B8%93%E6%A0%8F/"><span class="tag">docker专栏</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/swift%E6%9D%82%E8%AE%B0/"><span class="tag">swift杂记</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%A5%E4%BD%9C/"><span class="tag">工作</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%A7%84%E5%88%92/"><span class="tag">规划</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mysql%E6%9D%82%E8%AE%B0/"><span class="tag">Mysql杂记</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dnf/"><span class="tag">dnf</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/docker/"><span class="tag">docker</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/java/"><span class="tag">java</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/java%E6%9D%82%E8%AE%B0/"><span class="tag">java杂记</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/node/"><span class="tag">node</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/redis%E4%B8%93%E6%A0%8F/"><span class="tag">redis专栏</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/vue/"><span class="tag">vue</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%9F%8E/"><span class="tag">天空之城</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%A7%84%E5%88%92/"><span class="tag">小程序规划</span><span class="tag is-grey-lightest">1</span></a></div></div><div class="field is-grouped is-grouped-multiline"><a class="tags has-addons" href="/tags/"><span class="tag">查看全部&gt;&gt;</span></a></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><!--!--><div class="column-right-shadow is-hidden-widescreen"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://cdn.jsdelivr.net/gh/sakiraven/imgs/blog/声控周不鸽logoblue.png" alt="声控周不鸽的开发者日志" height="28"></a><p class="size-small"><span>&copy; 2022 声控周不鸽</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© <a href="http://www.beian.miit.gov.cn/" target="_blank">冀ICP备20012150号-1</a><br></span><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br/>&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br/></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
             var n = new Date(time);
             now.setTime(now.getTime() + 250),
                 days = (now - n) / 1e3 / 60 / 60 / 24,
